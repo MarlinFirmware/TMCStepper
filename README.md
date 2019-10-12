@@ -1,16 +1,19 @@
-Arduino library for Trinamic TMC stepper motor drivers.
+# Arduino library for Trinamic TMC stepper motor drivers
+This library works with any Arduino compatible board (Arduino, STM32, NXP, etc) and it's available on PlatformIO
 
 Supported TMC drivers:
-* [TMC2130][2130]
-* [TMC2160][2160]
-* [TMC2208][2208]
-* [TMC2209][2209]
-* [TMC2224][2224]
-* [TMC2240][2240]
-* [TMC2660][2660]
-* [TMC5130][5130]
-* [TMC5160][5160]
-* [TMC5161][5161]
+| Drivers  | Support | Supply       | Max RMS       | Interface | CoolStep™  | StallGuard™  | StealthChop™  |
+| :------: | :-----: | :----------: | :-----------: | :-------: | :--------: | :-----------:| :------------:|
+| TMC2130  | ✅      | 5…46V        | 1.4A          | SPI       | ✅          | ✅ v2        | ✅ v1 |
+| TMC2160  | ✅      | 8…60V        | ext. MOSFETs  | SPI       | ✅          | ✅ v2        | ✅ v2 |
+| TMC2208  | ✅      | 4.75…36V     | 1.4A          | UART      | ❌          | ❌           | ✅ v2 |
+| TMC2209  | ✅      | 4.75…29V     | 2.0A          | UART      | ✅          | ✅ v4        | ✅ v2 |
+| TMC2224  | ✅      | 4.75…36V     | 1.4A          | UART      | ❌          | ❌           | ✅ v2 |
+| TMC2240  | ✅      | 4.75…36V     | 1.4A          | SPI       | ✅          | ✅           | ✅ v2 |
+| TMC2660  | ✅      | 9…30V        | 2.8A          | SPI       | ✅          | ✅ v2        | ❌    |
+| TMC5130  | ✅      | 4.75…46V     | 1.4A          | SPI only  | ✅          | ✅ v2        | ✅ v1 |
+| TMC5160  | ✅      | 8…60V        | ext. MOSFETs  | SPI only  | ✅          | ✅ v2        | ✅ v2 |
+| TMC5161  | ✅      | 8…40V        | 3.5A          | SPI only  | ✅          | ✅ v2        | ✅ v2 |
 
 [2130]: https://teemuatlut.github.io/TMCStepper/class_t_m_c2130_stepper.html
 [2160]: https://teemuatlut.github.io/TMCStepper/class_t_m_c2160_stepper.html
