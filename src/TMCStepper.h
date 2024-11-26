@@ -1369,6 +1369,10 @@ class TMC2240Stepper {
 		INIT2240_REGISTER(CHOPCONF)			{{.sr=0}};
 		INIT2240_REGISTER(PWMCONF)			{{.sr=0}};
 		INIT2240_REGISTER(TPOWERDOWN)		{{.sr=0}};		// 8b
+		INIT2240_REGISTER(GLOBAL_SCALER)	{{.sr=0}};		// 8b
+		INIT_REGISTER(COOLCONF){{.sr=0}};	// 32b
+		INIT_REGISTER(TCOOLTHRS){.sr=0};	// 32b
+		INIT_REGISTER(THIGH){.sr=0};			// 32b
 
 		struct IFCNT_t 		{ constexpr static uint8_t address = 0x02; };
 		struct TSTEP_t 		{ constexpr static uint8_t address = 0x12; };
