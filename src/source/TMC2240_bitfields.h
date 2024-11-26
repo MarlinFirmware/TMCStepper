@@ -1,6 +1,13 @@
 /**
  * TMCStepper library by @teemuatlut
  * TMC2240_bitfields.h
+ *
+ * TMC2240 hardware register bit fields:
+ * CHOPCONF, DEVCONF, COOLCONF, PWMCONF
+ * IHOLD_IRUN
+ * TPOWERDOWN, TPWMTHRS, TCOOLTHRS
+ * SG4_THRS
+ * GCONF, GSTAT
  */
 #pragma once
 #pragma pack(push, 1)
@@ -9,7 +16,7 @@ namespace TMC2240_n {
   struct GCONF_t {
     constexpr static uint8_t address = 0x00;
     union {
-      uint16_t sr : 16;
+      uint32_t sr;
       struct {
         bool                   : 1,
               fast_standstill  : 1,
@@ -22,6 +29,7 @@ namespace TMC2240_n {
               diag1_stall      : 1,
               diag1_index      : 1,
               diag1_onstate    : 1,
+                               : 1,
               diag0_pushpull   : 1,
               diag1_pushpull   : 1,
               small_hysteresis : 1,
@@ -34,65 +42,13 @@ namespace TMC2240_n {
   struct GSTAT_t {
       constexpr static uint8_t address = 0x01;
       union {
-        uint8_t sr : 8;
+        uint32_t sr;
         struct {
           bool reset          : 1,
                drv_err        : 1,
                uv_cp          : 1,
                register_reset : 1,
                vm_uvlo        : 1;
-       };
-    };
-  };
-
-  struct SLAVECONF_t {
-    constexpr static uint8_t address = 0x03;
-    union {
-      uint16_t sr : 12;
-      struct {
-        uint16_t  SLAVEADDR : 8;
-        uint8_t   SENDDELAY : 4;
-      };
-    };
-  };
-
-  struct IOIN_t {
-    constexpr static uint8_t address = 0x04;
-    union {
-      uint32_t sr;
-      struct {
-        bool  step          : 1,
-              dir           : 1,
-              encb          : 1,
-              enca          : 1,
-              drv_enn       : 1,
-              encn          : 1,
-              uart_en       : 1,
-                            : 1,
-              comp_a        : 1,
-              comp_b        : 1,
-              comp_a1_a2    : 1,
-              comp_b1_b2    : 1,
-              output        : 1,
-              ext_res_det   : 1,
-              ext_clk       : 1,
-              adc_err       : 1;
-        uint8_t  silicon_rv : 3,
-                            : 5,
-              version       : 8;
-      };
-    };
-  };
-
-  struct DRV_CONF_t {
-    constexpr static uint8_t address = 0x0A;
-    union {
-      uint32_t sr;
-      struct {
-        uint8_t current_range : 2,
-                              : 2,
-                slope_control : 2;
-        uint16_t              : 16;
       };
     };
   };
@@ -102,32 +58,51 @@ namespace TMC2240_n {
     union {
       uint32_t sr;
       struct {
-          uint16_t TPOWERDOWN : 8;
+        uint8_t semin : 8;
       };
     };
   };
 
-  struct DRV_STATUS_t {
-    constexpr static uint8_t address = 0x6F;
+  struct DEVCONF_t {
+    constexpr static uint8_t address = 0x0a;
     union {
       uint32_t sr;
       struct {
-        uint16_t SG_RESULT : 10;
-        uint8_t            : 2;
-        uint8_t      s2vsa : 1,
-                     s2vsb : 1,
-                   stealth : 1,
-                  fsactive : 1;
-        uint16_t  CS_ACTUAL : 5;
-        uint8_t            : 3;
-        bool    stallguard : 1,
-                        ot : 1,
-                      otpw : 1,
-                      s2ga : 1,
-                      s2gb : 1,
-                       ola : 1,
-                       olb : 1,
-                      stst : 1;
+        uint8_t cur_range     : 2,
+                              : 2,
+                slope_control : 2;
+      };
+    };
+  };
+
+  struct TPWMTHRS_t {
+    constexpr static uint8_t address = 0x13;
+    union {
+      uint32_t sr;
+      struct {
+        //uint8_t tpwmthrsb : 20;
+        uint8_t tpwmthrsb;
+      };
+    };
+  };
+  struct TCOOLTHRS_t {
+    constexpr static uint8_t address = 0x14;
+    union {
+      uint32_t sr;
+      struct {
+        //uint8_t tcoolthrs : 20;
+        uint8_t tcoolthrs;
+      };
+    };
+  };
+  struct SG4_THRS_t {
+    constexpr static uint8_t address = 0x74;
+    union {
+      uint32_t sr;
+      struct {
+        uint8_t sg4_thrsb       : 8;
+        bool    sg4_filt_en     : 1,
+                sg_angle_offset : 1;
       };
     };
   };
@@ -158,8 +133,9 @@ namespace TMC2240_n {
                 hend     : 4;
         bool    fd3      : 1,
                 disfdcc  : 1,
+                         : 1,
                 chm      : 1;
-        uint8_t TBL      : 2;
+        uint8_t tbl      : 2;
         bool             : 1,
                 vhighfs  : 1,
                 vhighchm : 1;
@@ -176,7 +152,7 @@ namespace TMC2240_n {
   struct COOLCONF_t {
     constexpr static uint8_t address = 0x6D;
     union {
-      uint16_t sr;
+      uint32_t sr;
       struct {
         uint8_t    semin  : 4;
         bool              : 1;
@@ -188,6 +164,7 @@ namespace TMC2240_n {
         bool       seimin : 1;
         uint8_t    sgt    : 7;
         bool              : 1;
+        bool       sfilt  : 1;
         uint8_t           : 7;
       };
     };
@@ -208,30 +185,6 @@ namespace TMC2240_n {
                 pwm_dis_reg_stst   : 1;
         uint8_t pwm_reg            : 4,
                 pwm_lim            : 4;
-      };
-    };
-  };
-
-  struct PWM_SCALE_t {
-    constexpr static uint8_t address = 0x71;
-    union {
-      uint32_t sr;
-      struct {
-        uint16_t pwm_scale_sum  : 10;
-        uint8_t                 :  6;
-        int16_t  pwm_scale_auto :  9;
-      };
-    };
-  };
-
-  struct PWM_AUTO_t {
-    constexpr static uint8_t address = 0x72;
-    union {
-      uint32_t sr : 24;
-      struct {
-        uint8_t pwm_ofs_auto  : 8,
-                              : 8,
-                pwm_grad_auto : 8;
       };
     };
   };
