@@ -135,7 +135,7 @@ namespace TMC2240_n {
                 disfdcc  : 1,
                          : 1,
                 chm      : 1;
-        uint8_t tbl      : 2;
+        uint8_t TBL      : 2;
         bool             : 1,
                 vhighfs  : 1,
                 vhighchm : 1;
