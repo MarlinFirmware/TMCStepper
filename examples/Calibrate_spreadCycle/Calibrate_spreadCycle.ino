@@ -91,7 +91,7 @@ void setup() {
     if (result) {
         Serial.println(F("failed!"));
         Serial.print(F("Likely cause: "));
-        switch(result) {
+        switch (result) {
             case 1: Serial.println(F("loose connection")); break;
             case 2: Serial.println(F("Likely cause: no power")); break;
         }
