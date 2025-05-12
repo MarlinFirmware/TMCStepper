@@ -82,11 +82,11 @@ void TMC2208Stepper::dedge(     bool B ) { SET_REG(dedge);   }
 void TMC2208Stepper::diss2g(    bool B ) { SET_REG(diss2g);  }
 void TMC2208Stepper::diss2vs(   bool B ) { SET_REG(diss2vs); }
 
-uint8_t   TMC2208Stepper::toff()  { TMC2208_n::CHOPCONF_t r{0}; r.sr = CHOPCONF(); return r.toff;    }
-uint8_t   TMC2208Stepper::hstrt() { TMC2208_n::CHOPCONF_t r{0}; r.sr = CHOPCONF(); return r.hstrt;   }
-uint8_t   TMC2208Stepper::hend()  { TMC2208_n::CHOPCONF_t r{0}; r.sr = CHOPCONF(); return r.hend;    }
-uint8_t   TMC2208Stepper::tbl()   { TMC2208_n::CHOPCONF_t r{0}; r.sr = CHOPCONF(); return r.tbl;     }
-uint8_t   TMC2208Stepper::mres()  { TMC2208_n::CHOPCONF_t r{0}; r.sr = CHOPCONF(); return r.mres;    }
+uint8_t TMC2208Stepper::toff()    { TMC2208_n::CHOPCONF_t r{0}; r.sr = CHOPCONF(); return r.toff;    }
+uint8_t TMC2208Stepper::hstrt()   { TMC2208_n::CHOPCONF_t r{0}; r.sr = CHOPCONF(); return r.hstrt;   }
+uint8_t TMC2208Stepper::hend()    { TMC2208_n::CHOPCONF_t r{0}; r.sr = CHOPCONF(); return r.hend;    }
+uint8_t TMC2208Stepper::tbl()     { TMC2208_n::CHOPCONF_t r{0}; r.sr = CHOPCONF(); return r.tbl;     }
+uint8_t TMC2208Stepper::mres()    { TMC2208_n::CHOPCONF_t r{0}; r.sr = CHOPCONF(); return r.mres;    }
 bool    TMC2208Stepper::vsense()  { TMC2208_n::CHOPCONF_t r{0}; r.sr = CHOPCONF(); return r.vsense;  }
 bool    TMC2208Stepper::intpol()  { TMC2208_n::CHOPCONF_t r{0}; r.sr = CHOPCONF(); return r.intpol;  }
 bool    TMC2208Stepper::dedge()   { TMC2208_n::CHOPCONF_t r{0}; r.sr = CHOPCONF(); return r.dedge;   }
