@@ -5,7 +5,7 @@
  Copyright (C) 1997-2019 by Dimitri van Heesch
 
  This program is free software; you can redistribute it and/or modify
- it under the terms of version 2 of the GNU General Public License as 
+ it under the terms of version 2 of the GNU General Public License as
  published by the Free Software Foundation.
 
  This program is distributed in the hope that it will be useful,
@@ -335,10 +335,10 @@ function showNode(o, node, index, hash)
 {
   if (node && node.childrenData) {
     if (typeof(node.childrenData)==='string') {
-      var varName    = node.childrenData;
+      var varName = node.childrenData;
       getScript(node.relpath+varName,function(){
         node.childrenData = getData(varName);
-        showNode(o,node,index,hash);
+        showNode(o, node, index,hash);
       },true);
     } else {
       if (!node.childrenVisited) {
@@ -348,15 +348,15 @@ function showNode(o, node, index, hash)
       node.plus_img.innerHTML = arrowDown;
       node.expanded = true;
       var n = node.children[o.breadcrumbs[index]];
-      if (index+1<o.breadcrumbs.length) {
-        showNode(o,n,index+1,hash);
+      if (index + 1 < o.breadcrumbs.length) {
+        showNode(o, n, index + 1, hash);
       } else {
         if (typeof(n.childrenData)==='string') {
           var varName = n.childrenData;
-          getScript(n.relpath+varName,function(){
+          getScript(n.relpath + varName, function(){
             n.childrenData = getData(varName);
             node.expanded=false;
-            showNode(o,node,index,hash); // retry with child node expanded
+            showNode(o, node, index, hash); // retry with child node expanded
           },true);
         } else {
           var rootBase = stripPath(o.toroot.replace(/\..+$/, ''));

@@ -31,7 +31,7 @@ bool dir = true;
 
 void setup() {
 	Serial.begin(9600);
-	while(!Serial);
+	while (!Serial);
 	Serial.println("Start...");
 	driver.begin(); 			// Initiate pins and registeries
 	driver.rms_current(600); 	// Set stepper current to 600mA. The command is the same as command TMC2130.setCurrent(600, 0.11, 0.5);

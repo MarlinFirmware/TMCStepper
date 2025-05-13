@@ -12,7 +12,7 @@ SW_SPIClass::SW_SPIClass(uint16_t mosi, uint16_t miso, uint16_t sck) :
 
 void SW_SPIClass::init() {
   pinMode(mosi_pin, OUTPUT);
-  pinMode(sck_pin, OUTPUT);
+  pinMode(sck_pin,  OUTPUT);
   pinMode(miso_pin, INPUT_PULLUP);
   #ifdef ARDUINO_ARCH_AVR
     mosi_register = portOutputRegister(getPort(mosi_pin));
@@ -29,7 +29,7 @@ uint8_t SW_SPIClass::transfer(uint8_t ulVal) {
   uint8_t value = 0;
   writeSCK_L;
 
-  for (uint8_t i=7 ; i>=1 ; i--) {
+  for (uint8_t i = 7 ; i>=1 ; i--) {
     // Write bit
     !!(ulVal & (1 << i)) ? writeMOSI_H : writeMOSI_L;
     // Start clock pulse

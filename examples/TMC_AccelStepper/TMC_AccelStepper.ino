@@ -40,7 +40,7 @@ AccelStepper stepper = AccelStepper(stepper.DRIVER, STEP_PIN, DIR_PIN);
 void setup() {
     SPI.begin();
     Serial.begin(9600);
-    while(!Serial);
+    while (!Serial);
     Serial.println("Start...");
     pinMode(CS_PIN, OUTPUT);
     digitalWrite(CS_PIN, HIGH);

@@ -222,7 +222,7 @@ function handleMouseWheel(evt)
  */
 function handleMouseMove(evt)
 {
-  if(evt.preventDefault)
+  if (evt.preventDefault)
     evt.preventDefault();
 
   evt.returnValue = false;
@@ -242,7 +242,7 @@ function handleMouseMove(evt)
  */
 function handleMouseDown(evt)
 {
-  if(evt.preventDefault)
+  if (evt.preventDefault)
     evt.preventDefault();
   evt.returnValue = false;
   var g = svgDoc.getElementById("viewport");

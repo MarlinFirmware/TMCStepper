@@ -82,12 +82,12 @@ void TMC2160Stepper::rms_current(uint16_t mA) {
 
   do {
     uint32_t denominator = V_fs * 0xFFFF >> 8;
-    denominator *= CS+1;
+    denominator *= CS + 1;
     scaler = numerator / denominator;
 
     if (scaler > 255) scaler = 0; // Maximum
     else if (scaler < 128) CS--;  // Try again with smaller CS
-  } while(0 < scaler && scaler < 128);
+  } while (0 < scaler && scaler < 128);
 
 
   if (CS > 31)
@@ -104,9 +104,9 @@ void TMC2160Stepper::rms_current(uint16_t mA, float mult) {
 uint16_t TMC2160Stepper::cs2rms(uint8_t CS) {
     uint16_t scaler = GLOBAL_SCALER();
     if (!scaler) scaler = 256;
-    uint32_t numerator = scaler * (CS+1);
+    uint32_t numerator = scaler * (CS + 1);
     numerator *= 325;
-    numerator >>= (8+5); // Divide by 256 and 32
+    numerator >>= (8 + 5); // Divide by 256 and 32
     numerator *= 1000000;
     uint32_t denominator = Rsense*1000;
     denominator *= 1414;
@@ -135,20 +135,18 @@ void TMC2160Stepper::push() {
 
 ///////////////////////////////////////////////////////////////////////////////////////
 // R: IOIN
-uint32_t  TMC2160Stepper::IOIN() {
-  return read(TMC2160_n::IOIN_t::address);
-}
-bool    TMC2160Stepper::refl_step()      { TMC2160_n::IOIN_t r{0}; r.sr = IOIN(); return r.refl_step; }
-bool    TMC2160Stepper::refr_dir()       { TMC2160_n::IOIN_t r{0}; r.sr = IOIN(); return r.refr_dir; }
+uint32_t TMC2160Stepper::IOIN() { return read(TMC2160_n::IOIN_t::address); }
+bool    TMC2160Stepper::refl_step()      { TMC2160_n::IOIN_t r{0}; r.sr = IOIN(); return r.refl_step;      }
+bool    TMC2160Stepper::refr_dir()       { TMC2160_n::IOIN_t r{0}; r.sr = IOIN(); return r.refr_dir;       }
 bool    TMC2160Stepper::encb_dcen_cfg4() { TMC2160_n::IOIN_t r{0}; r.sr = IOIN(); return r.encb_dcen_cfg4; }
 bool    TMC2160Stepper::enca_dcin_cfg5() { TMC2160_n::IOIN_t r{0}; r.sr = IOIN(); return r.enca_dcin_cfg5; }
-bool    TMC2160Stepper::drv_enn()        { TMC2160_n::IOIN_t r{0}; r.sr = IOIN(); return r.drv_enn; }
-bool    TMC2160Stepper::dco_cfg6()       { TMC2160_n::IOIN_t r{0}; r.sr = IOIN(); return r.dco_cfg6; }
-uint8_t TMC2160Stepper::version()        { TMC2160_n::IOIN_t r{0}; r.sr = IOIN(); return r.version; }
+bool    TMC2160Stepper::drv_enn()        { TMC2160_n::IOIN_t r{0}; r.sr = IOIN(); return r.drv_enn;        }
+bool    TMC2160Stepper::dco_cfg6()       { TMC2160_n::IOIN_t r{0}; r.sr = IOIN(); return r.dco_cfg6;       }
+uint8_t TMC2160Stepper::version()        { TMC2160_n::IOIN_t r{0}; r.sr = IOIN(); return r.version;        }
 
 // W: GLOBAL_SCALER
 uint8_t TMC2160Stepper::GLOBAL_SCALER() { return GLOBAL_SCALER_register.sr; }
-void TMC2160Stepper::GLOBAL_SCALER(uint8_t input) {
+void    TMC2160Stepper::GLOBAL_SCALER(uint8_t input) {
   GLOBAL_SCALER_register.sr = input;
   write(GLOBAL_SCALER_register.address, GLOBAL_SCALER_register.sr);
 }
@@ -157,8 +155,6 @@ void TMC2160Stepper::GLOBAL_SCALER(uint8_t input) {
 uint16_t TMC2160Stepper::OFFSET_READ() { return read(OFFSET_READ_t::address); }
 
 // R: PWM_SCALE
-uint32_t TMC2160Stepper::PWM_SCALE() {
-  return read(TMC2160_n::PWM_SCALE_t::address);
-}
-uint8_t TMC2160Stepper::pwm_scale_sum()   { TMC2160_n::PWM_SCALE_t r{0}; r.sr = PWM_SCALE(); return r.pwm_scale_sum; }
+uint32_t TMC2160Stepper::PWM_SCALE() { return read(TMC2160_n::PWM_SCALE_t::address); }
+uint8_t  TMC2160Stepper::pwm_scale_sum()  { TMC2160_n::PWM_SCALE_t r{0}; r.sr = PWM_SCALE(); return r.pwm_scale_sum;  }
 uint16_t TMC2160Stepper::pwm_scale_auto() { TMC2160_n::PWM_SCALE_t r{0}; r.sr = PWM_SCALE(); return r.pwm_scale_auto; }
