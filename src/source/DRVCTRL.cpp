@@ -17,11 +17,11 @@ uint32_t TMC2660Stepper::DRVCTRL() {
 }
 void TMC2660Stepper::DRVCTRL(uint32_t data) {
   if (sdoff() == 1) {
-  	DRVCTRL_1_register.sr = data;
-  	write(DRVCTRL_1_register.address, DRVCTRL_1_register.sr);
+    DRVCTRL_1_register.sr = data;
+    write(DRVCTRL_1_register.address, DRVCTRL_1_register.sr);
   } else {
-  	DRVCTRL_0_register.sr = data;
-  	write(DRVCTRL_0_register.address, DRVCTRL_0_register.sr);
+    DRVCTRL_0_register.sr = data;
+    write(DRVCTRL_0_register.address, DRVCTRL_0_register.sr);
   }
 }
 
@@ -43,4 +43,4 @@ void TMC2660Stepper::mres(uint8_t B) { if (sdoff()) return; SET_REG0(mres);   }
 
 bool    TMC2660Stepper::intpol() { if (sdoff()) sdoff(0); GET_REG0(intpol); }
 bool    TMC2660Stepper::dedge()  { if (sdoff()) sdoff(0); GET_REG0(dedge);  }
-uint8_t TMC2660Stepper::mres()	 { if (sdoff()) sdoff(0); GET_REG0(mres);   }
+uint8_t TMC2660Stepper::mres()   { if (sdoff()) sdoff(0); GET_REG0(mres);   }

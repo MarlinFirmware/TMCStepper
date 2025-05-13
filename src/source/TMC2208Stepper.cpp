@@ -194,7 +194,7 @@ void TMC2208Stepper::write(uint8_t addr, uint32_t regVal) {
 
   preWriteCommunication();
 
-  for (uint8_t i=0; i<=len; i++) {
+  for (uint8_t i = 0; i <= len; i++) {
     bytesWritten += serial_write(datagram[i]);
   }
   postWriteCommunication();
@@ -212,7 +212,7 @@ uint64_t TMC2208Stepper::_sendDatagram(uint8_t datagram[], const uint8_t len, ui
     }
   #endif
 
-  for (int i=0; i<=len; i++) serial_write(datagram[i]);
+  for (int i = 0; i <= len; i++) serial_write(datagram[i]);
 
   #if defined(ARDUINO_ARCH_AVR)
     if (RXTX_pin > 0) {
@@ -249,7 +249,7 @@ uint64_t TMC2208Stepper::_sendDatagram(uint8_t datagram[], const uint8_t len, ui
   ms = millis();
   timeout = this->abort_window;
 
-  for (uint8_t i=0; i<5;) {
+  for (uint8_t i = 0; i < 5;) {
     uint32_t ms2 = millis();
     if (ms2 != ms) {
       // 1ms tick

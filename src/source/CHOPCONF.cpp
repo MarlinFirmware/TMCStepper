@@ -105,7 +105,7 @@ void     TMC2660Stepper::CHOPCONF(uint32_t data) {
   write(CHOPCONF_register.address, CHOPCONF_register.sr);
 }
 
-void TMC2660Stepper::toff(uint8_t B) 	{
+void TMC2660Stepper::toff(uint8_t B) {
   SET_REG(toff);
   if (B>0) _savedToff = B;
 }

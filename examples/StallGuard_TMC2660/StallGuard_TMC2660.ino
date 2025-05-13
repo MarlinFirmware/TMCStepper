@@ -57,7 +57,7 @@ ISR(TIMER1_COMPA_vect){
 void setup() {
   SPI.begin();
   Serial.begin(250000);         // Init serial port and set baudrate
-  while(!Serial);               // Wait for serial port to connect
+  while (!Serial);               // Wait for serial port to connect
   Serial.println("\nStart...");
 
   pinMode(EN_PIN, OUTPUT);
@@ -100,7 +100,7 @@ void loop() {
   static uint32_t last_time=0;
   uint32_t ms = millis();
 
-  while(Serial.available() > 0) {
+  while (Serial.available() > 0) {
     int8_t read_byte = Serial.read();
     #ifdef USING_TMC2660
       if (read_byte == '0')      { TIMSK1 &= ~(1 << OCIE1A); driver.toff(0); }
@@ -113,7 +113,7 @@ void loop() {
     else if (read_byte == '-') { if (OCR1A < MIN_SPEED) OCR1A += 20; }
   }
 
-  if((ms-last_time) > 100) { //run every 0.1s
+  if ((ms-last_time) > 100) { //run every 0.1s
     last_time = ms;
 
     READ_RDSEL10_t data{0};

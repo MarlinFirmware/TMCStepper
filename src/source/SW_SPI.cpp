@@ -29,7 +29,7 @@ uint8_t SW_SPIClass::transfer(uint8_t ulVal) {
   uint8_t value = 0;
   writeSCK_L;
 
-  for (uint8_t i=7 ; i>=1 ; i--) {
+  for (uint8_t i = 7 ; i>=1 ; i--) {
     // Write bit
     !!(ulVal & (1 << i)) ? writeMOSI_H : writeMOSI_L;
     // Start clock pulse

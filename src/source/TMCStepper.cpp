@@ -42,11 +42,11 @@ uint16_t TMCStepper::cs2rms(uint8_t CS) {
 }
 
 void TMCStepper::rms_current(uint16_t mA) {
-  uint8_t CS = 32.0*1.41421*mA/1000.0*(Rsense+0.02)/0.325 - 1;
+  uint8_t CS = 32.0*1.41421*mA / 1000.0*(Rsense + 0.02) / 0.325 - 1;
   // If Current Scale is too low, turn on high sensitivity R_sense and calculate again
   if (CS < 16) {
     vsense(true);
-    CS = 32.0*1.41421*mA/1000.0*(Rsense+0.02)/0.180 - 1;
+    CS = 32.0*1.41421*mA / 1000.0*(Rsense + 0.02) / 0.180 - 1;
   } else { // If CS >= 16, turn off high_sense_r
     vsense(false);
   }
@@ -77,7 +77,7 @@ void   TMCStepper::hysteresis_end(int8_t value) { hend(value + 3); }
 int8_t TMCStepper::hysteresis_end() { return hend()-3; };
 
 void    TMCStepper::hysteresis_start(uint8_t value) { hstrt(value - 1); }
-uint8_t TMCStepper::hysteresis_start() { return hstrt()+1; }
+uint8_t TMCStepper::hysteresis_start() { return hstrt() + 1; }
 
 void TMCStepper::microsteps(uint16_t ms) {
   switch (ms) {

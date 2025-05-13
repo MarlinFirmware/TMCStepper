@@ -2,8 +2,8 @@
 #define TMCStepper_UTILITY_h
 
 void print_HEX(uint32_t data) {
-  for (uint8_t B=24; B>=4; B-=8){
-    Serial.print((data>>(B+4))&0xF, HEX);
+  for (uint8_t B = 24; B>=4; B -= 8){
+    Serial.print((data>>(B + 4))&0xF, HEX);
     Serial.print((data>>B)&0xF, HEX);
     Serial.print(":");
   }

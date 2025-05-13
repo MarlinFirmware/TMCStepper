@@ -82,7 +82,7 @@ void TMC2160Stepper::rms_current(uint16_t mA) {
 
   do {
     uint32_t denominator = V_fs * 0xFFFF >> 8;
-    denominator *= CS+1;
+    denominator *= CS + 1;
     scaler = numerator / denominator;
 
     if (scaler > 255) scaler = 0; // Maximum
@@ -104,9 +104,9 @@ void TMC2160Stepper::rms_current(uint16_t mA, float mult) {
 uint16_t TMC2160Stepper::cs2rms(uint8_t CS) {
     uint16_t scaler = GLOBAL_SCALER();
     if (!scaler) scaler = 256;
-    uint32_t numerator = scaler * (CS+1);
+    uint32_t numerator = scaler * (CS + 1);
     numerator *= 325;
-    numerator >>= (8+5); // Divide by 256 and 32
+    numerator >>= (8 + 5); // Divide by 256 and 32
     numerator *= 1000000;
     uint32_t denominator = Rsense*1000;
     denominator *= 1414;

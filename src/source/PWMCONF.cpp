@@ -14,7 +14,7 @@
 //
 
 uint32_t TMC2130Stepper::PWMCONF() { return PWMCONF_register.sr; }
-void 	 TMC2130Stepper::PWMCONF(uint32_t input) {
+void    TMC2130Stepper::PWMCONF(uint32_t input) {
   PWMCONF_register.sr = input;
   write(PWMCONF_register.address, PWMCONF_register.sr);
 }
@@ -29,8 +29,8 @@ void TMC2130Stepper::freewheel( uint8_t B) { SET_REG(freewheel);     }
 uint8_t TMC2130Stepper::pwm_ampl()      { GET_REG(pwm_ampl);      }
 uint8_t TMC2130Stepper::pwm_grad()      { GET_REG(pwm_grad);      }
 uint8_t TMC2130Stepper::pwm_freq()      { GET_REG(pwm_freq);      }
-bool 	  TMC2130Stepper::pwm_autoscale() { GET_REG(pwm_autoscale); }
-bool 	  TMC2130Stepper::pwm_symmetric() { GET_REG(pwm_symmetric); }
+bool     TMC2130Stepper::pwm_autoscale() { GET_REG(pwm_autoscale); }
+bool     TMC2130Stepper::pwm_symmetric() { GET_REG(pwm_symmetric); }
 uint8_t TMC2130Stepper::freewheel()     { GET_REG(freewheel);     }
 
 //
@@ -66,7 +66,7 @@ uint8_t TMC2160Stepper::pwm_lim()       { return PWMCONF_register.pwm_lim;      
 //
 
 uint32_t TMC2208Stepper::PWMCONF() { return read(PWMCONF_register.address); }
-void 	 TMC2208Stepper::PWMCONF(uint32_t input) {
+void    TMC2208Stepper::PWMCONF(uint32_t input) {
   PWMCONF_register.sr = input;
   write(PWMCONF_register.address, PWMCONF_register.sr);
 }

@@ -7,7 +7,7 @@
 #include "TMC_MACROS.h"
 
 int8_t   TMC2130Stepper::chain_length = 0;
-uint32_t TMC2130Stepper::spi_speed = 16000000/8;
+uint32_t TMC2130Stepper::spi_speed = 16000000 / 8;
 
 TMC2130Stepper::TMC2130Stepper(uint16_t pinCS, float RS, int8_t link) :
   TMCStepper(RS),
@@ -247,28 +247,28 @@ void TMC2130Stepper::VDCMIN(uint32_t input) {
 ///////////////////////////////////////////////////////////////////////////////////////
 // RW: DCCTRL
 void TMC2130Stepper::DCCTRL(uint32_t input) {
-	DCCTRL_register.sr = input;
-	write(DCCTRL_register.address, DCCTRL_register.sr);
+  DCCTRL_register.sr = input;
+  write(DCCTRL_register.address, DCCTRL_register.sr);
 }
 void TMC2130Stepper::dc_time(uint16_t input) {
-	DCCTRL_register.dc_time = input;
-	write(DCCTRL_register.address, DCCTRL_register.sr);
+  DCCTRL_register.dc_time = input;
+  write(DCCTRL_register.address, DCCTRL_register.sr);
 }
 void TMC2130Stepper::dc_sg(uint8_t input) {
-	DCCTRL_register.dc_sg = input;
-	write(DCCTRL_register.address, DCCTRL_register.sr);
+  DCCTRL_register.dc_sg = input;
+  write(DCCTRL_register.address, DCCTRL_register.sr);
 }
 
-uint32_t TMC2130Stepper::DCCTRL() {	return read(DCCTRL_register.address); }
+uint32_t TMC2130Stepper::DCCTRL() {  return read(DCCTRL_register.address); }
 uint16_t TMC2130Stepper::dc_time() {
-	DCCTRL_t r{0};
+  DCCTRL_t r{0};
   r.sr = DCCTRL();
-	return r.dc_time;
+  return r.dc_time;
 }
 uint8_t  TMC2130Stepper::dc_sg() {
-	DCCTRL_t r{0};
+  DCCTRL_t r{0};
   r.sr = DCCTRL();
-	return r.dc_sg;
+  return r.dc_sg;
 }
 ///////////////////////////////////////////////////////////////////////////////////////
 // R: PWM_SCALE

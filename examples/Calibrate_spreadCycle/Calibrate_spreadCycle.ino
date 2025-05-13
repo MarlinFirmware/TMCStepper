@@ -60,9 +60,9 @@ void setup() {
     for (uint8_t i = 0; i < 60; i++) { Serial.print('.'); delay(100); }
     Serial.println(F("\nThen make sure the belt is disconnected"));
     Serial.println(F("as we will not respect endstops or physical limits"));
-    while(1) {
+    while (1) {
         Serial.println(F("Is the belt disconnected? Send 'yes' to confirm."));
-        while(!Serial.available());
+        while (!Serial.available());
         String yn = Serial.readStringUntil('\n');
         Serial.println(yn);
         if (yn == "yes") {
@@ -74,9 +74,9 @@ void setup() {
     }
 
     Serial.println(F("\nNow make sure the driver has 12V (or greater) power turned on."));
-    while(1) {
+    while (1) {
         Serial.println(F("Is VMOT power on? Send 'yes' to confirm"));
-        while(!Serial.available());
+        while (!Serial.available());
         String yn = Serial.readStringUntil('\n');
         Serial.println(yn);
         if (yn == "yes") {
@@ -144,7 +144,7 @@ void setup() {
         delay(3);
     }
 
-    while(1) {
+    while (1) {
         if (Serial.available() > 0) {
             uint8_t c = Serial.read();
             if (c == '+') {
