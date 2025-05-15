@@ -54,11 +54,13 @@ TMC2208Stepper::TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr, uint
 
 void TMC2208Stepper::begin() {
 	#if SW_CAPABLE_PLATFORM
-		beginSerial(115200);
+		#ifndef TMC2208_BAUDRATE
+			#define TMC2208_BAUDRATE 115200
+		#endif
+		beginSerial(TMC2208_BAUDRATE);
 	#endif
 	pdn_disable(true);
 	mstep_reg_select(true);
-
 }
 
 void TMC2208Stepper::defaults() {
@@ -315,6 +317,7 @@ uint32_t TMC2208Stepper::read(uint8_t addr) {
 
 	for (uint8_t i = 0; i < max_retries; i++) {
 		preReadCommunication();
+		delay(3);
 		out = _sendDatagram(datagram, len, abort_window);
 		postReadCommunication();
 
