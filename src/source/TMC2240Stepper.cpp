@@ -190,6 +190,13 @@ uint32_t TMC2240Stepper::IOIN() {
 	return read(TMC2240_n::IOIN_t::address);
 }
 
+// W: GLOBAL_SCALER
+uint8_t TMC2240Stepper::GLOBAL_SCALER() { return GLOBAL_SCALER_register.sr; }
+void TMC2240Stepper::GLOBAL_SCALER(uint8_t input) {
+  GLOBAL_SCALER_register.sr = input;
+  write(GLOBAL_SCALER_register.address, GLOBAL_SCALER_register.sr);
+}
+
 bool TMC2240Stepper::step()			    { TMC2240_n::IOIN_t r{0}; r.sr = IOIN(); return r.step;		}
 bool TMC2240Stepper::dir()			    { TMC2240_n::IOIN_t r{0}; r.sr = IOIN(); return r.dir;		}
 bool TMC2240Stepper::encb()			    { TMC2240_n::IOIN_t r{0}; r.sr = IOIN(); return r.encb;		}
@@ -242,12 +249,12 @@ uint8_t TMC2240Stepper::pwm_grad_auto() { PWM_AUTO_t r{0}; r.sr = PWM_AUTO(); re
 /**
  * 0:1A  1:2A  2:3A  3:3A
  */
-#define TMC2240_CURRENT_RANGE   2
+// #define TMC2240_CURRENT_RANGE   2
 
 /**
  * ('rref', 12000, minval=12000, maxval=60000)
  */
-#define TMC2240_Rref            12000
+// #define TMC2240_Rref            12000
 
 /*
   Requested current = mA = I_rms/1000
@@ -266,48 +273,35 @@ uint8_t TMC2240Stepper::pwm_grad_auto() { PWM_AUTO_t r{0}; r.sr = PWM_AUTO(); re
 */
 
 uint16_t TMC2240Stepper::cs2rms(uint8_t CS) {
-	uint32_t globalscaler = 0;
-	float MA,IFS_current_RMS = 0;
-	IFS_current_RMS	= calc_IFS_current_RMS(TMC2240_CURRENT_RANGE,TMC2240_Rref);
-	globalscaler	= global_scaler();
+	float IFS_current_RMS	= calc_IFS_current_RMS();
+	uint32_t globalscaler	= GLOBAL_SCALER();
 	return (float)(CS+0.5)*(globalscaler * IFS_current_RMS)/256/32*1000;
 }
 
-float TMC2240Stepper::calc_IFS_current_RMS(int8_t range, uint32_t Rref) {
+
+float TMC2240Stepper::calc_IFS_current_RMS() {
 	uint32_t Kifs_values[] = {11750,24000,36000,36000};
-	float IFS_current_RMS = 0;
-
-	IFS_current_RMS=(float)(((float)(Kifs_values[range]) /Rref) /1.414);
-
-	return IFS_current_RMS;
+	uint32_t Kifs = Kifs_values[DRV_CONF_register.current_range];
+	return ((float)Kifs /Rref) /1.414;
 }
 
 uint32_t TMC2240Stepper::set_globalscaler(float current, float IFS_current_RMS) {
-	uint32_t globalscaler = 0;
-	current /= 1000;
-	globalscaler = int(((current * 256) / IFS_current_RMS) + 0.5);
+	uint32_t globalscaler = ((current * 256) / IFS_current_RMS) + 0.5;
 
-	if (globalscaler < 32)globalscaler = 32;
-	if (globalscaler >= 256)globalscaler = 0;
-	global_scaler(globalscaler);
+	if (globalscaler < 32) globalscaler = 32;
+	if (globalscaler >= 256) globalscaler = 0;
+	GLOBAL_SCALER(globalscaler);
 	return globalscaler;
 }
 
 void TMC2240Stepper::rms_current(uint16_t mA) {
-	uint32_t globalscaler,CS=0;
-	float MA,IFS_current_RMS=0;
-	IFS_current_RMS	= calc_IFS_current_RMS(TMC2240_CURRENT_RANGE,TMC2240_Rref);
-	globalscaler	= set_globalscaler(mA,IFS_current_RMS);
-	MA = (float)mA / 1000;
-    //globalscaler    = global_scaler();
-	CS = (int)(((MA * 256 * 32) / (globalscaler * IFS_current_RMS))-1+0.5);
-    //MA = (float)mA/1000;
-    //CS = (int)(((float)(32* MA))/IFS_current_RMS )-0.5;
-	if (CS >= 31) CS = 31;
-	if (CS <= 0) CS = 0;
-    //CS = 30;
-    //SERIAL_ECHOLNPGM("CS=", CS);
-	irun(CS);
+	float IFS_current_RMS	= calc_IFS_current_RMS();
+	float mA_float = (float)mA / 1000;
+	uint32_t globalscaler	= set_globalscaler(mA_float, IFS_current_RMS);
+	int32_t CS = mA_float * globalscaler/256.0 * IFS_current_RMS * 32 - 1 + 0.5;
+	if (CS > 31) CS = 31;
+	if (CS < 0) CS = 0;
+  irun(CS);
 	ihold(CS*holdMultiplier);
 }
 

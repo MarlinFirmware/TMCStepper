@@ -1126,6 +1126,10 @@ class TMC2240Stepper {
 		TMC2240Stepper(uint16_t pinCS, int8_t link_index = -1);
 		TMC2240Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1);
 
+		/**
+		 * ('rref', 12000, minval=12000, maxval=60000)
+		 */
+		uint32_t Rref = 12000;
 		void begin();
 		void defaults();
 		void setSPISpeed(uint32_t speed);
@@ -1212,9 +1216,7 @@ class TMC2240Stepper {
 		uint32_t DRV_CONF();
 
 		void GLOBAL_SCALER(uint8_t input);
-		uint32_t GLOBAL_SCALER();
-		void 	global_scaler(uint8_t B);
-		uint8_t global_scaler();
+		uint8_t GLOBAL_SCALER();
 
 		// W: IHOLD_IRUN
 		void IHOLD_IRUN(uint32_t input);
@@ -1378,7 +1380,7 @@ class TMC2240Stepper {
 		struct TSTEP_t 		{ constexpr static uint8_t address = 0x12; };
 		struct MSCNT_t 		{ constexpr static uint8_t address = 0x6A; };
 
-		float 		calc_IFS_current_RMS(int8_t range, uint32_t Rref);
+		float 		calc_IFS_current_RMS();
 		uint32_t	set_globalscaler(float current, float IFS_current_RMS);
 
 		void beginTransaction();
