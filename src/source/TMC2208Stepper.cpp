@@ -49,7 +49,7 @@ TMC2208Stepper::TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr, uint
 
 void TMC2208Stepper::begin() {
 	#if SW_CAPABLE_PLATFORM
-		beginSerial(9600);
+		beginSerial(115200);
 	#endif
 	pdn_disable(true);
 	mstep_reg_select(true);
