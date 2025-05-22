@@ -3,6 +3,7 @@
  * SERIAL_SWITCH.cpp - Serial Switch for Arduino / Raspberry Pi
  */
 #include "SERIAL_SWITCH.h"
+#include "ESP32_Adapter.h"
 
 SSwitch::SSwitch( const uint16_t pin1, const uint16_t pin2, const uint8_t address) :
   p1(pin1),
