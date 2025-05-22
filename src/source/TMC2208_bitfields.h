@@ -1,3 +1,17 @@
+/**
+ * TMCStepper library by @teemuatlut
+ * TMC2208_bitfields.h
+ *
+ * TMC2208 (TMC2209, TMC2224) hardware register bit fields.
+ *
+ * Overriding TMC2130:
+ * GCONF, FACTORY_CONF, CHOPCONF
+ * PWMCONF, PWM_SCALE
+ * IOIN
+ * VACTUAL
+ * MSCURACT
+ * DRV_STATUS
+ */
 #pragma once
 #pragma pack(push, 1)
 

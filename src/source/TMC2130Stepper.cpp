@@ -1,3 +1,8 @@
+/**
+ * TMCStepper library by @teemuatlut
+ * TMC2130Stepper.cpp
+ * Implementing methods for TMC2130 (TMC2160, TMC5130, TMC5160, TMC5161)
+ */
 #include "TMCStepper.h"
 #include "TMC_MACROS.h"
 

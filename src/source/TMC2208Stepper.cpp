@@ -1,3 +1,8 @@
+/**
+ * TMCStepper library by @teemuatlut
+ * TMC2208Stepper.cpp
+ * Implementing methods for TMC2208 (TMC2209, TMC22224)
+ */
 #include "TMCStepper.h"
 #include "TMC_MACROS.h"
 #include "SERIAL_SWITCH.h"

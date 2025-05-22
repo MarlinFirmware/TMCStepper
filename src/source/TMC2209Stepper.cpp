@@ -1,3 +1,8 @@
+/**
+ * TMCStepper library by @teemuatlut
+ * TMC2209Stepper.cpp
+ * Implementing methods for TMC2209 (TMC2224)
+ */
 #include "TMCStepper.h"
 
 uint32_t TMC2209Stepper::IOIN() {
