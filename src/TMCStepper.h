@@ -32,6 +32,9 @@
 	#include <bcm2835.h>
 	#include "source/bcm2835_spi.h"
 	#include "source/bcm2835_stream.h"
+#elif defined(ESP_PLATFORM)
+	#include "source/ESP32_Serial.h"
+	#include "source/ESP32_SPI.h"
 #elif defined(__has_include)
 	#if __has_include(<Arduino.h>)
 		#include <Arduino.h>

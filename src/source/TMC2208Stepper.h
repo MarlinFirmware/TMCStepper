@@ -10,10 +10,17 @@
 
 class TMC2208Stepper : public TMCStepper {
 	public:
-		TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr, uint16_t mul_pin1, uint16_t mul_pin2);
-		TMC2208Stepper(Stream * SerialPort, float RS) :
-			TMC2208Stepper(SerialPort, RS, TMC2208_SLAVE_ADDR)
-			{}
+		#ifdef ESP_PLATFORM
+			TMC2208Stepper( ESP32_Serial * SerialPort, float RS, uint8_t addr, uint16_t mul_pin1, uint16_t mul_pin2);
+			TMC2208Stepper( ESP32_Serial * SerialPort, float RS) :
+				TMC2208Stepper(SerialPort, RS, TMC2208_SLAVE_ADDR)
+				{}
+		#else
+			TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr, uint16_t mul_pin1, uint16_t mul_pin2);
+			TMC2208Stepper(Stream * SerialPort, float RS) :
+				TMC2208Stepper(SerialPort, RS, TMC2208_SLAVE_ADDR)
+				{}
+		#endif
 		#if TMCSTEPPER_SW_SERIAL
 			TMC2208Stepper(uint16_t SW_RX_pin, uint16_t SW_TX_pin, float RS) :
 				TMC2208Stepper(SW_RX_pin, SW_TX_pin, RS, TMC2208_SLAVE_ADDR)
@@ -22,7 +29,7 @@ class TMC2208Stepper : public TMCStepper {
 			__attribute__((deprecated("Boolean argument has been deprecated and does nothing")))
 			TMC2208Stepper(uint16_t SW_RX_pin, uint16_t SW_TX_pin, float RS, bool) :
 				TMC2208Stepper(SW_RX_pin, SW_TX_pin, RS, TMC2208_SLAVE_ADDR)
-				{};
+				{}
 		#else
 			TMC2208Stepper(uint16_t, uint16_t, float) = delete; // Your platform does not currently support Software Serial
 		#endif

@@ -10,8 +10,13 @@
 
 class TMC2209Stepper : public TMC2208Stepper {
 	public:
-		TMC2209Stepper(Stream * SerialPort, float RS, uint8_t addr) :
-			TMC2208Stepper(SerialPort, RS, addr) {}
+		#ifdef ESP_PLATFORM
+			TMC2209Stepper(ESP32_Serial * SerialPort, float RS, uint8_t addr);
+			ESP32_Serial * HWSerial = nullptr;
+		#else
+			TMC2209Stepper(Stream * SerialPort, float RS, uint8_t addr) :
+				TMC2208Stepper(SerialPort, RS, addr) {}
+		#endif
 
 		#if TMCSTEPPER_SW_SERIAL
 			TMC2209Stepper(uint16_t SW_RX_pin, uint16_t SW_TX_pin, float RS, uint8_t addr) :

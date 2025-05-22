@@ -14,6 +14,7 @@
 		#include <Arduino.h>
 	#endif
 #endif
+#include <cstdint>
 
 #include "TMC_platforms.h"
 

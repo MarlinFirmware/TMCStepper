@@ -4,6 +4,8 @@
  *
  * Define SPI accessors for AVR, DUE (700kHz), LPC1768, STM32, DUE (116kHz)
  */
+#include "ESP32_Adapter.h"
+
 #ifdef ARDUINO_ARCH_AVR // 125kHz
   typedef volatile uint8_t* fastio_reg;
   typedef uint8_t fastio_bm;
