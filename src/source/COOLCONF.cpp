@@ -62,3 +62,15 @@ uint8_t TMC2209Stepper::seup()	{ GET_REG(seup);	}
 uint8_t TMC2209Stepper::semax()	{ GET_REG(semax);	}
 uint8_t TMC2209Stepper::sedn()	{ GET_REG(sedn);	}
 bool 	TMC2209Stepper::seimin(){ GET_REG(seimin);	}
+
+//
+// TMC2240
+//
+
+void TMC2240Stepper::sgt( int8_t B ) { SET_REG(sgt); }
+int8_t TMC2240Stepper::sgt() {
+	// Two's complement in a 7bit value
+	int8_t val = (COOLCONF_register.sgt &  0x40) << 1; // Isolate sign bit
+	val |= COOLCONF_register.sgt & 0x7F;
+	return val;
+}
