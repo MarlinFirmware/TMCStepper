@@ -35,10 +35,8 @@ bool 	TMC2130Stepper::seimin(){ GET_REG(seimin);	}
 bool 	TMC2130Stepper::sfilt()	{ GET_REG(sfilt);	}
 
 int8_t TMC2130Stepper::sgt() {
-	// Two's complement in a 7bit value
-	int8_t val = (COOLCONF_register.sgt &  0x40) << 1; // Isolate sign bit
-	val |= COOLCONF_register.sgt & 0x7F;
-	return val;
+	uint8_t raw = COOLCONF_register.sgt; // "int7_t"
+	return (raw & 0x40) ? raw - 128 : raw;
 }
 
 //
@@ -69,8 +67,6 @@ bool 	TMC2209Stepper::seimin(){ GET_REG(seimin);	}
 
 void TMC2240Stepper::sgt( int8_t B ) { SET_REG(sgt); }
 int8_t TMC2240Stepper::sgt() {
-	// Two's complement in a 7bit value
-	int8_t val = (COOLCONF_register.sgt &  0x40) << 1; // Isolate sign bit
-	val |= COOLCONF_register.sgt & 0x7F;
-	return val;
+	uint8_t raw = COOLCONF_register.sgt; // "int7_t"
+	return (raw & 0x40) ? raw - 128 : raw;
 }
