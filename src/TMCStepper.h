@@ -81,7 +81,7 @@
 #define INIT2240_REGISTER(REG) TMC2240_n::REG##_t REG##_register = TMC2240_n::REG##_t
 #define SET_ALIAS(TYPE, DRIVER, NEW, ARG, OLD) TYPE (DRIVER::*NEW)(ARG) = &DRIVER::OLD
 
-#define TMCSTEPPER_VERSION 0x000801 // v0.8.1 - Marlin bumps minor version
+#define TMCSTEPPER_VERSION 0x000802 // v0.8.2 - Marlin bumps minor version
 
 class TMCStepper {
 	public:
