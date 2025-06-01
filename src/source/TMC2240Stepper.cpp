@@ -429,3 +429,75 @@ void TMC2240Stepper::sg4_angle_offset(uint8_t B) {
 // R:SG4_RESULT
 uint32_t TMC2240Stepper::SG4_RESULT()	{ return read(SG4_RESULT_register.address); }
 uint16_t TMC2240Stepper::sg4_result()	{ TMC2240_n::SG4_RESULT_t r; r.sr = SG4_RESULT(); return r.sg4_result; }
+
+// RW: ADC_VSUPPLY_AIN
+uint32_t TMC2240Stepper::ADC_VSUPPLY_AIN() {
+	return read(TMC2240_n::ADC_VSUPPLY_AIN_t::address);
+}
+
+// RW: ADC_TEMP
+uint32_t TMC2240Stepper::ADC_TEMP() {
+	return read(TMC2240_n::ADC_TEMP_t::address);
+}
+
+// RW: OTW_OV_VTH
+uint32_t TMC2240Stepper::OTW_OV_VTH() {
+	return read(TMC2240_n::OTW_OV_VTH_t::address);
+}
+
+void TMC2240Stepper::OTW_OV_VTH(uint32_t input) {
+	OTW_OV_VTH_register.sr = input;
+	write(OTW_OV_VTH_register.address, OTW_OV_VTH_register.sr);
+}
+
+// R: AIN Voltage (ADC_AIN × 305.2 µV)
+float TMC2240Stepper::get_ain_voltage() {
+	TMC2240_n::ADC_VSUPPLY_AIN_t r;
+	r.sr = ADC_VSUPPLY_AIN();
+	return r.adc_ain * 0.0003052f;
+}
+
+// R: Supply Voltage (ADC_VSUPPLY × 9.732 mV)
+float TMC2240Stepper::get_vsupply_voltage() {
+	TMC2240_n::ADC_VSUPPLY_AIN_t r;
+	r.sr = ADC_VSUPPLY_AIN();
+	return r.adc_vsupply * 0.009732f;
+}
+
+// R: Internal temperature in °C
+float TMC2240Stepper::get_chip_temperature() {
+	TMC2240_n::ADC_TEMP_t r;
+	r.sr = ADC_TEMP();
+	return (r.adc_temp - 2038.0f) * (1.0f / 7.7f);
+}
+
+// RW: OVERTEMPPREWARNING_VTH (°C)
+float TMC2240Stepper::get_overtemp_prewarn_celsius() {
+	TMC2240_n::OTW_OV_VTH_t r;
+	r.sr = OTW_OV_VTH();
+	return (r.overtemp_prewarn_vth - 2038.0f) * (1.0f / 7.7f);
+}
+
+void TMC2240Stepper::set_overtemp_prewarn_celsius(float tempC) {
+	uint16_t adc_temp_th = (uint16_t)(tempC * 7.7f + 2038.0f + 0.5f);
+	TMC2240_n::OTW_OV_VTH_t r;
+	r.sr = OTW_OV_VTH();
+	r.overtemp_prewarn_vth = adc_temp_th;
+	write(r.address, r.sr);
+}
+
+// RW: OVERVOLTAGE_VTH (V)
+float TMC2240Stepper::get_overvoltage_threshold_voltage() {
+	TMC2240_n::OTW_OV_VTH_t r;
+	r.sr = OTW_OV_VTH();
+	return r.overvoltage_vth * 0.009732f;
+}
+
+void TMC2240Stepper::set_overvoltage_threshold_voltage(float volts) {
+	uint16_t adc_vth = (uint16_t)(volts / 0.009732f + 0.5f);
+	TMC2240_n::OTW_OV_VTH_t r;
+	r.sr = OTW_OV_VTH();
+	r.overvoltage_vth = adc_vth;
+	write(r.address, r.sr);
+}
+

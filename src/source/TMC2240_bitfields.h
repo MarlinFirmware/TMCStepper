@@ -332,7 +332,42 @@ namespace TMC2240_n {
       };
     };
   };
+  struct ADC_VSUPPLY_AIN_t {
+    constexpr static uint8_t address = 0x50;
+    union {
+      uint32_t sr;
+      struct {
+        uint16_t adc_vsupply : 13;
+        uint16_t adc_ain     : 13;
+        uint8_t              : 6; // reserved / padding
+      };
+    };
+  };
 
+  struct ADC_TEMP_t {
+    constexpr static uint8_t address = 0x51;
+    union {
+      uint32_t sr;
+      struct {
+        uint16_t adc_temp : 13;
+        uint32_t          : 19; // reserved
+      };
+    };
+  };
+
+  struct OTW_OV_VTH_t {
+    constexpr static uint8_t address = 0x52;
+    union {
+      uint32_t sr;
+      struct {
+        uint16_t overvoltage_vth       : 13;
+        uint8_t                        : 3;
+        uint16_t overtemp_prewarn_vth  : 13;
+        uint8_t                        : 3;
+      };
+    };
+  };
+    
 } // TMC2240_n
 
 #pragma pack(pop)
