@@ -352,16 +352,16 @@ uint16_t TMC2240Stepper::microsteps() {
 
 // R+C: GSTAT
 uint8_t TMC2240Stepper::GSTAT()			{ return read(TMC2240_n::GSTAT_t::address); }
-void  TMC2240Stepper::GSTAT(uint8_t)	{ write(TMC2240_n::GSTAT_t::address, 0b111); }
-bool  TMC2240Stepper::reset()			{ TMC2240_n::GSTAT_t r; r.sr = GSTAT(); return r.reset; }
-bool  TMC2240Stepper::drv_err()			{ TMC2240_n::GSTAT_t r; r.sr = GSTAT(); return r.drv_err; }
-bool  TMC2240Stepper::uv_cp()			{ TMC2240_n::GSTAT_t r; r.sr = GSTAT(); return r.uv_cp; }
-bool  TMC2240Stepper::register_reset()	{ TMC2240_n::GSTAT_t r; r.sr = GSTAT(); return r.register_reset; }
-bool  TMC2240Stepper::vm_uvlo()			{ TMC2240_n::GSTAT_t r; r.sr = GSTAT(); return r.vm_uvlo; }
+void TMC2240Stepper::GSTAT(uint8_t)		{ write(TMC2240_n::GSTAT_t::address, 0b111); }
+bool TMC2240Stepper::reset()			{ TMC2240_n::GSTAT_t r; r.sr = GSTAT(); return r.reset; }
+bool TMC2240Stepper::drv_err()			{ TMC2240_n::GSTAT_t r; r.sr = GSTAT(); return r.drv_err; }
+bool TMC2240Stepper::uv_cp()			{ TMC2240_n::GSTAT_t r; r.sr = GSTAT(); return r.uv_cp; }
+bool TMC2240Stepper::register_reset()	{ TMC2240_n::GSTAT_t r; r.sr = GSTAT(); return r.register_reset; }
+bool TMC2240Stepper::vm_uvlo()			{ TMC2240_n::GSTAT_t r; r.sr = GSTAT(); return r.vm_uvlo; }
 
 uint8_t TMC2240Stepper::test_connection() {
-  	uint32_t drv_status = DRV_STATUS();
-  	switch (drv_status) {
+	uint32_t drv_status = DRV_STATUS();
+	switch (drv_status) {
 		case 0xFFFFFFFF: return 1;
 		case 0: return 2;
 		default: return 0;
@@ -500,4 +500,3 @@ void TMC2240Stepper::set_overvoltage_threshold_voltage(float volts) {
 	r.overvoltage_vth = adc_vth;
 	write(r.address, r.sr);
 }
-

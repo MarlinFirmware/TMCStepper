@@ -332,6 +332,7 @@ namespace TMC2240_n {
       };
     };
   };
+
   struct ADC_VSUPPLY_AIN_t {
     constexpr static uint8_t address = 0x50;
     union {
@@ -367,7 +368,7 @@ namespace TMC2240_n {
       };
     };
   };
-    
+
 } // TMC2240_n
 
 #pragma pack(pop)

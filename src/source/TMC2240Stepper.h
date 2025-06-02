@@ -287,10 +287,10 @@ class TMC2240Stepper {
 		float get_vsupply_voltage();   // VSUPPLY × 9.732 mV
 		float get_chip_temperature();  // (ADC_TEMP - 2038) / 7.7
 		float get_overtemp_prewarn_celsius();
-		void set_overtemp_prewarn_celsius(float tempC);		
+		void set_overtemp_prewarn_celsius(float tempC);
 		float get_overvoltage_threshold_voltage();
 		void set_overvoltage_threshold_voltage(float volts);
-				
+
 		uint8_t status_response;
 
 	protected:
@@ -314,9 +314,9 @@ class TMC2240Stepper {
 		INIT2240_REGISTER(PWM_AUTO);		// 32b
 		INIT2240_REGISTER(SG4_THRS);		// 32b
 		INIT2240_REGISTER(SG4_RESULT);		// 32b
-		INIT2240_REGISTER(ADC_VSUPPLY_AIN);  // 0x50
-		INIT2240_REGISTER(ADC_TEMP);         // 0x51
-		INIT2240_REGISTER(OTW_OV_VTH);       // 0x52
+		INIT2240_REGISTER(ADC_VSUPPLY_AIN);	// 0x50
+		INIT2240_REGISTER(ADC_TEMP);		// 0x51
+		INIT2240_REGISTER(OTW_OV_VTH);		// 0x52
 
 		//INIT2240_REGISTER(SG4_IND);
 
