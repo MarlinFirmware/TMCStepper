@@ -19,7 +19,7 @@ namespace TMC2240_n {
   struct GCONF_t {
     constexpr static uint8_t address = 0x00;
     union {
-      uint16_t sr;
+      uint32_t sr;
       struct {
         bool                   : 1, // unused
               fast_standstill  : 1,
@@ -32,6 +32,7 @@ namespace TMC2240_n {
               diag1_stall      : 1,
               diag1_index      : 1,
               diag1_onstate    : 1,
+                               : 1, // unused
               diag0_pushpull   : 1,
               diag1_pushpull   : 1,
               small_hysteresis : 1,
