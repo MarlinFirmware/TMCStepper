@@ -22,8 +22,9 @@
 #include "TMC_MACROS.h"
 
 // Make sure the endianness is correct
-constexpr GCONF_t test_gconf{ .sr = 0x00000004 };
-static_assert(test_gconf.en_pwm_mode, "TMCStepper does not currently support Big Endian targets!");
+#if __BYTE_ORDER__ != __ORDER_LITTLE_ENDIAN__
+  #error "TMCStepper does not currently support Big Endian targets!"
+#endif
 
 /*
   Requested current = mA = I_rms/1000
