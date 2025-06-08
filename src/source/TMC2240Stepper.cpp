@@ -191,7 +191,7 @@ void TMC2240Stepper::push() {
 	TPOWERDOWN(TPOWERDOWN_register.sr);
 	TPWMTHRS(TPWMTHRS_register.sr);
 	GCONF(GCONF_register.sr);
-	SLAVECONF(SLAVECONF_register.sr);
+	SLAVECONF(NODECONF_register.sr);
 	DRV_CONF(DRV_CONF_register.sr);
 	IHOLD_IRUN(IHOLD_IRUN_register.sr);
 	CHOPCONF(CHOPCONF_register.sr);
