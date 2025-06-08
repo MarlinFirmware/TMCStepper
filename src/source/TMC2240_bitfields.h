@@ -1,3 +1,4 @@
+#include <stdint.h>
 /**
  * TMCStepper library by @teemuatlut
  * TMC2240_bitfields.h
@@ -16,6 +17,7 @@
 #pragma pack(push, 1)
 
 namespace TMC2240_n {
+  // 0x00 GCONF: Global Configuration Flags (RW)
   struct GCONF_t {
     constexpr static uint8_t address = 0x00;
     union {
@@ -42,6 +44,8 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x01 GSTAT: Global Status Flags (RO)
+  // Write 1 to clear a flag
   struct GSTAT_t {
       constexpr static uint8_t address = 0x01;
       union {
@@ -56,6 +60,8 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x03 NODECONF: Node Configuration (RW)
+  // Write 0 to reset values
   struct NODECONF_t {
     constexpr static uint8_t address = 0x03;
     union {
@@ -68,6 +74,9 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x04 IOIN: I/O In (RO, mostly)
+  // Read the state of all input pins and return IC revision in high byte
+  // Write 1 to 'output' to reset
   struct IOIN_t {
     constexpr static uint8_t address = 0x04;
     union {
@@ -85,17 +94,19 @@ namespace TMC2240_n {
               comp_b        : 1,
               comp_a1_a2    : 1,
               comp_b1_b2    : 1,
-              output        : 1,
+              output        : 1, // RW
               ext_res_det   : 1,
               ext_clk       : 1,
               adc_err       : 1;
-        uint8_t  silicon_rv : 3,
+        uint8_t silicon_rv  : 3,
                             : 5, // unused
               version       : 8;
       };
     };
   };
 
+  // 0x0A DRV_CONF: Driver Configuration (RW)
+  // Write 0 to "reset" values
   struct DRV_CONF_t {
     constexpr static uint8_t address = 0x0A;
     union {
@@ -104,21 +115,24 @@ namespace TMC2240_n {
         uint8_t current_range : 2,
                               : 2,  // unused
                 slope_control : 2;
-        uint16_t              : 16; // unused
+        uint32_t              : 26; // unused
       };
     };
   };
 
+  // 0x0B GLOBAL_SCALER: Global Scaler (RW)
+  // Write 0 to reset
   struct GLOBAL_SCALER_t {
     constexpr static uint8_t address = 0x0B;
     union {
       uint8_t sr;
       struct {
-           uint8_t  GLOBALSCALER : 8;
+         uint8_t GLOBALSCALER : 8;
       };
     };
   };
 
+  // 0x10 IHOLD_IRUN: Motor Current Control (RW)
   struct IHOLD_IRUN_t {
     constexpr static uint8_t address = 0x10;
     union {
@@ -135,6 +149,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x11 TPOWERDOWN: Motor Power Down Time (RW)
   struct TPOWERDOWN_t {
     constexpr static uint8_t address = 0x11;
     union {
@@ -145,6 +160,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x12 TSTEP: Actual Step Frequency (RO)
   struct TSTEP_t {
     constexpr static uint8_t address = 0x12;
     union {
@@ -155,6 +171,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x13 TPWMTHRS: StealthChop Threshold (RW)
   struct TPWMTHRS_t {
     constexpr static uint8_t address = 0x13;
     union {
@@ -165,6 +182,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x14 TCOOLTHRS: CoolStep Threshold (RW)
   struct TCOOLTHRS_t {
     constexpr static uint8_t address = 0x14;
     union {
@@ -175,6 +193,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x15 THIGH: High Velocity Mode Threshold (RW)
   struct THIGH_t {
     constexpr static uint8_t address = 0x15;
     union {
@@ -185,6 +204,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x6C CHOPCONF: Chopper Configuration (RW)
   struct CHOPCONF_t {
     constexpr static uint8_t address = 0x6C;
     union {
@@ -211,6 +231,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x6D COOLCONF: CoolStep Configuration (RW)
   struct COOLCONF_t {
     constexpr static uint8_t address = 0x6D;
     union {
@@ -232,6 +253,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x6F DRV_STATUS: Driver Status Flags (RO)
   struct DRV_STATUS_t {
     constexpr static uint8_t address = 0x6F;
     union {
@@ -257,6 +279,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x70 PWMCONF: PWM Configuration (RW)
   struct PWMCONF_t {
     constexpr static uint8_t address = 0x70;
     union {
@@ -276,6 +299,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x71 PWM_SCALE: PWM Amplitude (RO)
   struct PWM_SCALE_t {
     constexpr static uint8_t address = 0x71;
     union {
@@ -288,6 +312,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x72 PWM_AUTO: PWM Automatic Scaling (RO)
   struct PWM_AUTO_t {
     constexpr static uint8_t address = 0x72;
     union {
@@ -301,6 +326,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x74 SG4_THRS: StallGuard4 Threshold (RW)
   struct SG4_THRS_t {
     constexpr static uint8_t address = 0x74;
     union {
@@ -314,6 +340,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x75 SG4_RESULT: StallGuard4 Result (RO)
   struct SG4_RESULT_t {
     constexpr static uint8_t address = 0x75;
     union {
@@ -325,6 +352,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x76 SG4_IND: StallGuard4 Indicators (RO)
   struct SG4_IND_t {
     constexpr static uint8_t address = 0x76;
     union {
@@ -335,6 +363,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x50 ADC_VSUPPLY_AIN: Supply & AIN ADC (RO)
   struct ADC_VSUPPLY_AIN_t {
     constexpr static uint8_t address = 0x50;
     union {
@@ -347,6 +376,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x51 ADC_TEMP: Temperature ADC (RO)
   struct ADC_TEMP_t {
     constexpr static uint8_t address = 0x51;
     union {
@@ -358,6 +388,7 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x52 OTW_OV_VTH: Overtemp/Overvoltage Thresholds (RW)
   struct OTW_OV_VTH_t {
     constexpr static uint8_t address = 0x52;
     union {

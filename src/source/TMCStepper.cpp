@@ -21,6 +21,10 @@
 #include "../TMCStepper.h"
 #include "TMC_MACROS.h"
 
+// Make sure the endianness is correct
+constexpr GCONF_t test_gconf{ .sr = 0x00000004 };
+static_assert(test_gconf.en_pwm_mode == true, "Bitfield layout mismatch: en_pwm_mode should be bit 2");
+
 /*
   Requested current = mA = I_rms/1000
   Equation for current:
