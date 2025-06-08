@@ -24,16 +24,18 @@ void TMC2208Stepper::senddelay(uint8_t B)	{ SET_REG(senddelay); }
 //
 // TMC2240
 //
+#define SET_REG_2240(SETTING) NODECONF_register.SETTING = B; write(NODECONF_register.address, NODECONF_register.sr)
+#define GET_REG_2240(SETTING) return NODECONF_register.SETTING
 
-uint16_t TMC2240Stepper::SLAVECONF() { return SLAVECONF_register.sr; }
+uint16_t TMC2240Stepper::SLAVECONF() { return NODECONF_register.sr; }
 void TMC2240Stepper::SLAVECONF(uint16_t input) {
-	SLAVECONF_register.sr = input & 0xF00;
-	write(SLAVECONF_register.address, SLAVECONF_register.sr);
+	NODECONF_register.sr = input & 0xF00;
+	write(NODECONF_register.address, NODECONF_register.sr);
 }
-uint8_t TMC2240Stepper::slaveaddr()			{ GET_REG(slaveaddr); }
-void TMC2240Stepper::slaveaddr(uint8_t B)	{ SET_REG(slaveaddr); }
-uint8_t TMC2240Stepper::senddelay()			{ GET_REG(senddelay); }
-void TMC2240Stepper::senddelay(uint8_t B)	{ SET_REG(senddelay); }
+uint8_t TMC2240Stepper::nodeaddr()			{ GET_REG_2240(nodeaddr); }
+void TMC2240Stepper::nodeaddr(uint8_t B)	{ SET_REG_2240(nodeaddr); }
+uint8_t TMC2240Stepper::senddelay()			{ GET_REG_2240(senddelay); }
+void TMC2240Stepper::senddelay(uint8_t B)	{ SET_REG_2240(senddelay); }
 
 //
 // TMC5130

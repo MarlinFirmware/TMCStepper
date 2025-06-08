@@ -75,8 +75,10 @@ class TMC2240Stepper {
 		uint16_t SLAVECONF();
 		void senddelay(uint8_t B);
 		uint8_t senddelay();
-		void slaveaddr(uint8_t B);
-		uint8_t slaveaddr();
+		void nodeaddr(uint8_t B);
+		uint8_t nodeaddr();
+		void slaveaddr(uint8_t B) { nodeaddr(B); }
+		uint8_t slaveaddr() { return nodeaddr(); }
 
 		// R: IOIN
 		uint32_t IOIN();

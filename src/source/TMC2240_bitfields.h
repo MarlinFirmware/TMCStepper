@@ -3,7 +3,7 @@
  * TMC2240_bitfields.h
  *
  * TMC2240 hardware register bit fields:
- * CHOPCONF, COOLCONF, DRV_CONF, PWMCONF, SLAVECONF
+ * CHOPCONF, COOLCONF, DRV_CONF, PWMCONF, NODECONF
  * TPOWERDOWN, TSTEP, TPWMTHRS, TCOOLTHRS, THIGH
  * SG4_THRS, SG4_RESULT, SG4_IND
  * GCONF, GSTAT
@@ -45,7 +45,7 @@ namespace TMC2240_n {
   struct GSTAT_t {
       constexpr static uint8_t address = 0x01;
       union {
-        uint8_t sr : 8;
+        uint32_t sr;
         struct {
           bool reset          : 1,
                drv_err        : 1,
@@ -56,13 +56,14 @@ namespace TMC2240_n {
     };
   };
 
-  struct SLAVECONF_t {
+  struct NODECONF_t {
     constexpr static uint8_t address = 0x03;
     union {
-      uint16_t sr : 12;
+      uint32_t sr;
       struct {
-        uint16_t  slaveaddr : 8;
+        uint8_t   nodeaddr  : 8;
         uint8_t   senddelay : 4;
+        uint32_t            : 20; // unused
       };
     };
   };
@@ -79,7 +80,7 @@ namespace TMC2240_n {
               drv_enn       : 1,
               encn          : 1,
               uart_en       : 1,
-                            : 1, // unused
+                            : 1, // reserved
               comp_a        : 1,
               comp_b        : 1,
               comp_a1_a2    : 1,
