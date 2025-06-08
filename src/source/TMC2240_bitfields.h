@@ -1,4 +1,3 @@
-#include <stdint.h>
 /**
  * TMCStepper library by @teemuatlut
  * TMC2240_bitfields.h
