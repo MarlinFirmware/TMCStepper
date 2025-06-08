@@ -39,6 +39,7 @@ namespace TMC2240_n {
               small_hysteresis : 1,
               stop_enable      : 1,
               direct_mode      : 1;
+        uint16_t               : 15; // unused
       };
     };
   };
@@ -48,13 +49,14 @@ namespace TMC2240_n {
   struct GSTAT_t {
       constexpr static uint8_t address = 0x01;
       union {
-        uint32_t sr;
+        uint8_t sr;
         struct {
           bool reset          : 1,
                drv_err        : 1,
                uv_cp          : 1,
                register_reset : 1,
-               vm_uvlo        : 1;
+               vm_uvlo        : 1,
+                              : 3; // unused
       };
     };
   };
@@ -64,11 +66,11 @@ namespace TMC2240_n {
   struct NODECONF_t {
     constexpr static uint8_t address = 0x03;
     union {
-      uint32_t sr;
+      uint16_t sr;
       struct {
-        uint8_t   nodeaddr  : 8;
-        uint8_t   senddelay : 4;
-        uint32_t            : 20; // unused
+        uint8_t   nodeaddr  : 8,
+                  senddelay : 4,
+                            : 4; // unused
       };
     };
   };
@@ -109,12 +111,12 @@ namespace TMC2240_n {
   struct DRV_CONF_t {
     constexpr static uint8_t address = 0x0A;
     union {
-      uint32_t sr;
+      uint8_t sr;
       struct {
         uint8_t current_range : 2,
                               : 2,  // unused
-                slope_control : 2;
-        uint32_t              : 26; // unused
+                slope_control : 2,
+                              : 2;  // unused
       };
     };
   };
@@ -143,7 +145,8 @@ namespace TMC2240_n {
                        : 3, // unused
             iholddelay : 4,
                        : 4, // unused
-            irundelay  : 4;
+            irundelay  : 4,
+                       : 4; // unused
       };
     };
   };
@@ -152,9 +155,9 @@ namespace TMC2240_n {
   struct TPOWERDOWN_t {
     constexpr static uint8_t address = 0x11;
     union {
-      uint32_t sr;
+      uint8_t sr;
       struct {
-        uint16_t TPOWERDOWN : 8;
+        uint8_t TPOWERDOWN;
       };
     };
   };
@@ -166,6 +169,7 @@ namespace TMC2240_n {
       uint32_t sr;
       struct {
         uint32_t  tstep : 20;
+        uint16_t        : 12; // unused
       };
     };
   };
@@ -177,6 +181,7 @@ namespace TMC2240_n {
       uint32_t sr;
       struct {
         uint32_t  tpwmthrs : 20;
+        uint16_t           : 12; // unused
       };
     };
   };
@@ -188,6 +193,7 @@ namespace TMC2240_n {
       uint32_t sr;
       struct {
         uint32_t  tcoolthrs : 20;
+        uint16_t            : 12; // unused
       };
     };
   };
@@ -199,6 +205,7 @@ namespace TMC2240_n {
       uint32_t sr;
       struct {
         uint32_t  thigh : 20;
+        uint16_t        : 12; // unused
       };
     };
   };
@@ -282,18 +289,18 @@ namespace TMC2240_n {
   struct PWMCONF_t {
     constexpr static uint8_t address = 0x70;
     union {
-      uint32_t sr;                      // 0x00050480  0xC40C1E1D
+      uint32_t sr;                      // 0xC40C1E1D
       struct {
-        uint8_t pwm_ofs            : 8, // 128         29
-                pwm_grad           : 8, // 4           30
-                pwm_freq           : 2; // 1           0
-        bool    pwm_autoscale      : 1, // true        true
-                pwm_autograd       : 1; // false       true
-        uint8_t freewheel          : 2; // 0           0
-        bool    pwm_meas_sd_enable : 1, // false       false
-                pwm_dis_reg_stst   : 1; // false       false
-        uint8_t pwm_reg            : 4, // 0           4
-                pwm_lim            : 4; // 0           12
+        uint8_t pwm_ofs            : 8, // 29
+                pwm_grad           : 8, // 30
+                pwm_freq           : 2; // 0
+        bool    pwm_autoscale      : 1, // true
+                pwm_autograd       : 1; // true
+        uint8_t freewheel          : 2; // 0
+        bool    pwm_meas_sd_enable : 1, // false
+                pwm_dis_reg_stst   : 1; // false
+        uint8_t pwm_reg            : 4, // 4
+                pwm_lim            : 4; // 12
       };
     };
   };
@@ -307,6 +314,7 @@ namespace TMC2240_n {
         uint16_t pwm_scale_sum  : 10;
         uint8_t                 : 6; // unused
         int16_t  pwm_scale_auto : 9;
+        uint8_t                 : 7; // unused
       };
     };
   };

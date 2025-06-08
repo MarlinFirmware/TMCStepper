@@ -300,25 +300,26 @@ class TMC2240Stepper {
 		uint8_t status_response;
 
 	protected:
-		INIT2240_REGISTER(GCONF);			// 32b
-		INIT2240_REGISTER(GSTAT);			// 32b
-		INIT2240_REGISTER(NODECONF);		// 32b
-		INIT2240_REGISTER(TPOWERDOWN);		// 8b
-		INIT2240_REGISTER(DRV_CONF);		// 32b
-		INIT2240_REGISTER(GLOBAL_SCALER);	// 8b
-		INIT2240_REGISTER(IHOLD_IRUN);		// 32b
-		INIT2240_REGISTER(TPWMTHRS);		// 32b
-		INIT2240_REGISTER(TCOOLTHRS);		// 32b
-		INIT2240_REGISTER(THIGH);			// 32b
-		INIT2240_REGISTER(CHOPCONF);		// 32b
-		INIT2240_REGISTER(COOLCONF);		// 32b
-		INIT2240_REGISTER(PWMCONF);			// 32b
-		INIT2240_REGISTER(SG4_THRS);		// 32b
-		INIT2240_REGISTER(OTW_OV_VTH);		// 0x52
+		INIT2240_REGISTER(GCONF);			// 4
+		INIT2240_REGISTER(GSTAT);			// 1
+		INIT2240_REGISTER(NODECONF);		// 2
+		INIT2240_REGISTER(DRV_CONF);		// 1
+		INIT2240_REGISTER(GLOBAL_SCALER);	// 1
+		INIT2240_REGISTER(IHOLD_IRUN);		// 4
+		INIT2240_REGISTER(TPOWERDOWN);		// 1
+		INIT2240_REGISTER(TPWMTHRS);		// 4
+		INIT2240_REGISTER(TCOOLTHRS);		// 4
+		INIT2240_REGISTER(THIGH);			// 4
+		INIT2240_REGISTER(CHOPCONF);		// 4
+		INIT2240_REGISTER(COOLCONF);		// 4
+		INIT2240_REGISTER(PWMCONF);			// 4
+		INIT2240_REGISTER(SG4_THRS);		// 4
+		INIT2240_REGISTER(OTW_OV_VTH);		// 4
+											// (46 Bytes)
 
-		struct IFCNT_t 		{ constexpr static uint8_t address = 0x02; };
-		struct TSTEP_t 		{ constexpr static uint8_t address = 0x12; };
-		struct MSCNT_t 		{ constexpr static uint8_t address = 0x6A; };
+		struct IFCNT_t { constexpr static uint8_t address = 0x02; };
+		struct TSTEP_t { constexpr static uint8_t address = 0x12; };
+		struct MSCNT_t { constexpr static uint8_t address = 0x6A; };
 
 		float 		calc_IFS_current_RMS();
 		uint32_t	set_globalscaler(float current, float IFS_current_RMS);
