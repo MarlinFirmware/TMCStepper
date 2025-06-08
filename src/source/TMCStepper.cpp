@@ -23,7 +23,7 @@
 
 // Make sure the endianness is correct
 constexpr GCONF_t test_gconf{ .sr = 0x00000004 };
-static_assert(test_gconf.en_pwm_mode == true, "Bitfield layout mismatch: en_pwm_mode should be bit 2");
+static_assert(test_gconf.en_pwm_mode, "TMCStepper does not currently support Big Endian targets!");
 
 /*
   Requested current = mA = I_rms/1000
