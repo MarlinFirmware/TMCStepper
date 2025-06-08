@@ -37,7 +37,6 @@ class TMC2208Stepper : public TMCStepper {
 		bool isEnabled();
 
 		// RW: GCONF
-		uint32_t GCONF();
 		void GCONF(uint32_t input);
 		void I_scale_analog(bool B);
 		void internal_Rsense(bool B);
@@ -48,6 +47,7 @@ class TMC2208Stepper : public TMCStepper {
 		void pdn_disable(bool B);
 		void mstep_reg_select(bool B);
 		void multistep_filt(bool B);
+		uint32_t GCONF();
 		bool I_scale_analog();
 		bool internal_Rsense();
 		bool en_spreadCycle();

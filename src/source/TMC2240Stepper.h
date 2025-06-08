@@ -70,9 +70,13 @@ class TMC2240Stepper {
 
 		uint8_t IFCNT();
 
-		// W: SLAVECONF
-		void SLAVECONF(uint16_t input);
-		uint16_t SLAVECONF();
+		// W: NODECONF
+		void NODECONF(uint16_t input);
+		uint16_t NODECONF();
+		// Alias for parity with others
+		uint16_t SLAVECONF() { return NODECONF(); }
+		void SLAVECONF(uint16_t input) { NODECONF(input); }
+
 		void senddelay(uint8_t B);
 		uint8_t senddelay();
 		void nodeaddr(uint8_t B);
@@ -299,7 +303,7 @@ class TMC2240Stepper {
 		INIT2240_REGISTER(GCONF);			// 16b
 		INIT2240_REGISTER(GSTAT);			// 8b
 		INIT2240_REGISTER(TPOWERDOWN);		// 8b
-		INIT2240_REGISTER(SLAVECONF);		// 16b
+		INIT2240_REGISTER(NODECONF);		// 16b
 		INIT2240_REGISTER(DRV_CONF);		// 32b
 		INIT2240_REGISTER(GLOBAL_SCALER);	// 8b
 		INIT2240_REGISTER(IHOLD_IRUN);		// 32b
@@ -311,7 +315,7 @@ class TMC2240Stepper {
 		INIT2240_REGISTER(PWMCONF);			// 32b
 		INIT2240_REGISTER(SG4_THRS);		// 32b
 		INIT2240_REGISTER(OTW_OV_VTH);		// 0x52
-		
+
 		struct IFCNT_t 		{ constexpr static uint8_t address = 0x02; };
 		struct TSTEP_t 		{ constexpr static uint8_t address = 0x12; };
 		struct MSCNT_t 		{ constexpr static uint8_t address = 0x6A; };

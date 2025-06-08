@@ -27,8 +27,8 @@ void TMC2208Stepper::senddelay(uint8_t B)	{ SET_REG(senddelay); }
 #define SET_REG_2240(SETTING) NODECONF_register.SETTING = B; write(NODECONF_register.address, NODECONF_register.sr)
 #define GET_REG_2240(SETTING) return NODECONF_register.SETTING
 
-uint16_t TMC2240Stepper::SLAVECONF() { return NODECONF_register.sr; }
-void TMC2240Stepper::SLAVECONF(uint16_t input) {
+uint16_t TMC2240Stepper::NODECONF() { return NODECONF_register.sr; }
+void TMC2240Stepper::NODECONF(uint16_t input) {
 	NODECONF_register.sr = input & 0xF00;
 	write(NODECONF_register.address, NODECONF_register.sr);
 }
