@@ -427,7 +427,7 @@ void TMC2240Stepper::sg4_angle_offset(uint8_t B) {
 }
 
 // R:SG4_RESULT
-uint32_t TMC2240Stepper::SG4_RESULT()	{ return read(SG4_RESULT_register.address); }
+uint32_t TMC2240Stepper::SG4_RESULT()	{ return read(TMC2240_n::SG4_RESULT_t.address); }
 uint16_t TMC2240Stepper::sg4_result()	{ TMC2240_n::SG4_RESULT_t r; r.sr = SG4_RESULT(); return r.sg4_result; }
 
 // RW: ADC_VSUPPLY_AIN
