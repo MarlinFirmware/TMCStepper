@@ -500,3 +500,23 @@ void TMC2240Stepper::set_overvoltage_threshold_voltage(float volts) {
 	r.overvoltage_vth = adc_vth;
 	write(r.address, r.sr);
 }
+
+// RO: MSCNT
+uint16_t TMC2240Stepper::MSCNT() { return read(MSCNT_t::address); }
+
+// RO: MSCURACT
+uint32_t TMC2240Stepper::MSCURACT() { return read(TMC2240_n::MSCURACT_t::address); }
+int16_t TMC2240Stepper::cur_a() {
+  TMC2240_n::MSCURACT_t r{};
+  r.sr = MSCURACT();
+  int16_t value = r.cur_a;
+  if (value > 255) value -= 512;
+  return value;
+}
+int16_t TMC2240Stepper::cur_b() {
+  TMC2240_n::MSCURACT_t r{};
+  r.sr = MSCURACT();
+  int16_t value = r.cur_b;
+  if (value > 255) value -= 512;
+  return value;
+}

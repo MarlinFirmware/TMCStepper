@@ -221,6 +221,11 @@ class TMC2240Stepper {
 		uint8_t pwm_ofs_auto();
 		uint8_t pwm_grad_auto();
 
+		// R: MSCURACT
+		uint32_t MSCURACT();
+		int16_t cur_a();
+		int16_t cur_b();
+
 		uint32_t DRV_STATUS();
 		uint32_t SG_RESULT();
 		bool s2vsa();
@@ -316,6 +321,18 @@ class TMC2240Stepper {
 		INIT2240_REGISTER(SG4_THRS);		// 4
 		INIT2240_REGISTER(OTW_OV_VTH);		// 4
 											// (46 Bytes)
+		/*
+		INIT2240_REGISTER(MSLUT0);		// 4
+		INIT2240_REGISTER(MSLUT1); 		// 4
+		INIT2240_REGISTER(MSLUT2);		// 4
+		INIT2240_REGISTER(MSLUT3);		// 4
+		INIT2240_REGISTER(MSLUT4);		// 4
+		INIT2240_REGISTER(MSLUT5);		// 4
+		INIT2240_REGISTER(MSLUT6);		// 4
+		INIT2240_REGISTER(MSLUT7);		// 4
+		INIT2240_REGISTER(MSLUTSEL);	// 4
+		INIT2240_REGISTER(MSLUTSTART);	// 4
+		*/
 
 		struct IFCNT_t { constexpr static uint8_t address = 0x02; };
 		struct TSTEP_t { constexpr static uint8_t address = 0x12; };

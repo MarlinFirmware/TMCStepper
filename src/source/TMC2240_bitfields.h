@@ -249,6 +249,99 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x60 MSLUT0: Microstep Lookup Table 0 (RW)
+  struct MSLUT0_t {
+    constexpr static uint8_t address = 0x60;
+    uint32_t sr; // 0xAAAAB554
+  };
+
+  // 0x61 MSLUT1: Microstep Lookup Table 1 (RW)
+  struct MSLUT1_t {
+    constexpr static uint8_t address = 0x61;
+    uint32_t sr; // 0x4A9554AA
+  };
+
+  // 0x62 MSLUT2: Microstep Lookup Table 2 (RW)
+  struct MSLUT2_t {
+    constexpr static uint8_t address = 0x62;
+    uint32_t sr; // 0x24492929
+  };
+
+  // 0x63 MSLUT3: Microstep Lookup Table 3 (RW)
+  struct MSLUT3_t {
+    constexpr static uint8_t address = 0x63;
+    uint32_t sr; // 0x10104222
+  };
+
+  // 0x64 MSLUT4: Microstep Lookup Table 4 (RW)
+  struct MSLUT4_t {
+    constexpr static uint8_t address = 0x64;
+    uint32_t sr; // 0xFBFFFFFF
+  };
+
+  // 0x65 MSLUT5: Microstep Lookup Table 5 (RW)
+  struct MSLUT5_t {
+    constexpr static uint8_t address = 0x65;
+    uint32_t sr; // 0xB5BB777D
+  };
+
+  // 0x66 MSLUT6: Microstep Lookup Table 6 (RW)
+  struct MSLUT6_t {
+    constexpr static uint8_t address = 0x66;
+    uint32_t sr; // 0x49295556
+  };
+
+  // 0x67 MSLUT7: Microstep Lookup Table 7 (RW)
+  struct MSLUT7_t {
+    constexpr static uint8_t address = 0x67;
+    uint32_t sr; // 0x00404222
+  };
+
+  // 0x68 MSLUTSEL: Microstep Lookup Table Selector (RW)
+  struct MSLUTSEL_t {
+    constexpr static uint8_t address = 0x68;
+    union {
+      uint32_t sr;      // 0xFFFF8056
+      struct {
+        uint8_t w0 : 2, // %10
+                w1 : 2, // %01
+                w2 : 2, // %01
+                w3 : 2, // %01
+                x1 : 8, // 128
+                x2 : 8, // 255
+                x3 : 8; // 255
+      };
+    };
+  };
+
+  // 0x69 MSLUTSTART: Microstep Lookup Table Start (RW)
+  struct MSLUTSTART_t {
+    constexpr static uint8_t address = 0x69;
+    union {
+      uint32_t sr;               // 0x00F70000
+      struct {
+        uint8_t start_sin   : 8, // 0
+                            : 8,
+                start_sin90 : 8; // 247
+        int8_t offset_sin90 : 8; // 0
+      };
+    };
+  };
+
+  // 0x69 MSCURACT: Actual Microstep Current (RO)
+  struct MSCURACT_t {
+    constexpr static uint8_t address = 0x6B;
+    union {
+      uint32_t sr;
+      struct {
+        int16_t cur_b : 9,
+                      : 7, // unused
+                cur_a : 9
+                      : 7; // unused
+      };
+    };
+  };
+
   // 0x6C CHOPCONF: Chopper Configuration (RW)
   struct CHOPCONF_t {
     constexpr static uint8_t address = 0x6C;
