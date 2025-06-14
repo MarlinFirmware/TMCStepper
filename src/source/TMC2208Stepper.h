@@ -169,6 +169,11 @@ class TMC2208Stepper : public TMCStepper {
 		uint8_t pwm_ofs_auto();
 		uint8_t pwm_grad_auto();
 
+		// R: MSCURACT
+		uint32_t MSCURACT();
+		int16_t cur_a();
+		int16_t cur_b();
+
 		uint16_t bytesWritten = 0;
 		float Rsense = 0.11;
 		bool CRCerror = false;

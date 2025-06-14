@@ -57,11 +57,6 @@ class TMCStepper {
 		// R: MSCNT
 		uint16_t MSCNT();
 
-		// R: MSCURACT
-		uint32_t MSCURACT();
-		int16_t cur_a();
-		int16_t cur_b();
-
 	protected:
 		TMCStepper(float RS) : Rsense(RS) {};
 		INIT_REGISTER(IHOLD_IRUN);	// 32b

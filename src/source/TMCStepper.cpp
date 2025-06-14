@@ -15,7 +15,7 @@
  * drv_err
  * uv_cp
  * TPOWERDOWN, TSTEP, TPWMTHRS
- * MSCNT, MSCURACT
+ * MSCNT
  * cur_a, cur_b
  */
 #include "../TMCStepper.h"
@@ -161,22 +161,6 @@ void TMCStepper::TPWMTHRS(uint32_t input) {
   write(TPWMTHRS_register.address, TPWMTHRS_register.sr);
 }
 
-uint16_t TMCStepper::MSCNT() {
-  return read(MSCNT_t::address);
-}
-
-uint32_t TMCStepper::MSCURACT() { return read(MSCURACT_t::address); }
-int16_t TMCStepper::cur_a() {
-  MSCURACT_t r{};
-  r.sr = MSCURACT();
-  int16_t value = r.cur_a;
-  if (value > 255) value -= 512;
-  return value;
-}
-int16_t TMCStepper::cur_b() {
-  MSCURACT_t r{};
-  r.sr = MSCURACT();
-  int16_t value = r.cur_b;
-  if (value > 255) value -= 512;
-  return value;
-}
+///////////////////////////////////////////////////////////////////////////////////////
+// R: MSCNT
+uint16_t TMCStepper::MSCNT() { return read(MSCNT_t::address); }

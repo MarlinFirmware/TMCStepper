@@ -346,21 +346,15 @@ uint32_t TMC2208Stepper::read(uint8_t addr) {
 	return out>>8;
 }
 
-uint8_t TMC2208Stepper::IFCNT() {
-	return read(IFCNT_t::address);
-}
+uint8_t TMC2208Stepper::IFCNT() { return read(IFCNT_t::address); }
 
 void TMC2208Stepper::OTP_PROG(uint16_t input) {
 	write(OTP_PROG_t::address, input);
 }
 
-uint32_t TMC2208Stepper::OTP_READ() {
-	return read(OTP_READ_t::address);
-}
+uint32_t TMC2208Stepper::OTP_READ() { return read(OTP_READ_t::address); }
 
-uint16_t TMC2208Stepper::FACTORY_CONF() {
-	return read(FACTORY_CONF_register.address);
-}
+uint16_t TMC2208Stepper::FACTORY_CONF() { return read(FACTORY_CONF_register.address); }
 void TMC2208Stepper::FACTORY_CONF(uint16_t input) {
 	FACTORY_CONF_register.sr = input;
 	write(FACTORY_CONF_register.address, FACTORY_CONF_register.sr);
@@ -378,9 +372,7 @@ uint32_t TMC2208Stepper::VACTUAL() {
 	return VACTUAL_register.sr;
 }
 
-uint32_t TMC2208Stepper::PWM_SCALE() {
-	return read(TMC2208_n::PWM_SCALE_t::address);
-}
+uint32_t TMC2208Stepper::PWM_SCALE() { return read(TMC2208_n::PWM_SCALE_t::address); }
 uint8_t TMC2208Stepper::pwm_scale_sum() {
 	TMC2208_n::PWM_SCALE_t r{};
 	r.sr = PWM_SCALE();
@@ -401,8 +393,23 @@ int16_t TMC2208Stepper::pwm_scale_auto() {
 }
 
 // R: PWM_AUTO
-uint32_t TMC2208Stepper::PWM_AUTO() {
-	return read(PWM_AUTO_t::address);
-}
+uint32_t TMC2208Stepper::PWM_AUTO() { return read(PWM_AUTO_t::address); }
 uint8_t TMC2208Stepper::pwm_ofs_auto()  { PWM_AUTO_t r{}; r.sr = PWM_AUTO(); return r.pwm_ofs_auto; }
 uint8_t TMC2208Stepper::pwm_grad_auto() { PWM_AUTO_t r{}; r.sr = PWM_AUTO(); return r.pwm_grad_auto; }
+
+// R: MSCURACT
+uint32_t TMC2208Stepper::MSCURACT() { return read(TMC2208_n::MSCURACT_t::address); }
+int16_t TMC2208Stepper::cur_a() {
+	TMC2208_n::MSCURACT_t r{};
+	r.sr = MSCURACT();
+	int16_t value = r.cur_a;
+	if (value > 255) value -= 512;
+	return value;
+}
+int16_t TMC2208Stepper::cur_b() {
+	TMC2208_n::MSCURACT_t r{};
+	r.sr = MSCURACT();
+	int16_t value = r.cur_b;
+	if (value > 255) value -= 512;
+	return value;
+}

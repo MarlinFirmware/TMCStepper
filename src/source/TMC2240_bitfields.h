@@ -210,6 +210,45 @@ namespace TMC2240_n {
     };
   };
 
+  // 0x50 ADC_VSUPPLY_AIN: Supply & AIN ADC (RO)
+  struct ADC_VSUPPLY_AIN_t {
+    constexpr static uint8_t address = 0x50;
+    union {
+      uint32_t sr;
+      struct {
+        uint16_t adc_vsupply : 13;
+        uint16_t adc_ain     : 13;
+        uint8_t              : 6; // reserved / padding
+      };
+    };
+  };
+
+  // 0x51 ADC_TEMP: Temperature ADC (RO)
+  struct ADC_TEMP_t {
+    constexpr static uint8_t address = 0x51;
+    union {
+      uint32_t sr;
+      struct {
+        uint16_t adc_temp : 13;
+        uint32_t          : 19; // reserved
+      };
+    };
+  };
+
+  // 0x52 OTW_OV_VTH: Overtemp/Overvoltage Thresholds (RW)
+  struct OTW_OV_VTH_t {
+    constexpr static uint8_t address = 0x52;
+    union {
+      uint32_t sr;
+      struct {
+        uint16_t overvoltage_vth       : 13;
+        uint8_t                        : 3;
+        uint16_t overtemp_prewarn_vth  : 13;
+        uint8_t                        : 3;
+      };
+    };
+  };
+
   // 0x6C CHOPCONF: Chopper Configuration (RW)
   struct CHOPCONF_t {
     constexpr static uint8_t address = 0x6C;
@@ -323,7 +362,7 @@ namespace TMC2240_n {
   struct PWM_AUTO_t {
     constexpr static uint8_t address = 0x72;
     union {
-      uint32_t sr : 24;
+      uint32_t sr;
       struct {
         uint8_t pwm_ofs_auto  : 8,
                               : 8, // unused
@@ -366,45 +405,6 @@ namespace TMC2240_n {
       uint32_t sr;
       struct {
         uint8_t sg4_ind_0, sg4_ind_1, sg4_ind_2, sg4_ind_3;
-      };
-    };
-  };
-
-  // 0x50 ADC_VSUPPLY_AIN: Supply & AIN ADC (RO)
-  struct ADC_VSUPPLY_AIN_t {
-    constexpr static uint8_t address = 0x50;
-    union {
-      uint32_t sr;
-      struct {
-        uint16_t adc_vsupply : 13;
-        uint16_t adc_ain     : 13;
-        uint8_t              : 6; // reserved / padding
-      };
-    };
-  };
-
-  // 0x51 ADC_TEMP: Temperature ADC (RO)
-  struct ADC_TEMP_t {
-    constexpr static uint8_t address = 0x51;
-    union {
-      uint32_t sr;
-      struct {
-        uint16_t adc_temp : 13;
-        uint32_t          : 19; // reserved
-      };
-    };
-  };
-
-  // 0x52 OTW_OV_VTH: Overtemp/Overvoltage Thresholds (RW)
-  struct OTW_OV_VTH_t {
-    constexpr static uint8_t address = 0x52;
-    union {
-      uint32_t sr;
-      struct {
-        uint16_t overvoltage_vth       : 13;
-        uint8_t                        : 3;
-        uint16_t overtemp_prewarn_vth  : 13;
-        uint8_t                        : 3;
       };
     };
   };
