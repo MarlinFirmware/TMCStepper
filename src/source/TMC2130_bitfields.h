@@ -37,20 +37,20 @@ struct GCONF_t {
             diag1_pushpull      : 1,
             small_hysteresis    : 1,
             stop_enable         : 1,
-            direct_mode         : 1,
-                                : 15; // unused
+            direct_mode         : 1;
+      uint16_t                  : 15; // unused
     };
     struct { // TMC5160
       bool recalibrate            : 1,
-           faststandstill         : 1,
-                                  : 1,
-           multistep_filt         : 1,
-                                  : 3,
-           diag0_step             : 1,
-           diag1_dir              : 1,
-                                  : 4,
-           diag1_poscomp_pushpull : 1,
-                                  : 18; // unused
+           faststandstill         : 1;
+      uint8_t                     : 1;
+      bool multistep_filt         : 1;
+      uint8_t                     : 3;
+      bool diag0_step             : 1,
+           diag1_dir              : 1;
+      uint8_t                     : 4;
+      bool diag1_poscomp_pushpull : 1;
+      uint32_t                    : 18; // unused
     };
   };
 };
