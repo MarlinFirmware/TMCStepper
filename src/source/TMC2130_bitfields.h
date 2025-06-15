@@ -42,15 +42,15 @@ struct GCONF_t {
     };
     struct { // TMC5160
       bool recalibrate            : 1,
-           faststandstill         : 1;
-      uint8_t                     : 1;
-      bool multistep_filt         : 1;
+           faststandstill         : 1,
+                                  : 1,
+           multistep_filt         : 1;
       uint8_t                     : 3;
       bool diag0_step             : 1,
            diag1_dir              : 1;
       uint8_t                     : 4;
       bool diag1_poscomp_pushpull : 1;
-      uint32_t                    : 18; // unused
+	  uint32_t                    : 18; // unused
     };
   };
 };
