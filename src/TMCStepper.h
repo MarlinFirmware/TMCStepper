@@ -44,15 +44,19 @@
 	#endif
 #endif
 
-#if defined(__has_include)
-	#define SW_CAPABLE_PLATFORM __has_include(<SoftwareSerial.h>)
-#elif defined(__AVR__) || defined(TARGET_LPC1768) || defined(ARDUINO_ARCH_STM32)
-	#define SW_CAPABLE_PLATFORM true
-#else
-	#define SW_CAPABLE_PLATFORM false
+#ifndef TMCSTEPPER_SW_SERIAL
+	#if defined(__has_include)
+		#define TMCSTEPPER_SW_SERIAL __has_include(<SoftwareSerial.h>)
+	#elif defined(__AVR__) || defined(TARGET_LPC1768) || defined(ARDUINO_ARCH_STM32)
+		#define TMCSTEPPER_SW_SERIAL true
+	#else
+		#define TMCSTEPPER_SW_SERIAL false
+	#endif
 #endif
 
-#if SW_CAPABLE_PLATFORM
+#define HAS_HALF_DUPLEX_MODE (TMCSTEPPER_SW_SERIAL && defined(ARDUINO_ARCH_AVR))
+
+#if TMCSTEPPER_SW_SERIAL
 	#include <SoftwareSerial.h>
 #endif
 
