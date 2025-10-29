@@ -11,8 +11,8 @@
 class TMC2160Stepper : public TMC2130Stepper {
 	public:
 		TMC2160Stepper(uint16_t pinCS, float RS = default_RS, int8_t link_index = -1);
-		TMC2160Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1);
-		TMC2160Stepper(uint16_t pinCS, float RS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1);
+		TMC2160Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1, bool softSPI = _TMC_SOFTSPI_DEFAULT);
+		TMC2160Stepper(uint16_t pinCS, float RS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1, bool softSPI = _TMC_SOFTSPI_DEFAULT);
 		void begin();
 		void defaults();
 		void push();

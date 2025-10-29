@@ -6,6 +6,8 @@
  */
 #pragma once
 
+#include "TMCStepper_SPI.h"
+
 #define INIT2660_REGISTER(REG) TMC2660_n::REG##_t REG##_register{}
 
 class TMC2660Stepper {
@@ -13,6 +15,7 @@ class TMC2660Stepper {
 		TMC2660Stepper(uint16_t pinCS, float RS = default_RS);
 		TMC2660Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK);
 		TMC2660Stepper(uint16_t pinCS, float RS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK);
+		TMC2660Stepper(uint16_t pinCS, float RS, TMCSPIInterface *spiMan);
 		void write(uint8_t addressByte, uint32_t config);
 		uint32_t read();
 		void switchCSpin(bool state);
@@ -162,6 +165,11 @@ class TMC2660Stepper {
 		INIT_REGISTER(READ_RDSEL10);
 
 		const uint16_t _pinCS;
+		const uint16_t _pinMISO;
+		const uint16_t _pinMOSI;
+		const uint16_t _pinSCK;
+		const TMCSPIInterface *_spiMan;
+		const bool _has_pins;
 		const float Rsense;
 		static constexpr float default_RS = 0.1;
 		float holdMultiplier = 0.5;

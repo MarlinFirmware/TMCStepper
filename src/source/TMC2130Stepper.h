@@ -6,13 +6,16 @@
  */
 #pragma once
 
+#include "TMCStepper_SPI.h"
+
 #define INIT2130_REGISTER(REG) TMC2130_n::REG##_t REG##_register{}
 
 class TMC2130Stepper : public TMCStepper {
 	public:
 		TMC2130Stepper(uint16_t pinCS, float RS = default_RS, int8_t link_index = -1);
-		TMC2130Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1);
-		TMC2130Stepper(uint16_t pinCS, float RS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1);
+		TMC2130Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1, bool softSPI = _TMC_SOFTSPI_DEFAULT);
+		TMC2130Stepper(uint16_t pinCS, float RS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1, bool softSPI = _TMC_SOFTSPI_DEFAULT);
+		TMC2130Stepper(uint16_t pinCS, float RS, TMCSPIInterface *spiMan, int8_t link_index = -1);
 		void begin();
 		void defaults();
 		void setSPISpeed(uint32_t speed);
@@ -228,6 +231,11 @@ class TMC2130Stepper : public TMCStepper {
 
 		static uint32_t spi_speed; // Default 2MHz
 		const uint16_t _pinCS;
+		const uint16_t _pinMISO;
+		const uint16_t _pinMOSI;
+		const uint16_t _pinSCK;
+		const TMCSPIInterface *_spiMan;
+		const bool _has_pins;
 		SW_SPIClass * TMC_SW_SPI = nullptr;
 		static constexpr float default_RS = 0.11;
 
