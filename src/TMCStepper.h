@@ -32,7 +32,7 @@
 	#include <bcm2835.h>
 	#include "source/bcm2835_spi.h"
 	#include "source/bcm2835_stream.h"
-#elif __cplusplus >= 201703L
+#elif defined(__has_include)
 	#if __has_include(<Arduino.h>)
 		#include <Arduino.h>
 	#endif
@@ -44,15 +44,23 @@
 	#endif
 #endif
 
-#if (__cplusplus == 201703L) && defined(__has_include)
-	#define SW_CAPABLE_PLATFORM __has_include(<SoftwareSerial.h>)
-#elif defined(__AVR__) || defined(TARGET_LPC1768) || defined(ARDUINO_ARCH_STM32)
-	#define SW_CAPABLE_PLATFORM true
-#else
-	#define SW_CAPABLE_PLATFORM false
+#ifndef TMCSTEPPER_SW_SERIAL
+	#ifdef __has_include
+		#if __has_include(<SoftwareSerial.h>)
+			#define TMCSTEPPER_SW_SERIAL 1
+		#else
+			#define TMCSTEPPER_SW_SERIAL 0
+		#endif
+	#elif defined(__AVR__) || defined(TARGET_LPC1768) || defined(ARDUINO_ARCH_STM32)
+		#define TMCSTEPPER_SW_SERIAL 1
+	#else
+		#define TMCSTEPPER_SW_SERIAL 0
+	#endif
 #endif
 
-#if SW_CAPABLE_PLATFORM
+#define HAS_HALF_DUPLEX_MODE (TMCSTEPPER_SW_SERIAL && defined(ARDUINO_ARCH_AVR))
+
+#if TMCSTEPPER_SW_SERIAL
 	#include <SoftwareSerial.h>
 #endif
 

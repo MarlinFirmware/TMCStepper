@@ -14,7 +14,7 @@ class TMC2208Stepper : public TMCStepper {
 		TMC2208Stepper(Stream * SerialPort, float RS) :
 			TMC2208Stepper(SerialPort, RS, TMC2208_SLAVE_ADDR)
 			{}
-		#if SW_CAPABLE_PLATFORM
+		#if TMCSTEPPER_SW_SERIAL
 			TMC2208Stepper(uint16_t SW_RX_pin, uint16_t SW_TX_pin, float RS) :
 				TMC2208Stepper(SW_RX_pin, SW_TX_pin, RS, TMC2208_SLAVE_ADDR)
 				{}
@@ -29,7 +29,7 @@ class TMC2208Stepper : public TMCStepper {
 		void defaults();
 		void push();
 		void begin();
-		#if SW_CAPABLE_PLATFORM
+		#if TMCSTEPPER_SW_SERIAL
 			void beginSerial(uint32_t baudrate) __attribute__((weak));
 		#else
 			void beginSerial(uint32_t) = delete; // Your platform does not currently support Software Serial
@@ -190,14 +190,16 @@ class TMC2208Stepper : public TMCStepper {
 		struct OTP_READ_t		{ constexpr static uint8_t address = 0x05; };
 
 		TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr);
-		#if SW_CAPABLE_PLATFORM
+		#if TMCSTEPPER_SW_SERIAL
 			TMC2208Stepper(uint16_t SW_RX_pin, uint16_t SW_TX_pin, float RS, uint8_t addr);
 		#endif
 
 		Stream * HWSerial = nullptr;
-		#if SW_CAPABLE_PLATFORM
+		#if TMCSTEPPER_SW_SERIAL
 			SoftwareSerial * SWSerial = nullptr;
-			const uint16_t RXTX_pin = 0; // Half duplex
+			#if HAS_HALF_DUPLEX_MODE
+				const uint16_t RXTX_pin = 0; // Half duplex
+			#endif
 		#endif
 
 		SSwitch *sswitch = nullptr;
