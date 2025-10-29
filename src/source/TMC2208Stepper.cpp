@@ -7,9 +7,21 @@
 #include "TMC_MACROS.h"
 #include "SERIAL_SWITCH.h"
 
+#ifdef ESP_PLATFORM
+	#include <esp32/rom/ets_sys.h>
+	#include <esp_timer.h>
+	uint32_t millis() {
+		return esp_timer_get_time() / 1000;
+	}
+#endif
+
 // Protected
 // addr needed for TMC2209
+#ifdef ESP_PLATFORM
+TMC2208Stepper::TMC2208Stepper(ESP32_Serial * SerialPort, float RS, uint8_t addr) :
+#else
 TMC2208Stepper::TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr) :
+#endif
 	TMCStepper(RS),
 	slave_address(addr)
 	{
@@ -17,7 +29,11 @@ TMC2208Stepper::TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr) :
 		defaults();
 	}
 
+#ifdef ESP_PLATFORM
+TMC2208Stepper::TMC2208Stepper( ESP32_Serial * SerialPort, float RS, uint8_t addr, uint16_t mul_pin1, uint16_t mul_pin2) :
+#else
 TMC2208Stepper::TMC2208Stepper(Stream * SerialPort, float RS, uint8_t addr, uint16_t mul_pin1, uint16_t mul_pin2) :
+#endif
 	TMC2208Stepper(SerialPort, RS)
 	{
 		SSwitch *SMulObj = new SSwitch(mul_pin1, mul_pin2, addr);
@@ -230,7 +246,11 @@ void TMC2208Stepper::write(uint8_t addr, uint32_t regVal) {
 	}
 	postWriteCommunication();
 
-	delay(replyDelay);
+	#ifdef ESP_PLATFORM
+		ets_delay_us( replyDelay * 1000 );
+	#else
+		delay(replyDelay);
+	#endif
 }
 
 uint64_t TMC2208Stepper::_sendDatagram(uint8_t datagram[], const uint8_t len, uint16_t timeout) {
@@ -251,7 +271,11 @@ uint64_t TMC2208Stepper::_sendDatagram(uint8_t datagram[], const uint8_t len, ui
 		}
 	#endif
 
-	delay(this->replyDelay);
+	#ifdef ESP_PLATFORM
+		ets_delay_us( replyDelay * 1000 );
+	#else
+		delay(this->replyDelay);
+	#endif
 
 	// scan for the rx frame and read it
 	uint32_t ms = millis();
@@ -323,7 +347,11 @@ uint32_t TMC2208Stepper::read(uint8_t addr) {
 		out = _sendDatagram(datagram, len, abort_window);
 		postReadCommunication();
 
-		delay(replyDelay);
+		#ifdef ESP_PLATFORM
+			ets_delay_us( replyDelay * 1000 );
+		#else
+			delay(replyDelay);
+		#endif
 
 		CRCerror = false;
 		uint8_t out_datagram[] = {
