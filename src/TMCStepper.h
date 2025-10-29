@@ -45,12 +45,16 @@
 #endif
 
 #ifndef TMCSTEPPER_SW_SERIAL
-	#if defined(__has_include)
-		#define TMCSTEPPER_SW_SERIAL __has_include(<SoftwareSerial.h>)
+	#ifdef __has_include
+		#if __has_include(<SoftwareSerial.h>)
+			#define TMCSTEPPER_SW_SERIAL 1
+		#else
+			#define TMCSTEPPER_SW_SERIAL 0
+		#endif
 	#elif defined(__AVR__) || defined(TARGET_LPC1768) || defined(ARDUINO_ARCH_STM32)
-		#define TMCSTEPPER_SW_SERIAL true
+		#define TMCSTEPPER_SW_SERIAL 1
 	#else
-		#define TMCSTEPPER_SW_SERIAL false
+		#define TMCSTEPPER_SW_SERIAL 0
 	#endif
 #endif
 
