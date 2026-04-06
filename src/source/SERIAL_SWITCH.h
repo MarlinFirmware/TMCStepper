@@ -1,10 +1,14 @@
+/**
+ * TMCStepper library by @teemuatlut
+ * SERIAL_SWITCH.h - Serial Switch for Arduino / Raspberry Pi
+ */
 #pragma once
 #if defined(ARDUINO) && ARDUINO >= 100
 	#include <Arduino.h>
 #elif defined(bcm2835)
-	#include "source/rpi_bcm2835.h"
-	#include "source/bcm2835_spi.h"
-	#include "source/bcm2835_stream.h"
+	#include "rpi_bcm2835.h"
+	#include "bcm2835_spi.h"
+	#include "bcm2835_stream.h"
 #elif __cplusplus >= 201703L
 	#if __has_include(<Arduino.h>)
 		#include <Arduino.h>
