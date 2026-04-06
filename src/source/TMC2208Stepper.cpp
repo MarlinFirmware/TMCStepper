@@ -197,7 +197,7 @@ void TMC2208Stepper::write(uint8_t addr, uint32_t regVal) {
 
 	preWriteCommunication();
 
-	for(uint8_t i=0; i<=len; i++) {
+	for (uint8_t i = 0;  i<= len; i++) {
 		bytesWritten += serial_write(datagram[i]);
 	}
 	postWriteCommunication();
@@ -206,30 +206,33 @@ void TMC2208Stepper::write(uint8_t addr, uint32_t regVal) {
 }
 
 #if defined(ARDUINO_ARCH_RP2040) && defined(RP2040_SINGLE_WIRE_UART_PIN)
-#include <hardware/gpio.h>
-// Bit-bang one 8N1 UART byte on the single-wire PDN_UART pin.
-// Temporarily switches GPIO to SIO output for TX, then restores UART RX mode.
-// 9 µs/bit ≈ 111 kbaud (-3.7% vs 115200) — within the ±6.25% 8N1 tolerance.
-static void _rp2040_sw_uart_write_byte(uint8_t byte) {
-    constexpr uint32_t T = 9; // µs per bit
-    gpio_set_function(RP2040_SINGLE_WIRE_UART_PIN, GPIO_FUNC_SIO);
-    gpio_set_dir(RP2040_SINGLE_WIRE_UART_PIN, GPIO_OUT);
-    gpio_put(RP2040_SINGLE_WIRE_UART_PIN, 1); // idle HIGH before start bit
-    // Start bit
-    gpio_put(RP2040_SINGLE_WIRE_UART_PIN, 0);
-    delayMicroseconds(T);
-    // 8 data bits, LSB first
-    for (int i = 0; i < 8; i++) {
-        gpio_put(RP2040_SINGLE_WIRE_UART_PIN, (byte >> i) & 1);
-        delayMicroseconds(T);
-    }
-    // Stop bit
-    gpio_put(RP2040_SINGLE_WIRE_UART_PIN, 1);
-    delayMicroseconds(T);
-    // Restore UART1 RX function on GPIO9
-    gpio_set_function(RP2040_SINGLE_WIRE_UART_PIN, GPIO_FUNC_UART);
-}
-#endif
+
+	#include <hardware/gpio.h>
+
+	// Bit-bang one 8N1 UART byte on the single-wire PDN_UART pin.
+	// Temporarily switches GPIO to SIO output for TX, then restores UART RX mode.
+	// 9 µs/bit ≈ 111 kbaud (-3.7% vs 115200) — within the ±6.25% 8N1 tolerance.
+	static void _rp2040_sw_uart_write_byte(uint8_t byte) {
+	    constexpr uint32_t T = 9; // µs per bit
+	    gpio_set_function(RP2040_SINGLE_WIRE_UART_PIN, GPIO_FUNC_SIO);
+	    gpio_set_dir(RP2040_SINGLE_WIRE_UART_PIN, GPIO_OUT);
+	    gpio_put(RP2040_SINGLE_WIRE_UART_PIN, 1); // idle HIGH before start bit
+	    // Start bit
+	    gpio_put(RP2040_SINGLE_WIRE_UART_PIN, 0);
+	    delayMicroseconds(T);
+	    // 8 data bits, LSB first
+	    for (int i = 0; i < 8; i++) {
+	        gpio_put(RP2040_SINGLE_WIRE_UART_PIN, (byte >> i) & 1);
+	        delayMicroseconds(T);
+	    }
+	    // Stop bit
+	    gpio_put(RP2040_SINGLE_WIRE_UART_PIN, 1);
+	    delayMicroseconds(T);
+	    // Restore UART1 RX function on GPIO9
+	    gpio_set_function(RP2040_SINGLE_WIRE_UART_PIN, GPIO_FUNC_UART);
+	}
+
+#endif // ARDUINO_ARCH_RP2040 && RP2040_SINGLE_WIRE_UART_PIN
 
 uint64_t TMC2208Stepper::_sendDatagram(uint8_t datagram[], const uint8_t len, uint16_t timeout) {
 	// === STEP 0: flush stale RX bytes ===
@@ -241,7 +244,7 @@ uint64_t TMC2208Stepper::_sendDatagram(uint8_t datagram[], const uint8_t len, ui
 		}
 	}
 
-	#if defined(ARDUINO_ARCH_AVR)
+	#ifdef ARDUINO_ARCH_AVR
 		if (RXTX_pin > 0) {
 			digitalWrite(RXTX_pin, HIGH);
 			pinMode(RXTX_pin, OUTPUT);
@@ -250,14 +253,14 @@ uint64_t TMC2208Stepper::_sendDatagram(uint8_t datagram[], const uint8_t len, ui
 
 	// === STEP 1: write request ===
 	#if defined(ARDUINO_ARCH_RP2040) && defined(RP2040_SINGLE_WIRE_UART_PIN)
-	noInterrupts();
-	for(int i=0; i<=len; i++) _rp2040_sw_uart_write_byte(datagram[i]);
-	interrupts();
+		noInterrupts();
+		for (int i = 0; i <= len; i++) _rp2040_sw_uart_write_byte(datagram[i]);
+		interrupts();
 	#else
-	for(int i=0; i<=len; i++) serial_write(datagram[i]);
+		for (int i = 0; i <= len; i++) serial_write(datagram[i]);
 	#endif
 
-	#if defined(ARDUINO_ARCH_AVR)
+	#ifdef ARDUINO_ARCH_AVR
 		if (RXTX_pin > 0) {
 			pinMode(RXTX_pin, INPUT_PULLUP);
 		}
@@ -290,7 +293,7 @@ uint64_t TMC2208Stepper::_sendDatagram(uint8_t datagram[], const uint8_t len, ui
 	uint32_t _body_t0 = micros();
 	timeout = this->abort_window;
 
-	for(uint8_t i=0; i<5;) {
+	for (uint8_t i = 0; i < 5; i++) {
 		if ((micros() - _body_t0) > (uint32_t)timeout * 1000UL) {
 			return 0;
 		}
@@ -300,8 +303,6 @@ uint64_t TMC2208Stepper::_sendDatagram(uint8_t datagram[], const uint8_t len, ui
 
 		out <<= 8;
 		out |= res & 0xFF;
-
-		i++;
 	}
 
 	#if defined(ARDUINO_ARCH_AVR)
