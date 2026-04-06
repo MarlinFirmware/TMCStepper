@@ -8,7 +8,7 @@
 #include "SERIAL_SWITCH.h"
 
 #if defined(ARDUINO_ARCH_RP2040) && defined(RP2040_SINGLE_WIRE_UART_PIN)
-#include <hardware/gpio.h>
+  #include <hardware/gpio.h>
 #endif
 
 // Protected
@@ -268,12 +268,10 @@ void TMC2208Stepper::write(uint8_t addr, uint32_t regVal) {
 
 uint64_t TMC2208Stepper::_sendDatagram(uint8_t datagram[], const uint8_t len, uint16_t timeout) {
 	// === STEP 0: flush stale RX bytes ===
-	{
-		uint32_t _flush_t0 = micros();
-		while (available() > 0) {
-			serial_read();
-			if ((micros() - _flush_t0) > (uint32_t)timeout * 1000UL) break;
-		}
+	const uint32_t _flush_t0 = micros();
+	while (available() > 0) {
+		serial_read();
+		if ((micros() - _flush_t0) > (uint32_t)timeout * 1000UL) break;
 	}
 
 	#if HAS_HALF_DUPLEX_MODE
