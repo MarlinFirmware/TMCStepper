@@ -11,7 +11,8 @@
 class TMC2240Stepper {
 	public:
 		TMC2240Stepper(uint16_t pinCS, int8_t link_index = -1);
-		TMC2240Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1);
+		TMC2240Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1, bool softSPI = _TMC_SOFTSPI_DEFAULT);
+		TMC2240Stepper(uint16_t pinCS, TMCSPIInterface *spiMan, int8_t link_index = -1);
 
 		/**
 		 * ('rref', 12000, minval=12000, maxval=60000)
@@ -362,6 +363,11 @@ class TMC2240Stepper {
 
 		static uint32_t spi_speed; // Default 2MHz
 		const uint16_t _pinCS;
+		const uint16_t _pinMISO;
+		const uint16_t _pinMOSI;
+		const uint16_t _pinSCK;
+		const TMCSPIInterface *_spiMan;
+		const bool _has_pins;
 		SW_SPIClass * TMC_SW_SPI = nullptr;
 		static constexpr float default_RS = 0.11;
 
