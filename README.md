@@ -22,7 +22,6 @@ This library works with any Arduino compatible board (Arduino, STM32, NXP, etc) 
 
 The TMCStepper library is and always will be free to use.
 
-This project started for me as a personal test to see if I could do it. Over the years it has gained some popularity as more and more hobbyists are looking into advanced stepper motor drivers. More users also comes with more unique setups.
-This donation option will allow me to purchase the hardware that I can use for testing, validation and supporting you.
+Teemu Mäntykallio began this project as a personal challenge when it suddenly gained popularity when 3D printers and users widely adopted advanced silent stepper motor drivers. More users means a lot more work, so please donate to Teemu so he can purchase the hardware he needs for testing, validation, and user support — and to reward his great effort!
 
 - [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=KFRSQ3KUUPKWS&currency_code=EUR&source=url)
