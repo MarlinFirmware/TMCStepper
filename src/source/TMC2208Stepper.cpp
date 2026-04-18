@@ -88,8 +88,8 @@ void TMC2208Stepper::begin() {
 void TMC2208Stepper::defaults() {
 	GCONF_register.i_scale_analog = 1;
 	GCONF_register.internal_rsense = 0; // OTP
-	GCONF_register.en_spreadcycle = 0; // OTP
-	GCONF_register.multistep_filt = 1; // OTP
+	GCONF_register.en_spreadcycle = 0;  // OTP
+	GCONF_register.multistep_filt = 1;  // OTP
 
 	IHOLD_IRUN_register.iholddelay = 1; // OTP
 
