@@ -35,7 +35,9 @@
  */
 class TMC2240Stepper {
 	public:
-		TMC2240Stepper(uint16_t pinCS, int8_t link_index = -1);
+		#ifndef ESP_PLATFORM
+			TMC2240Stepper(uint16_t pinCS, int8_t link_index = -1);
+		#endif
 		TMC2240Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1);
 
 		/**
