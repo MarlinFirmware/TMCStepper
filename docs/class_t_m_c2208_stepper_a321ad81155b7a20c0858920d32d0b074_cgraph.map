@@ -1,0 +1,9 @@
+<map id="TMC2208Stepper::_sendDatagram" name="TMC2208Stepper::_sendDatagram">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,229,80"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2208_stepper.html#aef33fe13c1d9c19e9ec9abc159147a5d" title=" " alt="" coords="283,5,465,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,51,288,32,289,37,188,57"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2208_stepper.html#a8214f87693050e222fc24be979f468e2" title=" " alt="" coords="277,55,471,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,65,261,65,261,70,229,70"/>
+<area shape="rect" id="Node000004" href="$class_t_m_c2208_stepper.html#adb6243277ef84d2027b2b8bae6be5bd0" title=" " alt="" coords="293,104,455,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="179,78,278,101,277,106,177,84"/>
+</map>

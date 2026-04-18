@@ -1,4 +1,4 @@
 <map id="TMC2660Stepper::vsense" name="TMC2660Stepper::vsense">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,176,32"/>
-<area shape="rect" id="node2" href="$class_t_m_c2660_stepper.html#ae9e78a1a2e7847988c779e81e3ae5545" title=" " alt="" coords="224,5,395,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,179,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="63,30,57,21,60,11,72,5,92,3,113,5,124,12,121,16,111,10,92,8,74,10,64,15,62,20,67,28"/>
 </map>

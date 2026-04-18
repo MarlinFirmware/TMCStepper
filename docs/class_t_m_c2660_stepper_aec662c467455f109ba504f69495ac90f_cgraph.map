@@ -1,4 +1,8 @@
 <map id="TMC2660Stepper::isEnabled" name="TMC2660Stepper::isEnabled">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,192,32"/>
-<area shape="rect" id="node2" href="$class_t_m_c2660_stepper.html#abe01a905588d5feb41ec3a967512027f" title=" " alt="" coords="240,5,387,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,194,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2660_stepper.html#abe01a905588d5feb41ec3a967512027f" title=" " alt="" coords="242,29,392,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,40,226,40,226,45,194,45"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2660_stepper.html#ae0067aef27a3b77f7bd02670fcd87332" title=" " alt="" coords="440,29,590,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="392,40,425,40,425,45,392,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="482,30,475,21,479,11,493,5,515,3,540,5,552,12,549,17,538,10,515,8,494,10,483,15,481,20,486,27"/>
 </map>

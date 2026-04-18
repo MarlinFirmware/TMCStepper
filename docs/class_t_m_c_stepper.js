@@ -1,13 +1,12 @@
 var class_t_m_c_stepper =
 [
-    [ "MSCNT_t", "struct_t_m_c_stepper_1_1_m_s_c_n_t__t.html", null ],
     [ "TSTEP_t", "struct_t_m_c_stepper_1_1_t_s_t_e_p__t.html", null ],
+    [ "MSCNT_t", "struct_t_m_c_stepper_1_1_m_s_c_n_t__t.html", null ],
     [ "TMCStepper", "class_t_m_c_stepper.html#a8a8813bde06653e0b66f93e57387a02f", null ],
+    [ "~TMCStepper", "class_t_m_c_stepper.html#a3ae8c6443121962547c3ce3acd6f1fd6", null ],
     [ "blank_time", "class_t_m_c_stepper.html#aea3d94ca7be0fb510c6432cb95a9e6af", null ],
     [ "blank_time", "class_t_m_c_stepper.html#a889e66a7d32f607b4e22299aab6e9c99", null ],
     [ "cs2rms", "class_t_m_c_stepper.html#ae6829e76ae67523a4cb60553dd70fece", null ],
-    [ "cur_a", "class_t_m_c_stepper.html#a58d924967fb53750c162d0e9c4d2020c", null ],
-    [ "cur_b", "class_t_m_c_stepper.html#ac7451afd82d3ebac91fe607d4bab65f8", null ],
     [ "drv_err", "class_t_m_c_stepper.html#a547e59743734b01749efd52210a0bd02", null ],
     [ "DRV_STATUS", "class_t_m_c_stepper.html#a5ea6ccc4c32966e40b26e56afd1c633b", null ],
     [ "GSTAT", "class_t_m_c_stepper.html#ac7874c4b56bd1b3acce522c1e7d7dfed", null ],
@@ -38,7 +37,6 @@ var class_t_m_c_stepper =
     [ "mres", "class_t_m_c_stepper.html#a5ecb8e45ce8ab535bbc3f9f69e8c2657", null ],
     [ "mres", "class_t_m_c_stepper.html#a3a830313a06135d45c1328bd2f5f530b", null ],
     [ "MSCNT", "class_t_m_c_stepper.html#a5c93e348deec2455319c4ec819ac83fa", null ],
-    [ "MSCURACT", "class_t_m_c_stepper.html#ac2a244b29e2256064a7ec2e07d694d61", null ],
     [ "read", "class_t_m_c_stepper.html#a55984b797e1b4d3fd9e253277b19b8bd", null ],
     [ "reset", "class_t_m_c_stepper.html#ab3cc9688f015f07d65cca651c4c50299", null ],
     [ "rms_current", "class_t_m_c_stepper.html#aaa5cfefaf915e98eb9700bda48f99337", null ],

@@ -1,0 +1,6 @@
+<map id="TMC2160Stepper::pwm_ofs" name="TMC2160Stepper::pwm_ofs">
+<area shape="rect" id="Node000001" title=" " alt="" coords="238,29,422,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="370,17,357,11,330,8,305,10,292,15,289,20,296,27,291,31,284,21,288,11,304,5,330,3,358,5,373,12"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2160_stepper.html#a28ca2abf68614961609ce69987b79b8f" title=" " alt="" coords="5,29,190,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,45,190,45,190,40,222,40"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="TMC2160Stepper::bbmclks" name="TMC2160Stepper::bbmclks">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,186,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2160_stepper.html#a6c6a56ef47594711ce02fb0d3e852a6d" title=" " alt="" coords="234,29,414,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,40,218,40,218,45,186,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="286,31,279,21,283,11,298,5,324,3,352,5,366,12,364,17,350,10,324,8,300,10,287,15,284,20,290,27"/>
+</map>

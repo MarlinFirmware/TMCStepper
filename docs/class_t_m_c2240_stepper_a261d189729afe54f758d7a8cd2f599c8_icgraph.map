@@ -1,0 +1,8 @@
+<map id="TMC2240Stepper::ihold" name="TMC2240Stepper::ihold">
+<area shape="rect" id="Node000001" title=" " alt="" coords="413,29,571,55"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="528,17,516,10,492,8,470,10,459,15,456,20,462,27,458,31,451,21,455,11,469,5,492,3,518,5,530,12"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#a1c9ab690ef294eee252ccb1c8cf4badc" title=" " alt="" coords="207,29,365,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="398,45,365,45,365,40,398,40"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2240_stepper.html#a5f704f4ebe14d5a2ad74c08fcaf4d549" title=" " alt="" coords="5,22,159,62"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="191,45,159,45,159,40,191,40"/>
+</map>

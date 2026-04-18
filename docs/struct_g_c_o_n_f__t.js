@@ -1,5 +1,7 @@
 var struct_g_c_o_n_f__t =
 [
+    [ "__pad0__", "struct_g_c_o_n_f__t.html#ad7d7bf770c4fcef4852c92bdac63a1a0", null ],
+    [ "__pad0__", "struct_g_c_o_n_f__t.html#a089cac3f67c542636f0a9ebadcd228be", null ],
     [ "diag0_error", "struct_g_c_o_n_f__t.html#a4194c03a64455428bd27c29e8ffa1e17", null ],
     [ "diag0_int_pushpull", "struct_g_c_o_n_f__t.html#a812168ec9ce101147464267694b24864", null ],
     [ "diag0_otpw", "struct_g_c_o_n_f__t.html#a19e65986b1a23b5964ed353862d8b033", null ],

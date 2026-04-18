@@ -1,0 +1,8 @@
+<map id="TMC2240Stepper::hysteresis_end" name="TMC2240Stepper::hysteresis_end">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,225,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#abce214f8d9f65a69ad6089f476ad4d07" title=" " alt="" coords="273,29,432,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="225,40,257,40,257,45,225,45"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2240_stepper.html#a82b09ad3c3f8b16afb289977c5f775c7" title=" " alt="" coords="480,29,639,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="432,40,465,40,465,45,432,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="525,31,518,21,522,11,536,5,560,3,585,5,598,12,596,17,584,10,560,8,538,10,526,15,524,20,529,27"/>
+</map>

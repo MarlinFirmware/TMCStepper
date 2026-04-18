@@ -1,0 +1,7 @@
+<map id="TMC2240Stepper" name="TMC2240Stepper">
+<area shape="rect" id="Node000001" title=" " alt="" coords="35,102,158,128"/>
+<area shape="rect" id="Node000002" href="$class_s_switch.html" title=" " alt="" coords="5,5,76,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,44,72,77,89,100,85,103,68,79,50,46"/>
+<area shape="rect" id="Node000003" href="$class_s_w___s_p_i_class.html" title=" " alt="" coords="99,5,206,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="143,47,125,79,109,103,104,100,121,77,138,44"/>
+</map>

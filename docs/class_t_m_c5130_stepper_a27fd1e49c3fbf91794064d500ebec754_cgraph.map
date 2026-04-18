@@ -1,0 +1,7 @@
+<map id="TMC5130Stepper::INIT_REGISTER" name="TMC5130Stepper::INIT_REGISTER">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,163,46"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c5130_stepper.html#af78bc5ec6076b4e7ac8006488b069413" title=" " alt="" coords="211,13,411,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,23,195,23,195,28,163,28"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2130_stepper.html#aed0175bff6e80ebc14e0d2606283cbe0" title=" " alt="" coords="459,13,615,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="412,23,443,23,443,28,412,28"/>
+</map>

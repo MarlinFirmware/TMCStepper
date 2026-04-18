@@ -1,12 +1,75 @@
 var annotated_dup =
 [
-    [ "TMC2130_n", "namespace_t_m_c2130__n.html", "namespace_t_m_c2130__n" ],
-    [ "TMC2160_n", "namespace_t_m_c2160__n.html", "namespace_t_m_c2160__n" ],
-    [ "TMC2208_n", "namespace_t_m_c2208__n.html", "namespace_t_m_c2208__n" ],
-    [ "TMC2209_n", "namespace_t_m_c2209__n.html", "namespace_t_m_c2209__n" ],
-    [ "TMC2224_n", "namespace_t_m_c2224__n.html", "namespace_t_m_c2224__n" ],
-    [ "TMC2660_n", "namespace_t_m_c2660__n.html", "namespace_t_m_c2660__n" ],
-    [ "TMC5130_n", "namespace_t_m_c5130__n.html", "namespace_t_m_c5130__n" ],
+    [ "TMC2130_n", "namespace_t_m_c2130__n.html", [
+      [ "DRV_STATUS_t", "struct_t_m_c2130__n_1_1_d_r_v___s_t_a_t_u_s__t.html", "struct_t_m_c2130__n_1_1_d_r_v___s_t_a_t_u_s__t" ]
+    ] ],
+    [ "TMC2160_n", "namespace_t_m_c2160__n.html", [
+      [ "IOIN_t", "struct_t_m_c2160__n_1_1_i_o_i_n__t.html", "struct_t_m_c2160__n_1_1_i_o_i_n__t" ],
+      [ "PWMCONF_t", "struct_t_m_c2160__n_1_1_p_w_m_c_o_n_f__t.html", "struct_t_m_c2160__n_1_1_p_w_m_c_o_n_f__t" ],
+      [ "PWM_SCALE_t", "struct_t_m_c2160__n_1_1_p_w_m___s_c_a_l_e__t.html", "struct_t_m_c2160__n_1_1_p_w_m___s_c_a_l_e__t" ]
+    ] ],
+    [ "TMC2208_n", "namespace_t_m_c2208__n.html", [
+      [ "GCONF_t", "struct_t_m_c2208__n_1_1_g_c_o_n_f__t.html", "struct_t_m_c2208__n_1_1_g_c_o_n_f__t" ],
+      [ "IOIN_t", "struct_t_m_c2208__n_1_1_i_o_i_n__t.html", "struct_t_m_c2208__n_1_1_i_o_i_n__t" ],
+      [ "VACTUAL_t", "struct_t_m_c2208__n_1_1_v_a_c_t_u_a_l__t.html", "struct_t_m_c2208__n_1_1_v_a_c_t_u_a_l__t" ],
+      [ "MSCURACT_t", "struct_t_m_c2208__n_1_1_m_s_c_u_r_a_c_t__t.html", "struct_t_m_c2208__n_1_1_m_s_c_u_r_a_c_t__t" ],
+      [ "CHOPCONF_t", "struct_t_m_c2208__n_1_1_c_h_o_p_c_o_n_f__t.html", "struct_t_m_c2208__n_1_1_c_h_o_p_c_o_n_f__t" ],
+      [ "PWMCONF_t", "struct_t_m_c2208__n_1_1_p_w_m_c_o_n_f__t.html", "struct_t_m_c2208__n_1_1_p_w_m_c_o_n_f__t" ],
+      [ "DRV_STATUS_t", "struct_t_m_c2208__n_1_1_d_r_v___s_t_a_t_u_s__t.html", "struct_t_m_c2208__n_1_1_d_r_v___s_t_a_t_u_s__t" ],
+      [ "PWM_SCALE_t", "struct_t_m_c2208__n_1_1_p_w_m___s_c_a_l_e__t.html", "struct_t_m_c2208__n_1_1_p_w_m___s_c_a_l_e__t" ]
+    ] ],
+    [ "TMC2209_n", "namespace_t_m_c2209__n.html", [
+      [ "IOIN_t", "struct_t_m_c2209__n_1_1_i_o_i_n__t.html", "struct_t_m_c2209__n_1_1_i_o_i_n__t" ],
+      [ "SGTHRS_t", "struct_t_m_c2209__n_1_1_s_g_t_h_r_s__t.html", "struct_t_m_c2209__n_1_1_s_g_t_h_r_s__t" ],
+      [ "SG_RESULT_t", "struct_t_m_c2209__n_1_1_s_g___r_e_s_u_l_t__t.html", "struct_t_m_c2209__n_1_1_s_g___r_e_s_u_l_t__t" ],
+      [ "COOLCONF_t", "struct_t_m_c2209__n_1_1_c_o_o_l_c_o_n_f__t.html", "struct_t_m_c2209__n_1_1_c_o_o_l_c_o_n_f__t" ]
+    ] ],
+    [ "TMC2224_n", "namespace_t_m_c2224__n.html", [
+      [ "IOIN_t", "struct_t_m_c2224__n_1_1_i_o_i_n__t.html", "struct_t_m_c2224__n_1_1_i_o_i_n__t" ]
+    ] ],
+    [ "TMC2240_n", "namespace_t_m_c2240__n.html", [
+      [ "GCONF_t", "struct_t_m_c2240__n_1_1_g_c_o_n_f__t.html", "struct_t_m_c2240__n_1_1_g_c_o_n_f__t" ],
+      [ "GSTAT_t", "struct_t_m_c2240__n_1_1_g_s_t_a_t__t.html", "struct_t_m_c2240__n_1_1_g_s_t_a_t__t" ],
+      [ "NODECONF_t", "struct_t_m_c2240__n_1_1_n_o_d_e_c_o_n_f__t.html", "struct_t_m_c2240__n_1_1_n_o_d_e_c_o_n_f__t" ],
+      [ "IOIN_t", "struct_t_m_c2240__n_1_1_i_o_i_n__t.html", "struct_t_m_c2240__n_1_1_i_o_i_n__t" ],
+      [ "DRV_CONF_t", "struct_t_m_c2240__n_1_1_d_r_v___c_o_n_f__t.html", "struct_t_m_c2240__n_1_1_d_r_v___c_o_n_f__t" ],
+      [ "GLOBAL_SCALER_t", "struct_t_m_c2240__n_1_1_g_l_o_b_a_l___s_c_a_l_e_r__t.html", "struct_t_m_c2240__n_1_1_g_l_o_b_a_l___s_c_a_l_e_r__t" ],
+      [ "IHOLD_IRUN_t", "struct_t_m_c2240__n_1_1_i_h_o_l_d___i_r_u_n__t.html", "struct_t_m_c2240__n_1_1_i_h_o_l_d___i_r_u_n__t" ],
+      [ "TPOWERDOWN_t", "struct_t_m_c2240__n_1_1_t_p_o_w_e_r_d_o_w_n__t.html", "struct_t_m_c2240__n_1_1_t_p_o_w_e_r_d_o_w_n__t" ],
+      [ "TSTEP_t", "struct_t_m_c2240__n_1_1_t_s_t_e_p__t.html", "struct_t_m_c2240__n_1_1_t_s_t_e_p__t" ],
+      [ "TPWMTHRS_t", "struct_t_m_c2240__n_1_1_t_p_w_m_t_h_r_s__t.html", "struct_t_m_c2240__n_1_1_t_p_w_m_t_h_r_s__t" ],
+      [ "TCOOLTHRS_t", "struct_t_m_c2240__n_1_1_t_c_o_o_l_t_h_r_s__t.html", "struct_t_m_c2240__n_1_1_t_c_o_o_l_t_h_r_s__t" ],
+      [ "THIGH_t", "struct_t_m_c2240__n_1_1_t_h_i_g_h__t.html", "struct_t_m_c2240__n_1_1_t_h_i_g_h__t" ],
+      [ "ADC_VSUPPLY_AIN_t", "struct_t_m_c2240__n_1_1_a_d_c___v_s_u_p_p_l_y___a_i_n__t.html", "struct_t_m_c2240__n_1_1_a_d_c___v_s_u_p_p_l_y___a_i_n__t" ],
+      [ "ADC_TEMP_t", "struct_t_m_c2240__n_1_1_a_d_c___t_e_m_p__t.html", "struct_t_m_c2240__n_1_1_a_d_c___t_e_m_p__t" ],
+      [ "OTW_OV_VTH_t", "struct_t_m_c2240__n_1_1_o_t_w___o_v___v_t_h__t.html", "struct_t_m_c2240__n_1_1_o_t_w___o_v___v_t_h__t" ],
+      [ "MSLUT0_t", "struct_t_m_c2240__n_1_1_m_s_l_u_t0__t.html", "struct_t_m_c2240__n_1_1_m_s_l_u_t0__t" ],
+      [ "MSLUT1_t", "struct_t_m_c2240__n_1_1_m_s_l_u_t1__t.html", "struct_t_m_c2240__n_1_1_m_s_l_u_t1__t" ],
+      [ "MSLUT2_t", "struct_t_m_c2240__n_1_1_m_s_l_u_t2__t.html", "struct_t_m_c2240__n_1_1_m_s_l_u_t2__t" ],
+      [ "MSLUT3_t", "struct_t_m_c2240__n_1_1_m_s_l_u_t3__t.html", "struct_t_m_c2240__n_1_1_m_s_l_u_t3__t" ],
+      [ "MSLUT4_t", "struct_t_m_c2240__n_1_1_m_s_l_u_t4__t.html", "struct_t_m_c2240__n_1_1_m_s_l_u_t4__t" ],
+      [ "MSLUT5_t", "struct_t_m_c2240__n_1_1_m_s_l_u_t5__t.html", "struct_t_m_c2240__n_1_1_m_s_l_u_t5__t" ],
+      [ "MSLUT6_t", "struct_t_m_c2240__n_1_1_m_s_l_u_t6__t.html", "struct_t_m_c2240__n_1_1_m_s_l_u_t6__t" ],
+      [ "MSLUT7_t", "struct_t_m_c2240__n_1_1_m_s_l_u_t7__t.html", "struct_t_m_c2240__n_1_1_m_s_l_u_t7__t" ],
+      [ "MSLUTSEL_t", "struct_t_m_c2240__n_1_1_m_s_l_u_t_s_e_l__t.html", "struct_t_m_c2240__n_1_1_m_s_l_u_t_s_e_l__t" ],
+      [ "MSLUTSTART_t", "struct_t_m_c2240__n_1_1_m_s_l_u_t_s_t_a_r_t__t.html", "struct_t_m_c2240__n_1_1_m_s_l_u_t_s_t_a_r_t__t" ],
+      [ "MSCURACT_t", "struct_t_m_c2240__n_1_1_m_s_c_u_r_a_c_t__t.html", "struct_t_m_c2240__n_1_1_m_s_c_u_r_a_c_t__t" ],
+      [ "CHOPCONF_t", "struct_t_m_c2240__n_1_1_c_h_o_p_c_o_n_f__t.html", "struct_t_m_c2240__n_1_1_c_h_o_p_c_o_n_f__t" ],
+      [ "COOLCONF_t", "struct_t_m_c2240__n_1_1_c_o_o_l_c_o_n_f__t.html", "struct_t_m_c2240__n_1_1_c_o_o_l_c_o_n_f__t" ],
+      [ "DRV_STATUS_t", "struct_t_m_c2240__n_1_1_d_r_v___s_t_a_t_u_s__t.html", "struct_t_m_c2240__n_1_1_d_r_v___s_t_a_t_u_s__t" ],
+      [ "PWMCONF_t", "struct_t_m_c2240__n_1_1_p_w_m_c_o_n_f__t.html", "struct_t_m_c2240__n_1_1_p_w_m_c_o_n_f__t" ],
+      [ "PWM_SCALE_t", "struct_t_m_c2240__n_1_1_p_w_m___s_c_a_l_e__t.html", "struct_t_m_c2240__n_1_1_p_w_m___s_c_a_l_e__t" ],
+      [ "PWM_AUTO_t", "struct_t_m_c2240__n_1_1_p_w_m___a_u_t_o__t.html", "struct_t_m_c2240__n_1_1_p_w_m___a_u_t_o__t" ],
+      [ "SG4_THRS_t", "struct_t_m_c2240__n_1_1_s_g4___t_h_r_s__t.html", "struct_t_m_c2240__n_1_1_s_g4___t_h_r_s__t" ],
+      [ "SG4_RESULT_t", "struct_t_m_c2240__n_1_1_s_g4___r_e_s_u_l_t__t.html", "struct_t_m_c2240__n_1_1_s_g4___r_e_s_u_l_t__t" ],
+      [ "SG4_IND_t", "struct_t_m_c2240__n_1_1_s_g4___i_n_d__t.html", "struct_t_m_c2240__n_1_1_s_g4___i_n_d__t" ]
+    ] ],
+    [ "TMC2660_n", "namespace_t_m_c2660__n.html", [
+      [ "CHOPCONF_t", "struct_t_m_c2660__n_1_1_c_h_o_p_c_o_n_f__t.html", "struct_t_m_c2660__n_1_1_c_h_o_p_c_o_n_f__t" ]
+    ] ],
+    [ "TMC5130_n", "namespace_t_m_c5130__n.html", [
+      [ "IOIN_t", "struct_t_m_c5130__n_1_1_i_o_i_n__t.html", "struct_t_m_c5130__n_1_1_i_o_i_n__t" ]
+    ] ],
     [ "A1_t", "struct_a1__t.html", "struct_a1__t" ],
     [ "AMAX_t", "struct_a_m_a_x__t.html", "struct_a_m_a_x__t" ],
     [ "CHOPCONF_t", "struct_c_h_o_p_c_o_n_f__t.html", "struct_c_h_o_p_c_o_n_f__t" ],
@@ -28,7 +91,6 @@ var annotated_dup =
     [ "GSTAT_t", "struct_g_s_t_a_t__t.html", "struct_g_s_t_a_t__t" ],
     [ "IHOLD_IRUN_t", "struct_i_h_o_l_d___i_r_u_n__t.html", "struct_i_h_o_l_d___i_r_u_n__t" ],
     [ "IOIN_t", "struct_i_o_i_n__t.html", "struct_i_o_i_n__t" ],
-    [ "MSCURACT_t", "struct_m_s_c_u_r_a_c_t__t.html", "struct_m_s_c_u_r_a_c_t__t" ],
     [ "MSLUT0_t", "struct_m_s_l_u_t0__t.html", "struct_m_s_l_u_t0__t" ],
     [ "MSLUT1_t", "struct_m_s_l_u_t1__t.html", "struct_m_s_l_u_t1__t" ],
     [ "MSLUT2_t", "struct_m_s_l_u_t2__t.html", "struct_m_s_l_u_t2__t" ],
@@ -52,7 +114,10 @@ var annotated_dup =
     [ "SHORT_CONF_t", "struct_s_h_o_r_t___c_o_n_f__t.html", "struct_s_h_o_r_t___c_o_n_f__t" ],
     [ "SLAVECONF_t", "struct_s_l_a_v_e_c_o_n_f__t.html", "struct_s_l_a_v_e_c_o_n_f__t" ],
     [ "SMARTEN_t", "struct_s_m_a_r_t_e_n__t.html", "struct_s_m_a_r_t_e_n__t" ],
+    [ "SPIClass", "class_s_p_i_class.html", "class_s_p_i_class" ],
+    [ "SPISettings", "struct_s_p_i_settings.html", "struct_s_p_i_settings" ],
     [ "SSwitch", "class_s_switch.html", "class_s_switch" ],
+    [ "Stream", "class_stream.html", "class_stream" ],
     [ "SW_MODE_t", "struct_s_w___m_o_d_e__t.html", "struct_s_w___m_o_d_e__t" ],
     [ "SW_SPIClass", "class_s_w___s_p_i_class.html", "class_s_w___s_p_i_class" ],
     [ "TCOOLTHRS_t", "struct_t_c_o_o_l_t_h_r_s__t.html", "struct_t_c_o_o_l_t_h_r_s__t" ],
@@ -62,6 +127,7 @@ var annotated_dup =
     [ "TMC2208Stepper", "class_t_m_c2208_stepper.html", "class_t_m_c2208_stepper" ],
     [ "TMC2209Stepper", "class_t_m_c2209_stepper.html", "class_t_m_c2209_stepper" ],
     [ "TMC2224Stepper", "class_t_m_c2224_stepper.html", "class_t_m_c2224_stepper" ],
+    [ "TMC2240Stepper", "class_t_m_c2240_stepper.html", "class_t_m_c2240_stepper" ],
     [ "TMC2660Stepper", "class_t_m_c2660_stepper.html", "class_t_m_c2660_stepper" ],
     [ "TMC5130Stepper", "class_t_m_c5130_stepper.html", "class_t_m_c5130_stepper" ],
     [ "TMC5160Stepper", "class_t_m_c5160_stepper.html", "class_t_m_c5160_stepper" ],

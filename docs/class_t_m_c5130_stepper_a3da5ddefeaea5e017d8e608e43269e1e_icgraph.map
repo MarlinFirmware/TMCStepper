@@ -1,5 +1,9 @@
 <map id="TMC5130Stepper::TZEROWAIT" name="TMC5130Stepper::TZEROWAIT">
-<area shape="rect" id="node1" title=" " alt="" coords="212,31,416,57"/>
-<area shape="rect" id="node2" href="$class_t_m_c5130_stepper.html#a55e61f5181d74f26c9d35c54e4436d7a" title=" " alt="" coords="5,5,164,32"/>
-<area shape="rect" id="node3" href="$class_t_m_c5160_stepper.html#a5a12974304588f9d01898d91ba854b87" title=" " alt="" coords="5,56,164,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="213,70,422,96"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c5130_stepper.html#a311b7ae18a34ad6248a239dbd65ddff5" title=" " alt="" coords="6,5,164,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,69,164,48,165,43,248,63"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c5130_stepper.html#a55e61f5181d74f26c9d35c54e4436d7a" title=" " alt="" coords="5,70,165,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,86,165,86,165,80,197,80"/>
+<area shape="rect" id="Node000004" href="$class_t_m_c5160_stepper.html#a5a12974304588f9d01898d91ba854b87" title=" " alt="" coords="5,120,165,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="239,102,150,121,148,116,238,97"/>
 </map>

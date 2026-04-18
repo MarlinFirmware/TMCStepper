@@ -1,8 +1,6 @@
 <map id="TMC2130Stepper::diag0_otpw" name="TMC2130Stepper::diag0_otpw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,200,83"/>
-<area shape="rect" id="node2" href="$class_t_m_c2130_stepper.html#aee84a9abfc84b387c6ae5658f90bf684" title=" " alt="" coords="248,56,424,83"/>
-<area shape="rect" id="node3" href="$class_t_m_c2130_stepper.html#aed0175bff6e80ebc14e0d2606283cbe0" title=" " alt="" coords="472,56,627,83"/>
-<area shape="rect" id="node4" href="$class_t_m_c2130_stepper.html#aed8aa4583943e649dbf3bb1c1da90d63" title=" " alt="" coords="675,5,877,32"/>
-<area shape="rect" id="node5" href="$class_s_w___s_p_i_class.html#af260fdc0af3f1312b106483161e559c3" title=" " alt="" coords="925,81,1081,108"/>
-<area shape="rect" id="node6" href="$class_s_w___s_p_i_class.html#a1b7600aa1d9571c103718c5d3e376675" title=" " alt="" coords="691,107,861,133"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,203,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2130_stepper.html#acae28cdb6b8b75d8804b2f8fef807604" title=" " alt="" coords="251,29,448,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,40,235,40,235,45,203,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="309,31,301,21,306,11,322,5,349,3,380,5,395,13,393,17,378,11,349,8,323,10,309,15,306,20,313,27"/>
 </map>

@@ -1,5 +1,9 @@
 <map id="TMC5130Stepper::DMAX" name="TMC5130Stepper::DMAX">
-<area shape="rect" id="node1" title=" " alt="" coords="212,31,379,57"/>
-<area shape="rect" id="node2" href="$class_t_m_c5130_stepper.html#a55e61f5181d74f26c9d35c54e4436d7a" title=" " alt="" coords="5,5,164,32"/>
-<area shape="rect" id="node3" href="$class_t_m_c5160_stepper.html#a5a12974304588f9d01898d91ba854b87" title=" " alt="" coords="5,56,164,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="213,70,383,96"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c5130_stepper.html#af0e2218b9a555ff6605ac9d4bb468aec" title=" " alt="" coords="6,5,164,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,68,163,49,164,44,233,63"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c5130_stepper.html#a55e61f5181d74f26c9d35c54e4436d7a" title=" " alt="" coords="5,70,165,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,86,165,86,165,80,197,80"/>
+<area shape="rect" id="Node000004" href="$class_t_m_c5160_stepper.html#a5a12974304588f9d01898d91ba854b87" title=" " alt="" coords="5,120,165,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="225,103,144,121,143,116,224,97"/>
 </map>

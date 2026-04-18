@@ -1,0 +1,6 @@
+<map id="TMC2240Stepper::fast_standstill" name="TMC2240Stepper::fast_standstill">
+<area shape="rect" id="Node000001" title=" " alt="" coords="207,29,360,70"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="316,16,304,10,283,8,264,10,253,15,248,20,250,28,245,29,243,19,249,10,263,5,283,3,305,5,318,11"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#a9c9811236604061b3ac147cda755ac8f" title=" " alt="" coords="5,29,159,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,52,159,52,159,47,191,47"/>
+</map>

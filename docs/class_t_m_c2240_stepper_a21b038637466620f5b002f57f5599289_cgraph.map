@@ -1,0 +1,6 @@
+<map id="TMC2240Stepper::current_range" name="TMC2240Stepper::current_range">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,177,70"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#a6545e9b52a8f7018f190ba222f6ca494" title=" " alt="" coords="225,29,396,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,47,209,47,209,52,177,52"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="269,29,267,19,274,10,288,5,310,3,334,5,348,11,346,16,333,10,310,8,289,10,277,15,272,21,274,28"/>
+</map>

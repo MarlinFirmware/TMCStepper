@@ -1,4 +1,5 @@
 <map id="TMC2160Stepper::begin" name="TMC2160Stepper::begin">
-<area shape="rect" id="node1" title=" " alt="" coords="215,5,376,32"/>
-<area shape="rect" id="node2" href="$class_t_m_c5130_stepper.html#a897212f81817cdaee4536d642badc149" title=" " alt="" coords="5,5,167,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="216,5,378,31"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c5130_stepper.html#a897212f81817cdaee4536d642badc149" title=" " alt="" coords="5,5,168,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,21,168,21,168,16,200,16"/>
 </map>

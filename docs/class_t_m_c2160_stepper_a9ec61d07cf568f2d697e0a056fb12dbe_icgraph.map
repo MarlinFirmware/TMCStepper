@@ -1,0 +1,6 @@
+<map id="TMC2160Stepper::pwm_lim" name="TMC2160Stepper::pwm_lim">
+<area shape="rect" id="Node000001" title=" " alt="" coords="237,29,420,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="369,17,355,10,328,8,304,10,291,15,288,20,294,27,290,31,282,21,287,11,303,5,328,3,357,5,371,12"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2160_stepper.html#ae599246cee1dc570d9dc1ea4df8d3e54" title=" " alt="" coords="5,29,189,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,45,189,45,189,40,221,40"/>
+</map>

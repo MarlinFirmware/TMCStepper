@@ -1,0 +1,6 @@
+<map id="TMC2208Stepper::diss2vs" name="TMC2208Stepper::diss2vs">
+<area shape="rect" id="Node000001" title=" " alt="" coords="230,29,406,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="357,17,344,10,318,8,294,10,281,15,279,20,285,27,281,31,273,21,278,11,293,5,318,3,345,5,359,12"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2208_stepper.html#afc70b23b3486ae3ea3a3dfa804441148" title=" " alt="" coords="5,29,182,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,45,182,45,182,40,214,40"/>
+</map>

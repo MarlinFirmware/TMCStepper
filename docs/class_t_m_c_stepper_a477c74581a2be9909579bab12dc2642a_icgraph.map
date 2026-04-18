@@ -1,4 +1,7 @@
 <map id="TMCStepper::hend" name="TMCStepper::hend">
-<area shape="rect" id="node1" title=" " alt="" coords="244,5,375,32"/>
-<area shape="rect" id="node2" href="$class_t_m_c_stepper.html#a6bf501e3e9b1c929e95a15f1d8279595" title=" " alt="" coords="5,5,196,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="245,31,376,56"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c_stepper.html#a8bc339ee30404455a56f32a915300fb6" title=" " alt="" coords="5,5,197,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,36,197,32,198,27,229,31"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c_stepper.html#a6bf501e3e9b1c929e95a15f1d8279595" title=" " alt="" coords="5,55,197,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,55,198,59,197,54,229,50"/>
 </map>

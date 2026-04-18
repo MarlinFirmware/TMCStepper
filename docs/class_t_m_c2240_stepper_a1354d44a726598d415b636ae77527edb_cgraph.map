@@ -1,0 +1,5 @@
+<map id="TMC2240Stepper::IHOLD_IRUN" name="TMC2240Stepper::IHOLD_IRUN">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,219,31"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#a4538a5802e0a530914e3e05cb8de9c7b" title=" " alt="" coords="267,5,426,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,16,251,16,251,21,219,21"/>
+</map>

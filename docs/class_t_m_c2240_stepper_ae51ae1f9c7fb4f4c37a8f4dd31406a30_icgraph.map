@@ -1,0 +1,6 @@
+<map id="TMC2240Stepper::stop_enable" name="TMC2240Stepper::stop_enable">
+<area shape="rect" id="Node000001" title=" " alt="" coords="210,29,366,70"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="321,16,309,10,288,8,268,10,257,15,252,20,254,28,249,29,247,19,253,10,267,5,288,3,310,5,323,11"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#a4c8fa964fec23794b02f659c352d37e1" title=" " alt="" coords="5,29,162,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,52,162,52,162,47,194,47"/>
+</map>

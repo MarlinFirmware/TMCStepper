@@ -1,5 +1,7 @@
 <map id="TMC2130Stepper::ENCM_CTRL" name="TMC2130Stepper::ENCM_CTRL">
-<area shape="rect" id="node1" title=" " alt="" coords="212,31,419,57"/>
-<area shape="rect" id="node2" href="$class_t_m_c2130_stepper.html#ac62d32ad08be0a34b411bdd5a8489246" title=" " alt="" coords="5,5,164,32"/>
-<area shape="rect" id="node3" href="$class_t_m_c5130_stepper.html#a55e61f5181d74f26c9d35c54e4436d7a" title=" " alt="" coords="5,56,164,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="213,42,426,68"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2130_stepper.html#a580969a53ee49f2c47d677d4e4594f9d" title=" " alt="" coords="6,5,164,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,42,164,38,164,33,198,37"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2130_stepper.html#ac62d32ad08be0a34b411bdd5a8489246" title=" " alt="" coords="5,70,165,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,72,165,76,165,71,197,67"/>
 </map>

@@ -1,6 +1,9 @@
 <map id="TMC2208Stepper" name="TMC2208Stepper">
-<area shape="rect" id="node1" title=" " alt="" coords="79,80,201,107"/>
-<area shape="rect" id="node3" href="$class_t_m_c2209_stepper.html" title=" " alt="" coords="5,155,128,181"/>
-<area shape="rect" id="node4" href="$class_t_m_c2224_stepper.html" title=" " alt="" coords="152,155,275,181"/>
-<area shape="rect" id="node2" href="$class_t_m_c_stepper.html" title=" " alt="" coords="93,5,187,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="79,79,202,105"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2209_stepper.html" title=" " alt="" coords="5,153,129,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="119,117,81,154,78,150,115,114"/>
+<area shape="rect" id="Node000004" href="$class_t_m_c2224_stepper.html" title=" " alt="" coords="153,153,277,178"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="166,114,204,150,201,154,162,117"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c_stepper.html" title=" " alt="" coords="93,5,188,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,46,143,79,138,79,138,46"/>
 </map>

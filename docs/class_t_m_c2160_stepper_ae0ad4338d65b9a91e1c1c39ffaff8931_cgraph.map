@@ -1,7 +1,14 @@
 <map id="TMC2160Stepper::rms_current" name="TMC2160Stepper::rms_current">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,157,72"/>
-<area shape="rect" id="node2" href="$class_t_m_c2160_stepper.html#a05142aa741a7ebd105a13df39fba9d91" title=" " alt="" coords="205,31,357,72"/>
-<area shape="rect" id="node3" href="$class_t_m_c2160_stepper.html#a6c84af7f87af2c616de8a6a288309ecb" title=" " alt="" coords="405,13,579,39"/>
-<area shape="rect" id="node5" href="$class_t_m_c_stepper.html#a89f965f7d005e189ef27951f37e699f2" title=" " alt="" coords="431,63,553,90"/>
-<area shape="rect" id="node4" href="$class_t_m_c2160_stepper.html#a4dc485fd467892f35f98ad6ea30b6d21" title=" " alt="" coords="627,5,809,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,159,87"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2160_stepper.html#a05142aa741a7ebd105a13df39fba9d91" title=" " alt="" coords="207,47,360,87"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,64,191,64,191,70,159,70"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2160_stepper.html#a6c84af7f87af2c616de8a6a288309ecb" title=" " alt="" coords="408,21,582,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="360,52,394,47,395,52,361,58"/>
+<area shape="rect" id="Node000005" href="$class_t_m_c_stepper.html#a89f965f7d005e189ef27951f37e699f2" title=" " alt="" coords="433,78,557,104"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="360,73,418,80,417,85,360,78"/>
+<area shape="rect" id="Node000004" href="$class_t_m_c2160_stepper.html#a4dc485fd467892f35f98ad6ea30b6d21" title=" " alt="" coords="630,5,814,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="582,28,615,27,615,32,583,33"/>
+<area shape="rect" id="Node000006" href="$class_t_m_c_stepper.html#aa82391a803e3103b03fadd9bb597d532" title=" " alt="" coords="660,94,784,120"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="558,93,644,99,644,104,558,98"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="684,95,677,86,681,76,697,70,722,68,750,70,764,77,762,82,748,75,722,73,698,75,685,80,682,85,689,92"/>
 </map>

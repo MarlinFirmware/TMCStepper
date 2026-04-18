@@ -1,0 +1,6 @@
+<map id="TMC2130Stepper::seimin" name="TMC2130Stepper::seimin">
+<area shape="rect" id="Node000001" title=" " alt="" coords="223,29,392,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="345,17,332,10,307,8,284,10,272,15,269,20,275,27,271,31,264,21,268,11,283,5,307,3,334,5,348,12"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2130_stepper.html#a854fbf50049cf55e4e44bab89ac7e4cf" title=" " alt="" coords="5,29,175,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,45,175,45,175,40,207,40"/>
+</map>

@@ -1,0 +1,19 @@
+<map id="TMC2240Stepper::rms_current" name="TMC2240Stepper::rms_current">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,88,159,129"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#a8d9765a61d3bf90aa88ff933a29ad160" title=" " alt="" coords="208,5,364,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,85,218,50,220,55,135,90"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2240_stepper.html#a1c9ab690ef294eee252ccb1c8cf4badc" title=" " alt="" coords="207,70,365,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,96,191,92,191,97,159,101"/>
+<area shape="rect" id="Node000005" href="$class_t_m_c2240_stepper.html#ad1639c4db3c0ddfcf16b96b77be71219" title=" " alt="" coords="210,120,362,145"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="159,115,195,119,194,124,158,120"/>
+<area shape="rect" id="Node000007" href="$class_t_m_c2240_stepper.html#a6c7890ad00371779ff777dee0d00544b" title=" " alt="" coords="211,169,360,210"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="136,127,220,161,218,166,134,132"/>
+<area shape="rect" id="Node000004" href="$class_t_m_c2240_stepper.html#a261d189729afe54f758d7a8cd2f599c8" title=" " alt="" coords="426,46,584,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="365,72,410,67,411,72,366,77"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="468,47,461,38,465,28,480,22,505,20,531,22,545,29,543,34,530,27,505,25,482,27,469,32,466,37,473,44"/>
+<area shape="rect" id="Node000006" href="$class_t_m_c2240_stepper.html#af64920dda2f277bed484e12d54a8d0d3" title=" " alt="" coords="428,120,581,145"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="362,130,413,130,413,135,362,135"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="468,121,461,111,465,101,480,95,505,93,531,96,545,102,543,107,530,101,505,98,482,100,469,105,466,110,473,117"/>
+<area shape="rect" id="Node000008" href="$class_t_m_c2240_stepper.html#a0950aa99ecae81e9599a77563b1d2d97" title=" " alt="" coords="413,169,596,210"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="361,187,398,187,398,192,361,192"/>
+</map>

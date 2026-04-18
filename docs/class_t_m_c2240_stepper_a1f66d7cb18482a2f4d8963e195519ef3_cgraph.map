@@ -1,0 +1,5 @@
+<map id="TMC2240Stepper::SLAVECONF" name="TMC2240Stepper::SLAVECONF">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,216,31"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#a4cb41cd822ddcbbf558a31f43ee55221" title=" " alt="" coords="264,5,472,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,16,248,16,248,21,216,21"/>
+</map>

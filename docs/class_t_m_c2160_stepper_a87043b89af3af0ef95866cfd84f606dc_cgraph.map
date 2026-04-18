@@ -1,0 +1,6 @@
+<map id="TMC2160Stepper::drvstrength" name="TMC2160Stepper::drvstrength">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,202,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2160_stepper.html#a211ec5de3bf648715b9886312e97242d" title=" " alt="" coords="250,29,446,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,40,234,40,234,45,202,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="308,31,300,21,304,11,321,5,348,3,378,5,393,13,391,17,377,11,348,8,322,10,308,15,305,20,312,27"/>
+</map>

@@ -1,4 +1,7 @@
 <map id="TMC2209Stepper::TCOOLTHRS" name="TMC2209Stepper::TCOOLTHRS">
-<area shape="rect" id="node1" title=" " alt="" coords="212,5,419,32"/>
-<area shape="rect" id="node2" href="$class_t_m_c2209_stepper.html#a180f4b9a78e526592d946ec12f71982e" title=" " alt="" coords="5,5,164,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="213,42,426,68"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2209_stepper.html#a22cc2b19d7ef7387fcc37a4d978788f5" title=" " alt="" coords="6,5,164,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,42,164,38,164,33,198,37"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2209_stepper.html#a180f4b9a78e526592d946ec12f71982e" title=" " alt="" coords="5,70,165,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,72,165,76,165,71,197,67"/>
 </map>

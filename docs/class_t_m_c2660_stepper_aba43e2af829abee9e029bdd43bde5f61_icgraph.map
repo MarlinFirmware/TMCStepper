@@ -1,7 +1,11 @@
 <map id="TMC2660Stepper::read" name="TMC2660Stepper::read">
-<area shape="rect" id="node1" title=" " alt="" coords="465,78,620,105"/>
-<area shape="rect" id="node2" href="$class_t_m_c2660_stepper.html#a124bab76346c3c6c17f812e8c4ad7a5c" title=" " alt="" coords="211,78,417,105"/>
-<area shape="rect" id="node3" href="$class_t_m_c2660_stepper.html#a560c825469ada7c23ec66a4106360e48" title=" " alt="" coords="5,5,163,47"/>
-<area shape="rect" id="node4" href="$class_t_m_c2660_stepper.html#a51f799cf592f8d9d50d110aaedfe141a" title=" " alt="" coords="12,71,156,112"/>
-<area shape="rect" id="node5" href="$class_t_m_c2660_stepper.html#a72a9a2ecf2d0707dba76de414cec209e" title=" " alt="" coords="8,136,160,177"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="474,78,630,104"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2660_stepper.html#a124bab76346c3c6c17f812e8c4ad7a5c" title=" " alt="" coords="214,78,426,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="459,94,427,94,427,88,459,88"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2660_stepper.html#a560c825469ada7c23ec66a4106360e48" title=" " alt="" coords="5,5,166,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="256,76,160,49,162,44,257,71"/>
+<area shape="rect" id="Node000004" href="$class_t_m_c2660_stepper.html#a51f799cf592f8d9d50d110aaedfe141a" title=" " alt="" coords="13,71,158,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="198,94,159,94,159,88,198,88"/>
+<area shape="rect" id="Node000005" href="$class_t_m_c2660_stepper.html#a72a9a2ecf2d0707dba76de414cec209e" title=" " alt="" coords="9,136,162,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="257,111,162,138,160,133,256,106"/>
 </map>

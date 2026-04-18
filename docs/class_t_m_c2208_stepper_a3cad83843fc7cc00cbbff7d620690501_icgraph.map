@@ -1,5 +1,7 @@
 <map id="TMC2208Stepper::PWM_AUTO" name="TMC2208Stepper::PWM_AUTO">
-<area shape="rect" id="node1" title=" " alt="" coords="211,46,416,73"/>
-<area shape="rect" id="node2" href="$class_t_m_c2208_stepper.html#a2940a4fc578d24624d835ac1664aeef3" title=" " alt="" coords="5,5,163,47"/>
-<area shape="rect" id="node3" href="$class_t_m_c2208_stepper.html#af24b684f8072b9e5b064f093d266257e" title=" " alt="" coords="5,71,163,112"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="213,46,421,72"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2208_stepper.html#a2940a4fc578d24624d835ac1664aeef3" title=" " alt="" coords="5,5,165,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,46,165,40,166,35,208,41"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2208_stepper.html#af24b684f8072b9e5b064f093d266257e" title=" " alt="" coords="5,71,165,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,77,165,83,165,77,204,72"/>
 </map>

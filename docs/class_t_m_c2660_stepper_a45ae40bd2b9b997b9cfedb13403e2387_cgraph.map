@@ -1,4 +1,8 @@
 <map id="TMC2660Stepper::DRVCTRL" name="TMC2660Stepper::DRVCTRL">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,195,32"/>
-<area shape="rect" id="node2" href="$class_t_m_c2660_stepper.html#aa20df51be5967e40cc23132a1d461275" title=" " alt="" coords="243,5,400,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,201,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2660_stepper.html#aa20df51be5967e40cc23132a1d461275" title=" " alt="" coords="249,29,409,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,40,233,40,233,45,201,45"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2660_stepper.html#af6b9772d151924e000c051ecff34d313" title=" " alt="" coords="457,29,617,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="409,40,441,40,441,45,409,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="502,31,496,21,500,11,514,5,537,3,563,5,576,12,573,17,561,10,537,8,515,10,503,15,501,20,507,27"/>
 </map>

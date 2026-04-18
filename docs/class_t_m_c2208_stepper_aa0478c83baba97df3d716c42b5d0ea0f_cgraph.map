@@ -1,0 +1,15 @@
+<map id="TMC2208Stepper::INIT2208_REGISTER" name="TMC2208Stepper::INIT2208_REGISTER">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,88,191,129"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2208_stepper.html#a9e9792fafdbbf0681daf613b2a5f507a" title=" " alt="" coords="239,96,430,122"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,106,223,106,223,112,191,112"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2208_stepper.html#a142b14de8a4dcc6cf76b4a6ede9e1cea" title=" " alt="" coords="478,96,637,122"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="431,106,462,106,462,112,431,112"/>
+<area shape="rect" id="Node000004" href="$class_t_m_c2208_stepper.html#a409c19fa6b052a370a317d061bf9af4e" title=" " alt="" coords="686,5,871,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="580,93,627,67,684,41,706,33,708,38,686,46,629,72,582,98"/>
+<area shape="rect" id="Node000005" href="$class_t_m_c2208_stepper.html#a5147cab1658f782b36b0ce7e951d4f4e" title=" " alt="" coords="685,55,872,96"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="637,94,669,89,670,95,638,99"/>
+<area shape="rect" id="Node000006" href="$class_t_m_c2208_stepper.html#a66e4f8694ee035432af8b61f14b35a92" title=" " alt="" coords="689,120,868,161"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="638,118,674,123,673,128,637,123"/>
+<area shape="rect" id="Node000007" href="$class_t_m_c2208_stepper.html#adb6243277ef84d2027b2b8bae6be5bd0" title=" " alt="" coords="697,186,860,226"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="584,120,686,170,703,177,701,182,684,175,582,125"/>
+</map>

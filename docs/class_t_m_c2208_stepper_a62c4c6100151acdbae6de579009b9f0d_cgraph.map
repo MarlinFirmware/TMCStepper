@@ -1,7 +1,13 @@
 <map id="TMC2208Stepper::SLAVECONF" name="TMC2208Stepper::SLAVECONF">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,215,83"/>
-<area shape="rect" id="node2" href="$class_t_m_c2208_stepper.html#a142b14de8a4dcc6cf76b4a6ede9e1cea" title=" " alt="" coords="263,56,420,83"/>
-<area shape="rect" id="node3" href="$class_s_switch.html#a6ff09d0850d551571dc333fb74ff8628" title=" " alt="" coords="503,5,614,32"/>
-<area shape="rect" id="node4" href="$class_t_m_c2208_stepper.html#a409c19fa6b052a370a317d061bf9af4e" title=" " alt="" coords="468,56,649,83"/>
-<area shape="rect" id="node5" href="$class_t_m_c2208_stepper.html#a7dd83313385079099b0622957786a979" title=" " alt="" coords="478,107,639,149"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,216,122"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2208_stepper.html#a142b14de8a4dcc6cf76b4a6ede9e1cea" title=" " alt="" coords="264,96,423,122"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,106,248,106,248,112,216,112"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2208_stepper.html#a409c19fa6b052a370a317d061bf9af4e" title=" " alt="" coords="472,5,657,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="366,93,413,67,470,41,492,33,494,38,472,46,415,72,368,98"/>
+<area shape="rect" id="Node000004" href="$class_t_m_c2208_stepper.html#a5147cab1658f782b36b0ce7e951d4f4e" title=" " alt="" coords="471,55,657,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="423,94,455,89,456,95,424,99"/>
+<area shape="rect" id="Node000005" href="$class_t_m_c2208_stepper.html#a66e4f8694ee035432af8b61f14b35a92" title=" " alt="" coords="474,120,654,161"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="424,118,459,123,459,128,423,123"/>
+<area shape="rect" id="Node000006" href="$class_t_m_c2208_stepper.html#adb6243277ef84d2027b2b8bae6be5bd0" title=" " alt="" coords="483,186,645,226"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="370,120,472,170,489,177,487,182,470,175,368,125"/>
 </map>

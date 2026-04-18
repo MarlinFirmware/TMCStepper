@@ -7,6 +7,8 @@ var class_t_m_c2209_stepper =
     [ "diag", "class_t_m_c2209_stepper.html#a57eb34f291e73aef7d3de9f21239e3ac", null ],
     [ "dir", "class_t_m_c2209_stepper.html#abfe7546eae0d8d3496de34589c43e166", null ],
     [ "enn", "class_t_m_c2209_stepper.html#a15552d02544cc0df6b82317c937e4ea5", null ],
+    [ "INIT2209_REGISTER", "class_t_m_c2209_stepper.html#a64221bf459b0dea397baba27b7a54e10", null ],
+    [ "INIT2209_REGISTER", "class_t_m_c2209_stepper.html#ade36c1462edb9fdb4afcc354ae1f6d2a", null ],
     [ "INIT_REGISTER", "class_t_m_c2209_stepper.html#a22cc2b19d7ef7387fcc37a4d978788f5", null ],
     [ "IOIN", "class_t_m_c2209_stepper.html#aeab582b2f23d4e58f63aec80163b3838", null ],
     [ "ms1", "class_t_m_c2209_stepper.html#a72a107720c4c682acde250585e2a229e", null ],
@@ -30,7 +32,5 @@ var class_t_m_c2209_stepper =
     [ "step", "class_t_m_c2209_stepper.html#addc6c0342e5b35667cde4dbae26c6e2d", null ],
     [ "TCOOLTHRS", "class_t_m_c2209_stepper.html#a5a1335a60d938c7d1fcb7408c28f8650", null ],
     [ "TCOOLTHRS", "class_t_m_c2209_stepper.html#acc61f21e6584dc64bd9bd025fd7bc29a", null ],
-    [ "version", "class_t_m_c2209_stepper.html#a32b4d9a1b78ccc722c85089b45a48947", null ],
-    [ "COOLCONF_register", "class_t_m_c2209_stepper.html#a9d2a143190a39935b32f3814b0668de4", null ],
-    [ "SGTHRS_register", "class_t_m_c2209_stepper.html#a916d2842d30ba1b54c2cd4bf5a01c005", null ]
+    [ "version", "class_t_m_c2209_stepper.html#a32b4d9a1b78ccc722c85089b45a48947", null ]
 ];

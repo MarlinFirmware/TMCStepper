@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['pwm_5fauto_5ft_521',['PWM_AUTO_t',['../struct_p_w_m___a_u_t_o__t.html',1,'']]],
-  ['pwm_5fscale_5ft_522',['PWM_SCALE_t',['../struct_t_m_c2208__n_1_1_p_w_m___s_c_a_l_e__t.html',1,'TMC2208_n::PWM_SCALE_t'],['../struct_t_m_c2160__n_1_1_p_w_m___s_c_a_l_e__t.html',1,'TMC2160_n::PWM_SCALE_t'],['../struct_t_m_c2130_stepper_1_1_p_w_m___s_c_a_l_e__t.html',1,'TMC2130Stepper::PWM_SCALE_t']]],
-  ['pwmconf_5ft_523',['PWMCONF_t',['../struct_t_m_c2208__n_1_1_p_w_m_c_o_n_f__t.html',1,'TMC2208_n::PWMCONF_t'],['../struct_t_m_c2160__n_1_1_p_w_m_c_o_n_f__t.html',1,'TMC2160_n::PWMCONF_t'],['../struct_p_w_m_c_o_n_f__t.html',1,'PWMCONF_t']]]
+  ['offset_5fread_5ft_0',['OFFSET_READ_t',['../struct_o_f_f_s_e_t___r_e_a_d__t.html',1,'']]],
+  ['otp_5fprog_5ft_1',['OTP_PROG_t',['../struct_t_m_c2208_stepper_1_1_o_t_p___p_r_o_g__t.html',1,'TMC2208Stepper']]],
+  ['otp_5fread_5ft_2',['OTP_READ_t',['../struct_t_m_c2208_stepper_1_1_o_t_p___r_e_a_d__t.html',1,'TMC2208Stepper']]],
+  ['otw_5fov_5fvth_5ft_3',['OTW_OV_VTH_t',['../struct_t_m_c2240__n_1_1_o_t_w___o_v___v_t_h__t.html',1,'TMC2240_n']]],
+  ['output_5ft_4',['OUTPUT_t',['../struct_o_u_t_p_u_t__t.html',1,'']]]
 ];

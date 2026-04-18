@@ -1,0 +1,7 @@
+<map id="TMC2240Stepper::INIT2240_REGISTER" name="TMC2240Stepper::INIT2240_REGISTER">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,191,46"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#adf383c51bd00c42884ffb5b9677636c4" title=" " alt="" coords="239,13,441,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,23,223,23,223,28,191,28"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2240_stepper.html#a4538a5802e0a530914e3e05cb8de9c7b" title=" " alt="" coords="489,13,648,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="441,23,473,23,473,28,441,28"/>
+</map>

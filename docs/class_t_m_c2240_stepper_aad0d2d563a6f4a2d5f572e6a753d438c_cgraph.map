@@ -1,0 +1,6 @@
+<map id="TMC2240Stepper::diss2g" name="TMC2240Stepper::diss2g">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,175,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#a50da37b0a34601ea0ec377b82c111b24" title=" " alt="" coords="223,29,392,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,40,207,40,207,45,175,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="271,31,264,21,268,11,283,5,307,3,334,5,348,12,345,17,332,10,307,8,284,10,272,15,269,20,275,27"/>
+</map>

@@ -1,5 +1,7 @@
 <map id="TMC2160Stepper::PWM_SCALE" name="TMC2160Stepper::PWM_SCALE">
-<area shape="rect" id="node1" title=" " alt="" coords="211,39,373,80"/>
-<area shape="rect" id="node2" href="$class_t_m_c2160_stepper.html#aed84d0cf68f223e6e0a463bf489f05da" title=" " alt="" coords="5,5,163,47"/>
-<area shape="rect" id="node3" href="$class_t_m_c2160_stepper.html#a5a7e05fecd47e292b496f9c07d2e7d7d" title=" " alt="" coords="5,71,163,112"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="213,39,377,79"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2160_stepper.html#aed84d0cf68f223e6e0a463bf489f05da" title=" " alt="" coords="5,5,165,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,46,165,41,165,36,198,41"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2160_stepper.html#a5a7e05fecd47e292b496f9c07d2e7d7d" title=" " alt="" coords="5,71,165,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,77,165,81,165,76,197,71"/>
 </map>

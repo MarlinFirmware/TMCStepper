@@ -1,0 +1,7 @@
+<map id="TMC2240Stepper::PWM_SCALE" name="TMC2240Stepper::PWM_SCALE">
+<area shape="rect" id="Node000001" title=" " alt="" coords="213,39,377,79"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#adf41d39fbdfc6b0aee70f52fa3c4d0d3" title=" " alt="" coords="5,5,165,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,46,165,41,165,36,198,41"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2240_stepper.html#a3f8b5b5fccf3dd4e210062ed4a7a199b" title=" " alt="" coords="5,71,165,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,77,165,81,165,76,197,71"/>
+</map>

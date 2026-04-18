@@ -1,0 +1,6 @@
+<map id="TMC5160Stepper::tpfd" name="TMC5160Stepper::tpfd">
+<area shape="rect" id="Node000001" title=" " alt="" coords="207,29,360,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="318,17,306,10,283,8,262,10,251,15,248,20,254,27,250,31,243,21,247,11,261,5,283,3,308,5,321,12"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c5160_stepper.html#a365f4343bff99bedff934f0647cbaa34" title=" " alt="" coords="5,29,159,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,45,159,45,159,40,191,40"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="TMC2660Stepper::sgt" name="TMC2660Stepper::sgt">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,155,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2660_stepper.html#a49b6ef9af2c9facdcf78928e802148d2" title=" " alt="" coords="203,29,352,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,40,187,40,187,45,155,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="244,30,238,21,242,11,255,5,277,3,302,5,314,12,311,17,300,10,277,8,257,10,246,15,243,20,249,27"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="TMC2130Stepper::diag0_otpw" name="TMC2130Stepper::diag0_otpw">
+<area shape="rect" id="Node000001" title=" " alt="" coords="251,29,448,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="393,17,378,11,349,8,323,10,309,15,306,20,313,27,309,31,301,21,306,11,322,5,349,3,380,5,395,13"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2130_stepper.html#a774e7d003b2e993fdaef68e2869df70d" title=" " alt="" coords="5,29,203,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,45,203,45,203,40,235,40"/>
+</map>

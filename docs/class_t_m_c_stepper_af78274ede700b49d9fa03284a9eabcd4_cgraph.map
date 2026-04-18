@@ -1,4 +1,5 @@
 <map id="TMCStepper::test_connection" name="TMCStepper::test_connection">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,200,32"/>
-<area shape="rect" id="node2" href="$class_t_m_c_stepper.html#a5ea6ccc4c32966e40b26e56afd1c633b" title=" " alt="" coords="248,5,435,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,201,31"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c_stepper.html#a5ea6ccc4c32966e40b26e56afd1c633b" title=" " alt="" coords="249,5,440,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,16,233,16,233,21,201,21"/>
 </map>

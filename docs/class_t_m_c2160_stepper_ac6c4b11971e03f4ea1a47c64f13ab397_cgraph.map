@@ -1,4 +1,4 @@
 <map id="TMC2160Stepper::shortdelay" name="TMC2160Stepper::shortdelay">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,196,32"/>
-<area shape="rect" id="node2" href="$class_t_m_c2160_stepper.html#a716fa422e61e34e15f4a61b824479dae" title=" " alt="" coords="244,5,435,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,197,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="69,30,63,21,66,11,80,5,101,3,124,5,136,12,134,16,122,10,101,8,81,10,70,15,68,20,73,27"/>
 </map>

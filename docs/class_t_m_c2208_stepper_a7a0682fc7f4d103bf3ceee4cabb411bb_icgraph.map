@@ -1,5 +1,7 @@
 <map id="TMC2208Stepper::SLAVECONF" name="TMC2208Stepper::SLAVECONF">
-<area shape="rect" id="node1" title=" " alt="" coords="212,31,421,57"/>
-<area shape="rect" id="node2" href="$class_t_m_c2208_stepper.html#a8eb0d71fbfeeb24c9092328c44fab7e5" title=" " alt="" coords="5,5,164,32"/>
-<area shape="rect" id="node3" href="$class_t_m_c2209_stepper.html#a180f4b9a78e526592d946ec12f71982e" title=" " alt="" coords="5,56,164,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="213,31,423,56"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2208_stepper.html#a8eb0d71fbfeeb24c9092328c44fab7e5" title=" " alt="" coords="5,5,165,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,33,165,29,165,24,197,28"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2209_stepper.html#a180f4b9a78e526592d946ec12f71982e" title=" " alt="" coords="5,55,165,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,59,165,62,165,57,197,53"/>
 </map>

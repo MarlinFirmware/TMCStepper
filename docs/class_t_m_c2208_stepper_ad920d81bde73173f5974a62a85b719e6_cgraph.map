@@ -1,7 +1,13 @@
 <map id="TMC2208Stepper::fclktrim" name="TMC2208Stepper::fclktrim">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,177,83"/>
-<area shape="rect" id="node2" href="$class_t_m_c2208_stepper.html#a142b14de8a4dcc6cf76b4a6ede9e1cea" title=" " alt="" coords="225,56,383,83"/>
-<area shape="rect" id="node3" href="$class_s_switch.html#a6ff09d0850d551571dc333fb74ff8628" title=" " alt="" coords="466,5,577,32"/>
-<area shape="rect" id="node4" href="$class_t_m_c2208_stepper.html#a409c19fa6b052a370a317d061bf9af4e" title=" " alt="" coords="431,56,612,83"/>
-<area shape="rect" id="node5" href="$class_t_m_c2208_stepper.html#a7dd83313385079099b0622957786a979" title=" " alt="" coords="441,107,602,149"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,180,122"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2208_stepper.html#a142b14de8a4dcc6cf76b4a6ede9e1cea" title=" " alt="" coords="228,96,387,122"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,106,212,106,212,112,180,112"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2208_stepper.html#a409c19fa6b052a370a317d061bf9af4e" title=" " alt="" coords="436,5,621,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="330,93,377,67,434,41,456,33,458,38,436,46,379,72,332,98"/>
+<area shape="rect" id="Node000004" href="$class_t_m_c2208_stepper.html#a5147cab1658f782b36b0ce7e951d4f4e" title=" " alt="" coords="435,55,621,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="387,94,419,89,420,95,388,99"/>
+<area shape="rect" id="Node000005" href="$class_t_m_c2208_stepper.html#a66e4f8694ee035432af8b61f14b35a92" title=" " alt="" coords="438,120,618,161"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="388,118,423,123,423,128,387,123"/>
+<area shape="rect" id="Node000006" href="$class_t_m_c2208_stepper.html#adb6243277ef84d2027b2b8bae6be5bd0" title=" " alt="" coords="447,186,609,226"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="334,120,436,170,453,177,451,182,434,175,332,125"/>
 </map>

@@ -1,0 +1,8 @@
+<map id="TMC2208Stepper::pdn_disable" name="TMC2208Stepper::pdn_disable">
+<area shape="rect" id="Node000001" title=" " alt="" coords="416,29,568,70"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="525,16,513,10,492,8,473,10,462,15,457,20,459,28,454,29,452,19,458,10,472,5,492,3,514,5,527,11"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2208_stepper.html#a9de4a150926f2875903be27063f00973" title=" " alt="" coords="216,29,368,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="400,52,368,52,368,47,400,47"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2208_stepper.html#a974fa83e3bab04cd9f9a7b2d31ebd18e" title=" " alt="" coords="5,37,168,62"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="200,52,168,52,168,47,200,47"/>
+</map>

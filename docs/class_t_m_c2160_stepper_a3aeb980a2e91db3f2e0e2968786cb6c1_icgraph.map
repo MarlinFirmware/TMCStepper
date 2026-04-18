@@ -1,0 +1,6 @@
+<map id="TMC2160Stepper::s2g_level" name="TMC2160Stepper::s2g_level">
+<area shape="rect" id="Node000001" title=" " alt="" coords="206,29,358,70"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="314,16,302,10,282,8,263,10,251,15,247,20,249,28,244,29,242,19,248,10,262,5,282,3,304,5,317,11"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2160_stepper.html#a938f72c9e6a03dfb1890aabbe6f7d59c" title=" " alt="" coords="5,29,158,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,52,158,52,158,47,190,47"/>
+</map>

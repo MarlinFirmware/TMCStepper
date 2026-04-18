@@ -1,0 +1,6 @@
+<map id="TMC2209Stepper::semax" name="TMC2209Stepper::semax">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,176,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2209_stepper.html#aac6c2ffdb7ef1c6045f2e80e6224e076" title=" " alt="" coords="224,29,394,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,40,208,40,208,45,176,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="273,31,265,21,270,11,284,5,309,3,336,5,349,12,347,17,334,10,309,8,286,10,273,15,271,20,277,27"/>
+</map>

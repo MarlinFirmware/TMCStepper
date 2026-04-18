@@ -1,5 +1,6 @@
 var struct_p_w_m_c_o_n_f__t =
 [
+    [ "__pad0__", "struct_p_w_m_c_o_n_f__t.html#a0611d49575a758d468552a89d6b252a7", null ],
     [ "freewheel", "struct_p_w_m_c_o_n_f__t.html#a30952f3b95f214b64252bb87bdbe12fd", null ],
     [ "pwm_ampl", "struct_p_w_m_c_o_n_f__t.html#af9f3f4abae3ec5f222194a91c5a2bb81", null ],
     [ "pwm_autoscale", "struct_p_w_m_c_o_n_f__t.html#a4e31e46785c24ed8b2c007b832b68ed5", null ],

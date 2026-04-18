@@ -1,9 +1,14 @@
 var searchData=
 [
-  ['latch_5fl_5factive_989',['latch_l_active',['../struct_s_w___m_o_d_e__t.html#afe97462a02c7a0423f8904d45ce6a99c',1,'SW_MODE_t']]],
-  ['latch_5fl_5finactive_990',['latch_l_inactive',['../struct_s_w___m_o_d_e__t.html#a2121bfd9849c1b8d509c9b8560941fad',1,'SW_MODE_t']]],
-  ['latch_5fr_5factive_991',['latch_r_active',['../struct_s_w___m_o_d_e__t.html#a11c10322841539f624836d78bed7278e',1,'SW_MODE_t']]],
-  ['latch_5fr_5finactive_992',['latch_r_inactive',['../struct_s_w___m_o_d_e__t.html#aaedac544cc895656e81562ee502a8d14',1,'SW_MODE_t']]],
-  ['latch_5fx_5fact_993',['latch_x_act',['../struct_e_n_c_m_o_d_e__t.html#a8afe8c36d6b83d49a125c920ff0edd8d',1,'ENCMODE_t']]],
-  ['link_5findex_994',['link_index',['../class_t_m_c2130_stepper.html#a4d44a7e893bf6c18e0dec7c2f14146cf',1,'TMC2130Stepper']]]
+  ['i_5fscale_5fanalog_0',['i_scale_analog',['../struct_g_c_o_n_f__t.html#a1ecb6d49eef8ef860f3b6c0184dd9b82',1,'GCONF_t::i_scale_analog'],['../struct_t_m_c2208__n_1_1_g_c_o_n_f__t.html#affdd8ea131db887ff9c3c78c67c4e9ca',1,'TMC2208_n::GCONF_t::i_scale_analog']]],
+  ['ignore_5fab_1',['ignore_ab',['../struct_e_n_c_m_o_d_e__t.html#abe7325f58e5cc76070bb4c77daf2995e',1,'ENCMODE_t']]],
+  ['ihold_2',['ihold',['../struct_i_h_o_l_d___i_r_u_n__t.html#aecfae91788fb6ee976db810c393e1660',1,'IHOLD_IRUN_t::ihold'],['../struct_t_m_c2240__n_1_1_i_h_o_l_d___i_r_u_n__t.html#a171cfd0d546ff32ee8bccd5341d6c89a',1,'TMC2240_n::IHOLD_IRUN_t::ihold']]],
+  ['iholddelay_3',['iholddelay',['../struct_i_h_o_l_d___i_r_u_n__t.html#a993170d8e957741327f570f1d8fcda0b',1,'IHOLD_IRUN_t::iholddelay'],['../struct_t_m_c2240__n_1_1_i_h_o_l_d___i_r_u_n__t.html#ada80a9f3c89b9e2a7c2fab040b6d8c11',1,'TMC2240_n::IHOLD_IRUN_t::iholddelay']]],
+  ['index_5fotpw_4',['index_otpw',['../struct_t_m_c2208__n_1_1_g_c_o_n_f__t.html#aa9cec746caf08b6e1b10cb4ac466d6a1',1,'TMC2208_n::GCONF_t']]],
+  ['index_5fstep_5',['index_step',['../struct_t_m_c2208__n_1_1_g_c_o_n_f__t.html#a2bf96887a6bd9976a9bb467b09a2dce9',1,'TMC2208_n::GCONF_t']]],
+  ['internal_5frsense_6',['internal_rsense',['../struct_g_c_o_n_f__t.html#ac8bf6a73f99f5cf614adb10a977502f2',1,'GCONF_t::internal_rsense'],['../struct_t_m_c2208__n_1_1_g_c_o_n_f__t.html#afd632dd101410ed8bf5f9a5948cd67cd',1,'TMC2208_n::GCONF_t::internal_rsense']]],
+  ['intpol_7',['intpol',['../struct_c_h_o_p_c_o_n_f__t.html#a732d965d87ab7e2db879c50d6e4c2d55',1,'CHOPCONF_t::intpol'],['../struct_t_m_c2208__n_1_1_c_h_o_p_c_o_n_f__t.html#aecc82281a22683ec3ed474d26b5aec08',1,'TMC2208_n::CHOPCONF_t::intpol'],['../struct_t_m_c2240__n_1_1_c_h_o_p_c_o_n_f__t.html#aed43cf9ecb5fc7148eb6d8f92bd53bfd',1,'TMC2240_n::CHOPCONF_t::intpol'],['../struct_d_r_v_c_t_r_l__0__t.html#ad525e3b9f4fe0bafda14d96659afcf62',1,'DRVCTRL_0_t::intpol']]],
+  ['inv_8',['inv',['../struct_e_n_c_m___c_t_r_l__t.html#a920f6287f2853ca93f2fb14df8e2cad0',1,'ENCM_CTRL_t']]],
+  ['irun_9',['irun',['../struct_i_h_o_l_d___i_r_u_n__t.html#ac04d234427a7011275ff898e0614162a',1,'IHOLD_IRUN_t::irun'],['../struct_t_m_c2240__n_1_1_i_h_o_l_d___i_r_u_n__t.html#aa88cdf1c9744926bd6365c6ee727e7e9',1,'TMC2240_n::IHOLD_IRUN_t::irun']]],
+  ['irundelay_10',['irundelay',['../struct_t_m_c2240__n_1_1_i_h_o_l_d___i_r_u_n__t.html#ad17846d8d336833ea1025411aa0b6ba3',1,'TMC2240_n::IHOLD_IRUN_t']]]
 ];

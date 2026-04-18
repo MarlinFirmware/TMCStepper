@@ -1,0 +1,6 @@
+<map id="TMCStepper::iholddelay" name="TMCStepper::iholddelay">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,167,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c_stepper.html#a8fdec0d36204fb18b54b07625ef9e85c" title=" " alt="" coords="215,29,376,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,40,199,40,199,45,167,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="260,31,254,21,258,11,272,5,295,3,321,5,334,12,332,17,319,10,295,8,273,10,261,15,259,20,265,27"/>
+</map>

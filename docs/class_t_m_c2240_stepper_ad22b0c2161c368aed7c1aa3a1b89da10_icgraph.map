@@ -1,0 +1,6 @@
+<map id="TMC2240Stepper::dedge" name="TMC2240Stepper::dedge">
+<area shape="rect" id="Node000001" title=" " alt="" coords="220,29,386,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="340,17,328,10,303,8,280,10,268,15,265,20,271,27,267,31,260,21,264,11,279,5,303,3,329,5,342,12"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#a9c06586bf4912d9714ac8478b4d544c8" title=" " alt="" coords="5,29,172,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,45,172,45,172,40,204,40"/>
+</map>

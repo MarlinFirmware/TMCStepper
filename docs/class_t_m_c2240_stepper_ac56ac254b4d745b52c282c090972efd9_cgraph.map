@@ -1,0 +1,7 @@
+<map id="TMC2240Stepper::get_overtemp_prewarn_celsius" name="TMC2240Stepper::get_overtemp_prewarn_celsius">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,189,46"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#a13db85a1f13aa657e656cffe6ca32443" title=" " alt="" coords="237,5,399,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,23,221,23,221,28,189,28"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2240_stepper.html#ab9de5d1aad8b0a998557ef85de765df9" title=" " alt="" coords="447,13,603,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="399,23,431,23,431,28,399,28"/>
+</map>

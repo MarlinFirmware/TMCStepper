@@ -1,4 +1,5 @@
 <map id="TMCStepper::TPOWERDOWN" name="TMCStepper::TPOWERDOWN">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,205,32"/>
-<area shape="rect" id="node2" href="$class_t_m_c_stepper.html#a0c59db39db2a63ddae01f0545196edeb" title=" " alt="" coords="253,5,383,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,211,31"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c_stepper.html#a0c59db39db2a63ddae01f0545196edeb" title=" " alt="" coords="259,5,390,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,16,243,16,243,21,211,21"/>
 </map>

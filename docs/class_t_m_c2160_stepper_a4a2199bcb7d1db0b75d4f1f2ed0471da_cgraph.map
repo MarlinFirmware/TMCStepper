@@ -1,0 +1,6 @@
+<map id="TMC2160Stepper::pwm_freq" name="TMC2160Stepper::pwm_freq">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,194,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2160_stepper.html#a36456a05499e52dc6a34b57ed5c485d3" title=" " alt="" coords="242,29,430,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,40,226,40,226,45,194,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="297,31,289,21,294,11,310,5,336,3,365,5,379,12,377,17,363,11,336,8,311,10,297,15,294,20,301,27"/>
+</map>

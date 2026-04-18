@@ -1,4 +1,8 @@
 <map id="TMC2130Stepper::sg_current_decrease" name="TMC2130Stepper::sg_current_decrease">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,149,47"/>
-<area shape="rect" id="node2" href="$class_t_m_c2130_stepper.html#a1935476316e43802ade68dd84d346907" title=" " alt="" coords="197,13,356,39"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,22,151,62"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2130_stepper.html#a1935476316e43802ade68dd84d346907" title=" " alt="" coords="199,29,358,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,40,183,40,183,45,151,45"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2130_stepper.html#afd2d523526248e608e9f86234c906c58" title=" " alt="" coords="406,29,565,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="358,40,391,40,391,45,358,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="451,31,444,21,448,11,462,5,486,3,511,5,524,12,522,17,510,10,486,8,464,10,452,15,450,20,455,27"/>
 </map>

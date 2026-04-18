@@ -1,0 +1,9 @@
+<map id="TMC5160Stepper::TMC5160Stepper" name="TMC5160Stepper::TMC5160Stepper">
+<area shape="rect" id="Node000001" title=" " alt="" coords="287,55,520,80"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c5161_stepper.html#a5ad0292bfabaf69e4bbd1b7569bf3967" title=" " alt="" coords="5,5,239,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,54,199,34,200,29,311,49"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c5161_stepper.html#afff5eba2e407c3bc1ad9aabdbcffeb9f" title=" " alt="" coords="5,55,239,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="271,70,239,70,239,65,271,65"/>
+<area shape="rect" id="Node000004" href="$class_t_m_c5161_stepper.html#a67797469ad054e42ec6086b37b81fbdd" title=" " alt="" coords="5,104,239,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="311,86,200,106,199,101,310,81"/>
+</map>

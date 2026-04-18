@@ -1,4 +1,4 @@
 <map id="TMC2130Stepper::pwm_ampl" name="TMC2130Stepper::pwm_ampl">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,197,32"/>
-<area shape="rect" id="node2" href="$class_t_m_c2130_stepper.html#aaf09d701d44ed41bc75bc53bd9c19e17" title=" " alt="" coords="245,5,437,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,200,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="70,30,64,21,67,11,81,5,103,3,126,5,139,12,136,17,125,10,102,8,82,10,71,15,69,20,74,27"/>
 </map>

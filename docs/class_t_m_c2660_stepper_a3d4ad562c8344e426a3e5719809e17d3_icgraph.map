@@ -1,5 +1,7 @@
 <map id="TMC2660Stepper::hend" name="TMC2660Stepper::hend">
-<area shape="rect" id="node1" title=" " alt="" coords="272,31,431,57"/>
-<area shape="rect" id="node2" href="$class_t_m_c2660_stepper.html#a70544173e9657224640cf08097ebac19" title=" " alt="" coords="35,5,194,32"/>
-<area shape="rect" id="node3" href="$class_t_m_c2660_stepper.html#a28c5d45baa352c4d19e18edf3eeab294" title=" " alt="" coords="5,56,224,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="273,31,432,56"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2660_stepper.html#ae3100db503af9aec31cf84198429608c" title=" " alt="" coords="5,5,225,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="257,36,225,33,225,27,257,31"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2660_stepper.html#a28c5d45baa352c4d19e18edf3eeab294" title=" " alt="" coords="5,55,225,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="257,56,225,59,225,54,257,50"/>
 </map>

@@ -1,0 +1,6 @@
+<map id="TMC2208Stepper::senddelay" name="TMC2208Stepper::senddelay">
+<area shape="rect" id="Node000001" title=" " alt="" coords="244,29,434,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="381,17,367,11,339,8,314,10,300,15,297,20,304,27,299,31,292,21,296,11,312,5,339,3,369,6,383,13"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2208_stepper.html#aa2a3e103c7a77af70e5d7925b15fe170" title=" " alt="" coords="5,29,196,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,45,196,45,196,40,228,40"/>
+</map>

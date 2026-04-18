@@ -1,0 +1,8 @@
+<map id="TMC2240Stepper::slaveaddr" name="TMC2240Stepper::slaveaddr">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,193,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#afb143601252a38d9a2456f211609ab35" title=" " alt="" coords="241,29,425,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,40,225,40,225,45,193,45"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2240_stepper.html#a704a817115609f0c4dffebe43e6f3d64" title=" " alt="" coords="473,29,657,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="426,40,457,40,457,45,426,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="527,31,519,21,524,11,539,5,565,3,594,5,608,12,606,17,592,11,565,8,541,10,527,15,524,20,531,27"/>
+</map>

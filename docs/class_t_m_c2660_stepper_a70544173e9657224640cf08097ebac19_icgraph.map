@@ -1,0 +1,10 @@
+<map id="TMC2660Stepper::hend" name="TMC2660Stepper::hend">
+<area shape="rect" id="Node000001" title=" " alt="" coords="480,31,639,56"/>
+<area shape="poly" id="edge4_Node000001_Node000001" title=" " alt="" coords="596,18,584,12,560,9,538,11,526,16,524,21,529,29,525,32,518,22,522,12,536,6,560,4,585,7,598,14"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2660_stepper.html#a3d4ad562c8344e426a3e5719809e17d3" title=" " alt="" coords="273,31,432,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="465,46,432,46,432,41,465,41"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2660_stepper.html#ae3100db503af9aec31cf84198429608c" title=" " alt="" coords="5,5,225,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="257,36,225,33,225,27,257,31"/>
+<area shape="rect" id="Node000004" href="$class_t_m_c2660_stepper.html#a28c5d45baa352c4d19e18edf3eeab294" title=" " alt="" coords="5,55,225,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="257,56,225,59,225,54,257,50"/>
+</map>

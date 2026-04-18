@@ -1,0 +1,6 @@
+<map id="TMC5130Stepper::enc_sel_decimal" name="TMC5130Stepper::enc_sel_decimal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,158,70"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c5130_stepper.html#addb9c905a98855e364bf4186941221e4" title=" " alt="" coords="206,29,358,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,47,190,47,190,52,158,52"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="244,29,242,19,248,10,262,5,282,3,304,5,317,11,314,16,302,10,282,8,263,10,251,15,247,20,249,28"/>
+</map>

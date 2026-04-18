@@ -1,0 +1,8 @@
+<map id="TMC2240Stepper::microsteps" name="TMC2240Stepper::microsteps">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,201,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#a6fd38a237e8df2633631b809e924f32e" title=" " alt="" coords="249,29,409,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,40,233,40,233,45,201,45"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2240_stepper.html#a5db83171f1b1b180e2eb72afd262fd14" title=" " alt="" coords="457,29,617,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="409,40,441,40,441,45,409,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="502,31,496,21,500,11,514,5,537,3,563,5,576,12,573,17,561,10,537,8,515,10,503,15,501,20,507,27"/>
+</map>

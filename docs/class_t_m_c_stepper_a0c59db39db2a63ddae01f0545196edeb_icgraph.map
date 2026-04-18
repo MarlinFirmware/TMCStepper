@@ -1,7 +1,13 @@
 <map id="TMCStepper::write" name="TMCStepper::write">
-<area shape="rect" id="node1" title=" " alt="" coords="253,81,383,108"/>
-<area shape="rect" id="node2" href="$class_t_m_c_stepper.html#af834b7aecb144c7d5c3ba1494eb447a8" title=" " alt="" coords="33,5,177,32"/>
-<area shape="rect" id="node3" href="$class_t_m_c_stepper.html#a223e13cdebad6387c22df3fe918090ac" title=" " alt="" coords="17,56,194,83"/>
-<area shape="rect" id="node4" href="$class_t_m_c_stepper.html#a3c46d790163af9e4ccbb662916563938" title=" " alt="" coords="5,107,205,133"/>
-<area shape="rect" id="node5" href="$class_t_m_c_stepper.html#a4e609d7f77d9e6db6423b02b98ed5358" title=" " alt="" coords="17,157,193,184"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="512,80,643,106"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c_stepper.html#af834b7aecb144c7d5c3ba1494eb447a8" title=" " alt="" coords="288,5,434,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="536,75,463,45,427,34,428,29,465,40,538,70"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c_stepper.html#a223e13cdebad6387c22df3fe918090ac" title=" " alt="" coords="269,55,454,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="496,86,454,81,455,76,497,81"/>
+<area shape="rect" id="Node000005" href="$class_t_m_c_stepper.html#a3c46d790163af9e4ccbb662916563938" title=" " alt="" coords="259,104,464,130"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="497,104,465,108,464,103,496,99"/>
+<area shape="rect" id="Node000006" href="$class_t_m_c_stepper.html#a4e609d7f77d9e6db6423b02b98ed5358" title=" " alt="" coords="271,153,452,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="537,115,465,145,428,155,426,150,463,140,535,110"/>
+<area shape="rect" id="Node000004" href="$class_t_m_c_stepper.html#af3759763b851e6071d1bad90408b712c" title=" " alt="" coords="5,55,211,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="253,70,211,70,211,65,253,65"/>
 </map>

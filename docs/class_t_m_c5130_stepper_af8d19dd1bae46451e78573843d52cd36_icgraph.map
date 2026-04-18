@@ -1,5 +1,7 @@
 <map id="TMC5130Stepper::TMC_OUTPUT" name="TMC5130Stepper::TMC_OUTPUT">
-<area shape="rect" id="node1" title=" " alt="" coords="212,23,369,65"/>
-<area shape="rect" id="node2" href="$class_t_m_c5130_stepper.html#a55e61f5181d74f26c9d35c54e4436d7a" title=" " alt="" coords="5,5,164,32"/>
-<area shape="rect" id="node3" href="$class_t_m_c5160_stepper.html#a5a12974304588f9d01898d91ba854b87" title=" " alt="" coords="5,56,164,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="213,23,373,64"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c5130_stepper.html#a55e61f5181d74f26c9d35c54e4436d7a" title=" " alt="" coords="5,5,165,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,34,165,31,165,25,197,29"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c5160_stepper.html#a5a12974304588f9d01898d91ba854b87" title=" " alt="" coords="5,55,165,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,57,165,61,165,56,197,52"/>
 </map>

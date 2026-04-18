@@ -1,0 +1,7 @@
+<map id="TMC2240Stepper::test_connection" name="TMC2240Stepper::test_connection">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,159,46"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#aeb10fe740ff7d6e970ebdb3db5a775c1" title=" " alt="" coords="207,5,367,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,23,191,23,191,28,159,28"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2240_stepper.html#ab9de5d1aad8b0a998557ef85de765df9" title=" " alt="" coords="415,13,571,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="367,23,399,23,399,28,367,28"/>
+</map>

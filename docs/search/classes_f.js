@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['x_5fcompare_5ft_560',['X_COMPARE_t',['../struct_x___c_o_m_p_a_r_e__t.html',1,'']]],
-  ['x_5fenc_5ft_561',['X_ENC_t',['../struct_t_m_c5130_stepper_1_1_x___e_n_c__t.html',1,'TMC5130Stepper']]],
-  ['xactual_5ft_562',['XACTUAL_t',['../struct_x_a_c_t_u_a_l__t.html',1,'']]],
-  ['xdirect_5ft_563',['XDIRECT_t',['../struct_x_d_i_r_e_c_t__t.html',1,'']]],
-  ['xlatch_5ft_564',['XLATCH_t',['../struct_t_m_c5130_stepper_1_1_x_l_a_t_c_h__t.html',1,'TMC5130Stepper']]],
-  ['xtarget_5ft_565',['XTARGET_t',['../struct_t_m_c5130_stepper_1_1_x_t_a_r_g_e_t__t.html',1,'TMC5130Stepper']]]
+  ['v1_5ft_0',['V1_t',['../struct_v1__t.html',1,'']]],
+  ['vactual_5ft_1',['VACTUAL_t',['../struct_t_m_c2208__n_1_1_v_a_c_t_u_a_l__t.html',1,'TMC2208_n::VACTUAL_t'],['../struct_t_m_c5130_stepper_1_1_v_a_c_t_u_a_l__t.html',1,'TMC5130Stepper::VACTUAL_t']]],
+  ['vdcmin_5ft_2',['VDCMIN_t',['../struct_v_d_c_m_i_n__t.html',1,'']]],
+  ['vmax_5ft_3',['VMAX_t',['../struct_v_m_a_x__t.html',1,'']]],
+  ['vstart_5ft_4',['VSTART_t',['../struct_v_s_t_a_r_t__t.html',1,'']]],
+  ['vstop_5ft_5',['VSTOP_t',['../struct_v_s_t_o_p__t.html',1,'']]]
 ];

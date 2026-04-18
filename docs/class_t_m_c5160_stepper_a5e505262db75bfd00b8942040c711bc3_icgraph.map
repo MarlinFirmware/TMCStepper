@@ -1,0 +1,6 @@
+<map id="TMC5160Stepper::recalibrate" name="TMC5160Stepper::recalibrate">
+<area shape="rect" id="Node000001" title=" " alt="" coords="245,29,436,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="382,17,369,11,340,8,315,10,301,15,298,20,305,27,301,31,293,21,298,11,314,5,340,3,370,6,385,13"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c5160_stepper.html#a5433717e0c2024befd1e3e493b8ce2b7" title=" " alt="" coords="5,29,197,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,45,197,45,197,40,229,40"/>
+</map>

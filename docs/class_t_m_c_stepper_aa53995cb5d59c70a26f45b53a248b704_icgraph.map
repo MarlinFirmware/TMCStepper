@@ -1,4 +1,7 @@
 <map id="TMCStepper::tbl" name="TMCStepper::tbl">
-<area shape="rect" id="node1" title=" " alt="" coords="219,5,335,32"/>
-<area shape="rect" id="node2" href="$class_t_m_c_stepper.html#a889e66a7d32f607b4e22299aab6e9c99" title=" " alt="" coords="5,5,171,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="220,31,337,56"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c_stepper.html#aea3d94ca7be0fb510c6432cb95a9e6af" title=" " alt="" coords="5,5,172,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,36,172,32,172,27,205,31"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c_stepper.html#a889e66a7d32f607b4e22299aab6e9c99" title=" " alt="" coords="5,55,172,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="205,55,172,60,172,54,204,50"/>
 </map>

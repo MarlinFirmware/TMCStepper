@@ -1,0 +1,6 @@
+<map id="TMC2130Stepper::sfilt" name="TMC2130Stepper::sfilt">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,158,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2130_stepper.html#afcd37a97eb546a6d11af8a279631ac1f" title=" " alt="" coords="206,29,358,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,40,190,40,190,45,158,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="248,30,242,21,246,11,259,5,282,3,306,5,319,12,316,17,305,10,282,8,261,10,249,15,247,20,253,27"/>
+</map>

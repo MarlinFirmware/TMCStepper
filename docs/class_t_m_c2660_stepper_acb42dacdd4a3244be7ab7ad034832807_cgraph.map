@@ -1,4 +1,8 @@
 <map id="TMC2660Stepper::blank_time" name="TMC2660Stepper::blank_time">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,199,32"/>
-<area shape="rect" id="node2" href="$class_t_m_c2660_stepper.html#a72c064ac219a1fadd2d0410f8e4dd764" title=" " alt="" coords="247,5,391,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,200,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2660_stepper.html#a72c064ac219a1fadd2d0410f8e4dd764" title=" " alt="" coords="248,29,393,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,40,232,40,232,45,200,45"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2660_stepper.html#a4efb4d459c2eaa22f1ff3cbe417ab8d4" title=" " alt="" coords="441,29,586,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="393,40,425,40,425,45,393,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="481,30,475,21,479,11,492,5,514,3,537,5,550,12,547,17,536,10,514,8,493,10,483,15,480,20,486,27"/>
 </map>

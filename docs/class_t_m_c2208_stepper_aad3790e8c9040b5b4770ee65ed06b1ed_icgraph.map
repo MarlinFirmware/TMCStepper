@@ -1,5 +1,5 @@
 <map id="TMC2208Stepper::toff" name="TMC2208Stepper::toff">
-<area shape="rect" id="node1" title=" " alt="" coords="240,31,387,57"/>
-<area shape="rect" id="node2" href="$class_t_m_c2208_stepper.html#a9ad9b892e8abf475e15e6d8c30c56ce2" title=" " alt="" coords="5,5,192,32"/>
-<area shape="rect" id="node3" href="$class_t_m_c2208_stepper.html#a7ec1e7b4256e23a062cf72135d480d5f" title=" " alt="" coords="25,56,172,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="242,5,392,31"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2208_stepper.html#a9ad9b892e8abf475e15e6d8c30c56ce2" title=" " alt="" coords="5,5,194,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,21,194,21,194,16,226,16"/>
 </map>

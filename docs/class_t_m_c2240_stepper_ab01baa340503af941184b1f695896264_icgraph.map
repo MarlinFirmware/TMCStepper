@@ -1,0 +1,10 @@
+<map id="TMC2240Stepper::pwm_autograd" name="TMC2240Stepper::pwm_autograd">
+<area shape="rect" id="Node000001" title=" " alt="" coords="213,71,372,111"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="326,57,313,52,292,49,273,51,261,56,256,62,258,69,253,71,251,61,258,52,271,46,292,44,315,46,328,53"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#a585a914170a0402d23f3fab2ca8a5f4c" title=" " alt="" coords="5,5,165,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,68,151,49,153,44,212,63"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2240_stepper.html#a1094d03f285a16cfa7f9452bf6961852" title=" " alt="" coords="5,71,165,111"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="197,94,165,94,165,88,197,88"/>
+<area shape="rect" id="Node000004" href="$class_t_m_c2240_stepper.html#a208ec1ceb1357baa35721509ca04a7e0" title=" " alt="" coords="5,136,165,177"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="212,119,153,138,151,133,211,114"/>
+</map>

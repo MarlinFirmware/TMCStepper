@@ -1,0 +1,7 @@
+<map id="TMC2240Stepper::TPWMTHRS" name="TMC2240Stepper::TPWMTHRS">
+<area shape="rect" id="Node000001" title=" " alt="" coords="239,42,448,68"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2240_stepper.html#ad9687c51ef6c54227adfd8fa227b697f" title=" " alt="" coords="5,5,191,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,43,191,39,192,34,223,38"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2240_stepper.html#ad3dceab3734fad6678234e177bca6c11" title=" " alt="" coords="18,70,178,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,71,178,77,178,71,223,66"/>
+</map>

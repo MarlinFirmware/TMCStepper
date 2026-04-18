@@ -1,4 +1,5 @@
 <map id="TMC5160Stepper::ENC_DEVIATION" name="TMC5160Stepper::ENC_DEVIATION">
-<area shape="rect" id="node1" title=" " alt="" coords="212,5,369,47"/>
-<area shape="rect" id="node2" href="$class_t_m_c5160_stepper.html#a5a12974304588f9d01898d91ba854b87" title=" " alt="" coords="5,13,164,39"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="213,5,373,46"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c5160_stepper.html#a5a12974304588f9d01898d91ba854b87" title=" " alt="" coords="5,13,165,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,28,165,28,165,23,197,23"/>
 </map>

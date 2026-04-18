@@ -1,0 +1,7 @@
+<map id="TMCStepper::INIT_REGISTER" name="TMCStepper::INIT_REGISTER">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,211,31"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c_stepper.html#a223e13cdebad6387c22df3fe918090ac" title=" " alt="" coords="259,5,444,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,16,243,16,243,21,211,21"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c_stepper.html#a0c59db39db2a63ddae01f0545196edeb" title=" " alt="" coords="492,5,623,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="444,16,477,16,477,21,444,21"/>
+</map>

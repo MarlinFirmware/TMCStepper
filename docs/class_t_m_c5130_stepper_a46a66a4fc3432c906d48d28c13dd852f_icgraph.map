@@ -1,0 +1,6 @@
+<map id="TMC5130Stepper::pol_stop_l" name="TMC5130Stepper::pol_stop_l">
+<area shape="rect" id="Node000001" title=" " alt="" coords="202,29,350,70"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="308,16,296,10,276,8,257,10,246,15,242,20,244,28,238,29,237,19,243,10,256,5,276,3,297,5,310,11"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c5130_stepper.html#a8e9843563e5112695650c0c9bd036d42" title=" " alt="" coords="5,29,154,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,52,154,52,154,47,186,47"/>
+</map>

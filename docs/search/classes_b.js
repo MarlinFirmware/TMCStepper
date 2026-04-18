@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['ramp_5fstat_5ft_524',['RAMP_STAT_t',['../struct_r_a_m_p___s_t_a_t__t.html',1,'']]],
-  ['rampmode_5ft_525',['RAMPMODE_t',['../struct_r_a_m_p_m_o_d_e__t.html',1,'']]],
-  ['read_5frdsel00_5ft_526',['READ_RDSEL00_t',['../struct_r_e_a_d___r_d_s_e_l00__t.html',1,'']]],
-  ['read_5frdsel01_5ft_527',['READ_RDSEL01_t',['../struct_r_e_a_d___r_d_s_e_l01__t.html',1,'']]],
-  ['read_5frdsel10_5ft_528',['READ_RDSEL10_t',['../struct_r_e_a_d___r_d_s_e_l10__t.html',1,'']]]
+  ['pwm_5fauto_5ft_0',['PWM_AUTO_t',['../struct_p_w_m___a_u_t_o__t.html',1,'PWM_AUTO_t'],['../struct_t_m_c2240__n_1_1_p_w_m___a_u_t_o__t.html',1,'TMC2240_n::PWM_AUTO_t']]],
+  ['pwm_5fscale_5ft_1',['PWM_SCALE_t',['../struct_t_m_c2130_stepper_1_1_p_w_m___s_c_a_l_e__t.html',1,'TMC2130Stepper::PWM_SCALE_t'],['../struct_t_m_c2160__n_1_1_p_w_m___s_c_a_l_e__t.html',1,'TMC2160_n::PWM_SCALE_t'],['../struct_t_m_c2208__n_1_1_p_w_m___s_c_a_l_e__t.html',1,'TMC2208_n::PWM_SCALE_t'],['../struct_t_m_c2240__n_1_1_p_w_m___s_c_a_l_e__t.html',1,'TMC2240_n::PWM_SCALE_t']]],
+  ['pwmconf_5ft_2',['PWMCONF_t',['../struct_p_w_m_c_o_n_f__t.html',1,'PWMCONF_t'],['../struct_t_m_c2160__n_1_1_p_w_m_c_o_n_f__t.html',1,'TMC2160_n::PWMCONF_t'],['../struct_t_m_c2208__n_1_1_p_w_m_c_o_n_f__t.html',1,'TMC2208_n::PWMCONF_t'],['../struct_t_m_c2240__n_1_1_p_w_m_c_o_n_f__t.html',1,'TMC2240_n::PWMCONF_t']]]
 ];

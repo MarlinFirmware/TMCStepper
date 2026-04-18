@@ -1,4 +1,7 @@
 <map id="TMC2130Stepper::TMC2130Stepper" name="TMC2130Stepper::TMC2130Stepper">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,236,32"/>
-<area shape="rect" id="node2" href="$class_t_m_c2130_stepper.html#abd1d08df305673b41b1b9c3106fb9c68" title=" " alt="" coords="284,5,459,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,239,56"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2130_stepper.html#abd1d08df305673b41b1b9c3106fb9c68" title=" " alt="" coords="287,5,464,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="239,29,271,26,271,31,239,34"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c_stepper.html#a8a8813bde06653e0b66f93e57387a02f" title=" " alt="" coords="287,55,464,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="239,52,271,55,271,60,239,57"/>
 </map>

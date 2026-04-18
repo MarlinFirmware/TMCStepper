@@ -1,0 +1,6 @@
+<map id="TMC2160Stepper::shortfilter" name="TMC2160Stepper::shortfilter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,191,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2160_stepper.html#a078118a06dfda4e3534db296288fc33d" title=" " alt="" coords="239,29,424,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,40,223,40,223,45,191,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="293,31,285,21,290,11,305,5,331,3,360,5,374,12,372,17,358,11,331,8,307,10,293,15,290,20,297,27"/>
+</map>

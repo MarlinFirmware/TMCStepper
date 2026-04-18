@@ -1,4 +1,8 @@
 <map id="TMC2660Stepper::hysteresis_end" name="TMC2660Stepper::hysteresis_end">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,224,32"/>
-<area shape="rect" id="node2" href="$class_t_m_c2660_stepper.html#a3d4ad562c8344e426a3e5719809e17d3" title=" " alt="" coords="272,5,431,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,225,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2660_stepper.html#a3d4ad562c8344e426a3e5719809e17d3" title=" " alt="" coords="273,29,432,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="225,40,257,40,257,45,225,45"/>
+<area shape="rect" id="Node000003" href="$class_t_m_c2660_stepper.html#a70544173e9657224640cf08097ebac19" title=" " alt="" coords="480,29,639,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="432,40,465,40,465,45,432,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="525,31,518,21,522,11,536,5,560,3,585,5,598,12,596,17,584,10,560,8,538,10,526,15,524,20,529,27"/>
 </map>

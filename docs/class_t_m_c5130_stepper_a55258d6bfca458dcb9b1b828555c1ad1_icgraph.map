@@ -1,0 +1,6 @@
+<map id="TMC5130Stepper::sg_stop" name="TMC5130Stepper::sg_stop">
+<area shape="rect" id="Node000001" title=" " alt="" coords="231,29,408,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="359,17,345,10,319,8,295,10,283,15,280,20,286,27,282,31,275,21,279,11,294,5,319,3,347,5,361,12"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c5130_stepper.html#ab9556a1554606f3f23a29c1537f9add4" title=" " alt="" coords="5,29,183,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,45,183,45,183,40,215,40"/>
+</map>

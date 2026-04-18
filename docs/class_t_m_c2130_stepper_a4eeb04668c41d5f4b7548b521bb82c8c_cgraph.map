@@ -1,8 +1,6 @@
 <map id="TMC2130Stepper::dedge" name="TMC2130Stepper::dedge">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,171,83"/>
-<area shape="rect" id="node2" href="$class_t_m_c2130_stepper.html#a67541b27d97ce45f175e9f6e4a2d0bff" title=" " alt="" coords="219,56,421,83"/>
-<area shape="rect" id="node3" href="$class_t_m_c2130_stepper.html#aed0175bff6e80ebc14e0d2606283cbe0" title=" " alt="" coords="469,56,624,83"/>
-<area shape="rect" id="node4" href="$class_t_m_c2130_stepper.html#aed8aa4583943e649dbf3bb1c1da90d63" title=" " alt="" coords="672,5,875,32"/>
-<area shape="rect" id="node5" href="$class_s_w___s_p_i_class.html#af260fdc0af3f1312b106483161e559c3" title=" " alt="" coords="923,81,1079,108"/>
-<area shape="rect" id="node6" href="$class_s_w___s_p_i_class.html#a1b7600aa1d9571c103718c5d3e376675" title=" " alt="" coords="688,107,859,133"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,172,55"/>
+<area shape="rect" id="Node000002" href="$class_t_m_c2130_stepper.html#a529ae6827da49fcf4628a992acbcfe02" title=" " alt="" coords="220,29,386,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,40,204,40,204,45,172,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="267,31,260,21,264,11,279,5,303,3,329,5,342,12,340,17,328,10,303,8,280,10,268,15,265,20,271,27"/>
 </map>
