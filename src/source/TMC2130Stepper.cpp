@@ -301,3 +301,10 @@ uint8_t TMC2130Stepper::sg_current_decrease() {
   }
   return 0;
 }
+
+TMC2130Stepper::~TMC2130Stepper() {
+  if (TMC_SW_SPI != nullptr) {
+    delete TMC_SW_SPI;
+    TMC_SW_SPI = nullptr;
+  }
+}

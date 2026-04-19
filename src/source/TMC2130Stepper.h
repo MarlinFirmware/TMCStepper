@@ -13,6 +13,7 @@ class TMC2130Stepper : public TMCStepper {
 		TMC2130Stepper(uint16_t pinCS, float RS = default_RS, int8_t link_index = -1);
 		TMC2130Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1);
 		TMC2130Stepper(uint16_t pinCS, float RS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1);
+		~TMC2130Stepper();
 		void begin();
 		void defaults();
 		void setSPISpeed(uint32_t speed);
