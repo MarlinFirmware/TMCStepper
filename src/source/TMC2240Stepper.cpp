@@ -281,7 +281,7 @@ uint8_t TMC2240Stepper::pwm_grad_auto() { PWM_AUTO_t r{}; r.sr = PWM_AUTO(); ret
 
 uint16_t TMC2240Stepper::cs2rms(uint8_t CS) {
 	float IFS_current_RMS	= calc_IFS_current_RMS();
-	const uint32_t globalscaler	= GLOBAL_SCALER();
+	const uint32_t gs = GLOBAL_SCALER(), globalscaler = gs ? gs : 256;
 	return float(CS + 0.5f) * (globalscaler * IFS_current_RMS) / 256 / 32 * 1000;
 }
 
@@ -304,7 +304,8 @@ void TMC2240Stepper::rms_current(uint16_t mA) {
 	float IFS_current_RMS	= calc_IFS_current_RMS();
 	float mA_float = (float)mA / 1000;
 	uint32_t globalscaler	= set_globalscaler(mA_float, IFS_current_RMS);
-	int32_t CS = mA_float * globalscaler / 256.0f * IFS_current_RMS * 32 - 1 + 0.5f;
+	if (globalscaler == 0) globalscaler = 256;
+	int32_t CS = mA_float * 256.0f / globalscaler / IFS_current_RMS * 32 - 1 + 0.5f;
 	if (CS > 31) CS = 31;
 	if (CS < 0) CS = 0;
 	irun(CS);
