@@ -521,3 +521,79 @@ int16_t TMC2240Stepper::cur_b() {
   if (value > 255) value -= 512;
   return value;
 }
+
+// StallGuard4 convenience methods
+bool TMC2240Stepper::sg4() {
+    return SG4_RESULT() & 0x3FF; // Return true if StallGuard4 has detected a stall
+}
+
+void TMC2240Stepper::sg4_en(bool B) {
+    COOLCONF_register.sg4_en = B;
+    COOLCONF(COOLCONF_register.sr);
+}
+
+bool TMC2240Stepper::sg4_en() {
+    return COOLCONF_register.sg4_en;
+}
+
+void TMC2240Stepper::sg4_smin(uint8_t B) {
+    COOLCONF_register.sg4_smin = B;
+    COOLCONF(COOLCONF_register.sr);
+}
+
+uint8_t TMC2240Stepper::sg4_smin() {
+    return COOLCONF_register.sg4_smin;
+}
+
+void TMC2240Stepper::sg4_smax(uint8_t B) {
+    COOLCONF_register.sg4_smax = B;
+    COOLCONF(COOLCONF_register.sr);
+}
+
+uint8_t TMC2240Stepper::sg4_smax() {
+    return COOLCONF_register.sg4_smax;
+}
+
+void TMC2240Stepper::sg4_filt_en(bool B) {
+    COOLCONF_register.sg4_filt_en = B;
+    COOLCONF(COOLCONF_register.sr);
+}
+
+bool TMC2240Stepper::sg4_filt_en() {
+    return COOLCONF_register.sg4_filt_en;
+}
+
+void TMC2240Stepper::sg4_angle_offset(uint8_t B) {
+    COOLCONF_register.sg4_angle_offset = B;
+    COOLCONF(COOLCONF_register.sr);
+}
+
+uint8_t TMC2240Stepper::sg4_angle_offset() {
+    return COOLCONF_register.sg4_angle_offset;
+}
+
+void TMC2240Stepper::sg4_thrs(uint8_t B) {
+    SG4_THRS_register.sg4_thrs = B;
+    SG4_THRS(SG4_THRS_register.sr);
+}
+
+uint8_t TMC2240Stepper::sg4_thrs() {
+    return SG4_THRS_register.sg4_thrs;
+}
+
+// Legacy compatibility methods
+void TMC2240Stepper::enableStallGuard4() {
+    sg4_en(true);
+}
+
+void TMC2240Stepper::disableStallGuard4() {
+    sg4_en(false);
+}
+
+bool TMC2240Stepper::isStallGuard4Active() {
+    return sg4();
+}
+
+uint16_t TMC2240Stepper::getStallGuard4Result() {
+    return sg4_result();
+}

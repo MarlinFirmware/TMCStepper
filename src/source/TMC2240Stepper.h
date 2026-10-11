@@ -179,6 +179,12 @@ class TMC2240Stepper {
 		void seimin(bool B);
 		void sgt(int8_t  B);
 		void sfilt(bool B);
+		void sg4_en(bool B);
+		void sg4_smin(uint8_t B);
+		void sg4_smax(uint8_t B);
+		void sg4_filt_en(bool B);
+		void sg4_angle_offset(uint8_t B);
+		void sg4_thrs(uint8_t B);
 		uint8_t semin();
 		uint8_t seup();
 		uint8_t semax();
@@ -186,6 +192,12 @@ class TMC2240Stepper {
 		bool seimin();
 		int8_t sgt();
 		bool sfilt();
+		bool sg4_en();
+		uint8_t sg4_smin();
+		uint8_t sg4_smax();
+		bool sg4_filt_en();
+		uint8_t sg4_angle_offset();
+		uint8_t sg4_thrs();
 
 		// RW: PWMCONF
 		void PWMCONF(uint32_t input);
@@ -234,6 +246,7 @@ class TMC2240Stepper {
 		bool fsactive();
 		uint16_t CS_ACTUAL();
 		bool stallguard();
+		bool sg4();
 		bool ot();
 		bool otpw();
 		bool s2ga();
@@ -280,6 +293,12 @@ class TMC2240Stepper {
 		void sg4_filt_en(bool B);
 		uint8_t sg4_angle_offset();
 		void sg4_angle_offset(uint8_t B);
+		uint8_t sg4_smin();
+		void sg4_smin(uint8_t B);
+		uint8_t sg4_smax();
+		void sg4_smax(uint8_t B);
+		bool sg4_en();
+		void sg4_en(bool B);
 
 		// R: SG4_RESULT
 		uint32_t SG4_RESULT();
