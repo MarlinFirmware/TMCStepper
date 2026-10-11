@@ -17,8 +17,8 @@
 
 #define KNOB_PIN A0           // Connect potentiometer
 #define EN_PIN 5              // Enable
-//#define DIR_PIN 6           // Direction (not need for UART control)
-//#define STEP_PIN 7          // Step (not need for UART control)
+//#define DIR_PIN 6           // Direction (not needed for UART control)
+//#define STEP_PIN 7          // Step (not needed for UART control)
 #define INDEX_PIN 2           // INDEX pin on TMC driver. Must connect to Arduino interrupt pin
 //#define CS_PIN 42           // Chip select
 //#define SW_MOSI 66          // Software Master Out Slave In (MOSI)
@@ -52,9 +52,9 @@
 
 TMC2209Stepper driver(SW_RX, SW_TX, R_SENSE, DRIVER_ADDRESS);
 
-void print_param(String param_name, float param_value) {
+void print_param(const char* param_name, float param_value) {
   Serial.print(param_name);
-  Serial.print(": ");
+  Serial.print(F(": "));
   Serial.println(param_value, 2);
 }
 
@@ -85,10 +85,11 @@ void setup() {
 
   // driver.en_pwm_mode(true);    // Toggle stealthChop on TMC2130/2160/5130/5160
   driver.en_spreadCycle(false);   // Toggle spreadCycle on TMC2208/2209/2224
-  // driver.VACTUAL(0);           // 0 - set rotor speed from STEP input, !=0 - from internal generator (12Mhz max)
+  // driver.VACTUAL(0);           // 0 - set rotor speed from STEP input, !=0 - from internal generator (12MHz max)
 
-  driver.pwm_autoscale(true);     // stealthChop auto configuration
-  driver.pwm_autograd(true);      // stealthChop auto configuration. Automatic tuning (only with pwm_autoscale=1)
+  // stealthChop auto-configuration (only active when stealthChop is enabled)
+  driver.pwm_autoscale(true);
+  driver.pwm_autograd(true);      // Automatic tuning (only with pwm_autoscale=1)
 
   // StealthChop autoconf phase 1 (PWM_ OFS_AUTO)
   // Conditions:
@@ -98,14 +99,14 @@ void setup() {
   print_param("IRUN", driver.irun());
   print_param("CS_ACTUAL", driver.cs_actual());
 
-  Serial.println("Start delay for autoconf");
-  delay(200);  // delay at least 130 milliseconds to StealthChop autoconfig phase 1
-  Serial.println("End delay for autoconf");
+  Serial.println(F("Start delay for autoconf"));
+  delay(200);  // Delay at least 130 ms for StealthChop autoconfig phase 1
+  Serial.println(F("End delay for autoconf"));
 
   print_param("IRUN", driver.irun());
   print_param("CS_ACTUAL", driver.cs_actual());
 
-  Serial.println("Starting phase 2 of StealthChop autoconfig");
+  Serial.println(F("Starting phase 2 of StealthChop autoconfig"));
 
   // Motor must move at a velocity, where a significant amount of back EMF is generated and where the full run current can be reached. Conditions:
   // - 1.5 * PWM_OFS_AUTO < PWM_SCALE_SUM < 4 * PWM_OFS_AUTO
@@ -114,29 +115,30 @@ void setup() {
 
   float percent_rotation_per_tick = (float)((float)(1.8 / MICROSTEPS) / 360);
 
-  int32_t vactual = (float)(1 / percent_rotation_per_tick);  //start from 1 RPS (60 RPM)
-  uint32_t calibration_time;                                 // how many time need to calibrate
+  int32_t vactual = (int32_t)(1.0f / percent_rotation_per_tick);  // Start from 1 RPS (60 RPM)
+  uint32_t calibration_time;
   int16_t pwm_scale_auto;
 
-  // StealthChop autoconf phase 2
-  // need some inspection. I'm not sure if this is correct
-
+  // StealthChop autoconfig phase 2
+  // Motor must move at a velocity where significant back EMF is generated
+  // and full run current can be reached.
   do {
     print_param("rotation speed", vactual);
     print_param("microsteps", MICROSTEPS);
-    calibration_time = (float)(500 / (float)(abs(vactual) / MICROSTEPS)) * 1000;  // how much time needed for 1000 full steps?
+    calibration_time = (uint32_t)(500.0f / (float)(abs(vactual) / MICROSTEPS) * 1000.0f);  // Time needed for 1000 full steps
     print_param("calibration time ms", calibration_time);
     driver.VACTUAL(vactual);  // steps per second
-    vactual *= -1.05f;        // increase 5% and change direction
-    if (abs(vactual) > 3.f / percent_rotation_per_tick)
-      vactual = (float)(1.f / percent_rotation_per_tick);
+    vactual = (int32_t)(vactual * -1.05f);  // Increase 5% and change direction
+    if (abs(vactual) > 3.0f / percent_rotation_per_tick) {
+      vactual = (int32_t)(1.0f / percent_rotation_per_tick);
+    }
     delay(calibration_time);
     pwm_scale_auto = driver.pwm_scale_auto();
     print_param("pwm_scale_auto", pwm_scale_auto);
   } while (pwm_scale_auto != 0);
 
   driver.VACTUAL(0);
-  Serial.println("StealthChop autoconfig finished...");
+  Serial.println(F("StealthChop autoconfig finished..."));
 
   driver.index_step(1);  // 1 - output steps to UART
 
@@ -147,49 +149,46 @@ void setup() {
 }
 
 bool shaft = false;
-int fwd_button_state;
+int fwd_button_state = LOW;
 int knob_pin_value = 0;
 int32_t rotation_speed = 0;
 uint16_t ticks;
-float percent_rotation_per_tick = 1.8 / MICROSTEPS / 360;
+const float percent_rotation_per_tick = 1.8f / MICROSTEPS / 360.0f;
 
 void loop() {
   fwd_button_state = digitalRead(FWD_BUTTON_PIN);
 
   if (fwd_button_state == HIGH) {
     knob_pin_value = analogRead(KNOB_PIN);
-    rotation_speed = (long)(knob_pin_value - 512) * 2 * MICROSTEPS;
+    rotation_speed = (int32_t)(knob_pin_value - 512) * 2 * MICROSTEPS;
 
-    driver.VACTUAL(rotation_speed);  // set rotor speed
+    driver.VACTUAL(rotation_speed);  // Set rotor speed
 
-    while (fwd_button_state == HIGH) {
-      print_param("pwm_scale_auto: ", driver.pwm_scale_auto());
+    while (digitalRead(FWD_BUTTON_PIN) == HIGH) {
       delay(100);
       knob_pin_value = analogRead(KNOB_PIN);
-      rotation_speed = (long)(knob_pin_value - 512) * 2 * MICROSTEPS;
+      rotation_speed = (int32_t)(knob_pin_value - 512) * 2 * MICROSTEPS;
       driver.VACTUAL(rotation_speed);
 
       #ifdef CAPTURE_TIMER
-        if (CaptureTimer::getTicks(&ticks)) {  // Only print on serial if new data is available
-          Serial.print("Ticks: ");
+        if (CaptureTimer::getTicks(&ticks)) {  // Only print if new data is available
+          Serial.print(F("Ticks: "));
           Serial.print(ticks);
-          Serial.print("\tFreq: ");
+          Serial.print(F("\tFreq: "));
           (void)CaptureTimer::getFreq(&ticks);
           Serial.print(ticks);
-          Serial.print("Hz");
-          Serial.print("\tRotation speed: ");
+          Serial.print(F("Hz"));
+          Serial.print(F("\tRotation speed: "));
           Serial.println(rotation_speed);
           print_param("IRUN", driver.irun());
           print_param("CS_ACTUAL", driver.cs_actual());
         }
       #endif
-
-      fwd_button_state = digitalRead(FWD_BUTTON_PIN);
     }
     driver.VACTUAL(0);
 
-    print_param("RPS: ", (float)rotation_speed * percent_rotation_per_tick);
-    print_param("MicroStep counter: ", driver.MSCNT());
+    print_param("RPS", (float)rotation_speed * percent_rotation_per_tick);
+    print_param("MicroStep counter", driver.MSCNT());
   }
   // shaft = !shaft;
   // driver.shaft(shaft);

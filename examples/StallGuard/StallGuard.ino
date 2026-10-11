@@ -1,33 +1,34 @@
 /**
  * Author Teemu Mäntykallio
  *
- * Plot TMC2130 or TMC2660 motor load using the stallGuard value.
- * You can finetune the reading by changing the STALL_VALUE.
- * This will let you control at which load the value will read 0
- * and the stall flag will be triggered. This will also set pin DIAG1 high.
- * A higher STALL_VALUE will make the reading less sensitive and
- * a lower STALL_VALUE will make it more sensitive.
+ * Plot TMC2130 or TMC5160 motor load using the stallGuard value.
+ * You can fine-tune the reading by changing the STALL_VALUE.
+ * This lets you control at which load the value will read 0
+ * and the stall flag will be triggered. This also sets pin DIAG1 high.
+ * A higher STALL_VALUE makes the reading less sensitive,
+ * a lower STALL_VALUE makes it more sensitive.
  *
- * You can control the rotation speed with
- * 0 Stop
- * 1 Resume
- * + Speed up
- * - Slow down
+ * Control the rotation speed via serial:
+ *   0   Stop
+ *   1   Resume
+ *   +   Speed up
+ *   -   Slow down
  */
 #include <TMCStepper.h>
 
-#define MAX_SPEED        40 // In timer value
-#define MIN_SPEED      1000
+// Timer interval values (inverted relationship to speed: smaller = faster)
+#define TIMER_INTERVAL_MAX  40 // Fastest stepping (smallest interval)
+#define TIMER_INTERVAL_MIN 1000 // Slowest stepping (largest interval)
 
-#define STALL_VALUE      15 // [-64..63]
+#define STALL_VALUE 15 // [-64..63]
 
-#define EN_PIN           38 // Enable
-#define DIR_PIN          55 // Direction
-#define STEP_PIN         54 // Step
-#define CS_PIN           42 // Chip select
-#define SW_MOSI          66 // Software Master Out Slave In (MOSI)
-#define SW_MISO          44 // Software Master In Slave Out (MISO)
-#define SW_SCK           64 // Software Slave Clock (SCK)
+#define EN_PIN     38 // Enable
+#define DIR_PIN    55 // Direction
+#define STEP_PIN   54 // Step
+#define CS_PIN     42 // Chip select
+#define SW_MOSI    66 // Software Master Out Slave In (MOSI)
+#define SW_MISO    44 // Software Master In Slave Out (MISO)
+#define SW_SCK     64 // Software Slave Clock (SCK)
 
 #define R_SENSE 0.11f // Match to your driver
                       // SilentStepStick series use 0.11
@@ -43,19 +44,10 @@
 
 using namespace TMC2130_n;
 
-// Using direct register manipulation can reach faster stepping times
-#define STEP_PORT     PORTF // Match with STEP_PIN
-#define STEP_BIT_POS      0 // Match with STEP_PIN
-
-ISR(TIMER1_COMPA_vect){
-  //STEP_PORT ^= 1 << STEP_BIT_POS;
-  digitalWrite(STEP_PIN, !digitalRead(STEP_PIN));
-}
-
 void setup() {
   SPI.begin();
-  Serial.begin(250000);         // Init serial port and set baudrate
-  while(!Serial);               // Wait for serial port to connect
+  Serial.begin(250000);          // Init serial port and set baud rate
+  while (!Serial);               // Wait for serial port to connect
   Serial.println("\nStart...");
 
   pinMode(EN_PIN, OUTPUT);
@@ -68,50 +60,56 @@ void setup() {
   driver.begin();
   driver.toff(4);
   driver.blank_time(24);
-  driver.rms_current(400); // mA
+  driver.rms_current(400);       // mA
   driver.microsteps(16);
-  driver.TCOOLTHRS(0xFFFFF); // 20bit max
+  driver.TCOOLTHRS(0xFFFFF);    // 20-bit max
   driver.THIGH(0);
   driver.semin(5);
   driver.semax(2);
   driver.sedn(0b01);
   driver.sgt(STALL_VALUE);
 
-  // Set stepper interrupt
+  // Set stepper interrupt using Timer1 CTC mode
   {
-    cli();//stop interrupts
-    TCCR1A = 0;// set entire TCCR1A register to 0
-    TCCR1B = 0;// same for TCCR1B
-    TCNT1  = 0;//initialize counter value to 0
-    OCR1A = 256;// = (16*10^6) / (1*1024) - 1 (must be <65536)
-    // turn on CTC mode
-    TCCR1B |= (1 << WGM12);
-    // Set CS11 bits for 8 prescaler
-    TCCR1B |= (1 << CS11);// | (1 << CS10);
-    // enable timer compare interrupt
-    TIMSK1 |= (1 << OCIE1A);
-    sei();//allow interrupts
+    cli();                       // Stop interrupts
+    TCCR1A = 0;                  // Clear TCCR1A
+    TCCR1B = 0;                  // Clear TCCR1B
+    TCNT1 = 0;                   // Initialize counter value
+    OCR1A = 256;                 // = (16*10^6) / (1*1024) - 1 (must be <65536)
+    TCCR1B |= (1 << WGM12);     // Turn on CTC mode
+    TCCR1B |= (1 << CS11);      // Set CS11 bit for 8 prescaler
+    TIMSK1 |= (1 << OCIE1A);    // Enable timer compare interrupt
+    sei();                       // Allow interrupts
   }
 }
 
+ISR(TIMER1_COMPA_vect) {
+  digitalWrite(STEP_PIN, !digitalRead(STEP_PIN));
+}
+
 void loop() {
-  static uint32_t last_time=0;
+  static uint32_t last_time = 0;
   uint32_t ms = millis();
 
-  while(Serial.available() > 0) {
+  while (Serial.available() > 0) {
     int8_t read_byte = Serial.read();
-    #ifdef USING_TMC2660
-      if (read_byte == '0')      { TIMSK1 &= ~(1 << OCIE1A); driver.toff(0); }
-      else if (read_byte == '1') { TIMSK1 |=  (1 << OCIE1A); driver.toff(driver.savedToff()); }
-    #else
-      if (read_byte == '0')      { TIMSK1 &= ~(1 << OCIE1A); digitalWrite( EN_PIN, HIGH ); }
-      else if (read_byte == '1') { TIMSK1 |=  (1 << OCIE1A); digitalWrite( EN_PIN,  LOW ); }
-    #endif
-    else if (read_byte == '+') { if (OCR1A > MAX_SPEED) OCR1A -= 20; }
-    else if (read_byte == '-') { if (OCR1A < MIN_SPEED) OCR1A += 20; }
+    if (read_byte == '0') {
+      TIMSK1 &= ~(1 << OCIE1A);
+      digitalWrite(EN_PIN, HIGH);
+    }
+    else if (read_byte == '1') {
+      TIMSK1 |= (1 << OCIE1A);
+      digitalWrite(EN_PIN, LOW);
+    }
+    else if (read_byte == '+') {
+      if (OCR1A > TIMER_INTERVAL_MAX) OCR1A -= 20;
+    }
+    else if (read_byte == '-') {
+      if (OCR1A < TIMER_INTERVAL_MIN) OCR1A += 20;
+    }
   }
 
-  if((ms-last_time) > 100) { //run every 0.1s
+  if (ms - last_time > 100) {    // Run every 0.1s
     last_time = ms;
 
     DRV_STATUS_t drv_status{0};
@@ -123,4 +121,3 @@ void loop() {
     Serial.println(driver.cs2rms(drv_status.cs_actual), DEC);
   }
 }
-

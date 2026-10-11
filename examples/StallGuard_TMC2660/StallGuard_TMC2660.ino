@@ -1,119 +1,118 @@
 /**
  * Author Teemu Mäntykallio
  *
- * Plot TMC2130 or TMC2660 motor load using the stallGuard value.
- * You can finetune the reading by changing the STALL_VALUE.
- * This will let you control at which load the value will read 0
- * and the stall flag will be triggered. This will also set pin DIAG1 high.
- * A higher STALL_VALUE will make the reading less sensitive and
- * a lower STALL_VALUE will make it more sensitive.
+ * This example demonstrates how to use StallGuard with a TMC2660 stepper
+ * driver. It reads the motor load (stallGuard value) and prints it over
+ * serial at 250000 baud.
  *
- * You can control the rotation speed with
- * 0 Stop
- * 1 Resume
- * + Speed up
- * - Slow down
+ * Control the rotation speed via serial:
+ *   0  Stop
+ *   1  Resume
+ *   +  Speed up
+ *   -  Slow down
+ *
+ * You can fine-tune the StallGuard sensitivity by changing STALL_VALUE.
+ * A higher STALL_VALUE makes the reading less sensitive, while a lower
+ * value makes it more sensitive. The stall flag will trigger when the
+ * motor load exceeds this threshold, setting DIAG1 high.
  */
+
 #include <TMCStepper.h>
 
-#define MAX_SPEED        40 // In timer value
-#define MIN_SPEED      1000
+#define MAX_SPEED       40    // Minimum OCR1A value (fastest speed)
+#define MIN_SPEED     1000    // Maximum OCR1A value (slowest speed)
+#define STALL_VALUE      15   // [-64..63] StallGuard threshold
 
-#define STALL_VALUE      15 // [-64..63]
+#define EN_PIN          38    // Enable pin
+#define DIR_PIN         55    // Direction pin
+#define STEP_PIN        54    // Step pin
+#define CS_PIN          42    // Chip select pin
 
-#define EN_PIN           38 // Enable
-#define DIR_PIN          55 // Direction
-#define STEP_PIN         54 // Step
-#define CS_PIN           42 // Chip select
-#define SW_MOSI          66 // Software Master Out Slave In (MOSI)
-#define SW_MISO          44 // Software Master In Slave Out (MISO)
-#define SW_SCK           64 // Software Slave Clock (SCK)
-#define SW_RX            63 // TMC2208/TMC2224 SoftwareSerial receive pin
-#define SW_TX            40 // TMC2208/TMC2224 SoftwareSerial transmit pin
-#define SERIAL_PORT Serial1 // TMC2208/TMC2224 HardwareSerial port
-#define DRIVER_ADDRESS 0b00 // TMC2209 Driver address according to MS1 and MS2
+#define R_SENSE       0.11f   // Match to your driver
+                              // SilentStepStick series use 0.11
+                              // UltiMachine Einsy and Archim2 boards use 0.2
+                              // Panucatt BSD2660 uses 0.1
+                              // Watterott TMC5160 uses 0.075
 
-#define R_SENSE 0.11f // Match to your driver
-                      // SilentStepStick series use 0.11
-                      // UltiMachine Einsy and Archim2 boards use 0.2
-                      // Panucatt BSD2660 uses 0.1
-                      // Watterott TMC5160 uses 0.075
-
-// Select your stepper driver type
-//TMC2660Stepper driver(CS_PIN, R_SENSE);                           // Hardware SPI
-//TMC2660Stepper driver(CS_PIN, R_SENSE, SW_MOSI, SW_MISO, SW_SCK);
+// Instantiate the TMC2660 driver (Hardware SPI)
+TMC2660Stepper driver(CS_PIN, R_SENSE);
 
 using namespace TMC2660_n;
 
-// Using direct register manipulation can reach faster stepping times
-#define STEP_PORT     PORTF // Match with STEP_PIN
-#define STEP_BIT_POS      0 // Match with STEP_PIN
+// Using direct register manipulation can reach faster stepping times.
+// For STEP_PIN = 54 on an ATmega2560, the port/bit mapping is:
+#define STEP_PORT       PORTF
+#define STEP_BIT_POS        0
 
-ISR(TIMER1_COMPA_vect){
-  //STEP_PORT ^= 1 << STEP_BIT_POS;
+ISR(TIMER1_COMPA_vect) {
+  // Direct register toggle for maximum speed:
+  // STEP_PORT ^= 1 << STEP_BIT_POS;
   digitalWrite(STEP_PIN, !digitalRead(STEP_PIN));
 }
 
 void setup() {
   SPI.begin();
-  Serial.begin(250000);         // Init serial port and set baudrate
-  while(!Serial);               // Wait for serial port to connect
-  Serial.println("\nStart...");
+  Serial.begin(250000);
+  while (!Serial);
+
+  Serial.println("\n[TMC2660 StallGuard Example]");
 
   pinMode(EN_PIN, OUTPUT);
   pinMode(STEP_PIN, OUTPUT);
   pinMode(CS_PIN, OUTPUT);
   pinMode(DIR_PIN, OUTPUT);
-  pinMode(MISO, INPUT_PULLUP);
   digitalWrite(EN_PIN, LOW);
 
+  // Initialize the TMC2660 driver
   driver.begin();
   driver.toff(4);
   driver.blank_time(24);
-  driver.rms_current(400); // mA
+  driver.rms_current(400);   // 400 mA
   driver.microsteps(16);
-  driver.sfilt(true); // Improves SG readout.
+  driver.sfilt(true);        // Filter improves StallGuard readout
   driver.rdsel(0b01);
   driver.semin(5);
   driver.semax(2);
   driver.sedn(0b01);
   driver.sgt(STALL_VALUE);
 
-  // Set stepper interrupt
-  {
-    cli();//stop interrupts
-    TCCR1A = 0;// set entire TCCR1A register to 0
-    TCCR1B = 0;// same for TCCR1B
-    TCNT1  = 0;//initialize counter value to 0
-    OCR1A = 256;// = (16*10^6) / (1*1024) - 1 (must be <65536)
-    // turn on CTC mode
-    TCCR1B |= (1 << WGM12);
-    // Set CS11 bits for 8 prescaler
-    TCCR1B |= (1 << CS11);// | (1 << CS10);
-    // enable timer compare interrupt
-    TIMSK1 |= (1 << OCIE1A);
-    sei();//allow interrupts
-  }
+  // Configure Timer1 CTC mode for stepper interrupt
+  cli();
+  TCCR1A = 0;
+  TCCR1B = 0;
+  TCNT1  = 0;
+  OCR1A  = 256;              // = (16*10^6) / (1*1024) - 1 (must be <65536)
+  TCCR1B |= (1 << WGM12);    // CTC mode
+  TCCR1B |= (1 << CS11);     // 8x prescaler
+  TIMSK1 |= (1 << OCIE1A);   // Enable compare interrupt
+  sei();
 }
 
 void loop() {
-  static uint32_t last_time=0;
+  static uint32_t last_time = 0;
   uint32_t ms = millis();
 
-  while(Serial.available() > 0) {
+  // Handle serial commands
+  while (Serial.available() > 0) {
     int8_t read_byte = Serial.read();
-    #ifdef USING_TMC2660
-      if (read_byte == '0')      { TIMSK1 &= ~(1 << OCIE1A); driver.toff(0); }
-      else if (read_byte == '1') { TIMSK1 |=  (1 << OCIE1A); driver.toff(driver.savedToff()); }
-    #else
-      if (read_byte == '0')      { TIMSK1 &= ~(1 << OCIE1A); digitalWrite( EN_PIN, HIGH ); }
-      else if (read_byte == '1') { TIMSK1 |=  (1 << OCIE1A); digitalWrite( EN_PIN,  LOW ); }
-    #endif
-    else if (read_byte == '+') { if (OCR1A > MAX_SPEED) OCR1A -= 20; }
-    else if (read_byte == '-') { if (OCR1A < MIN_SPEED) OCR1A += 20; }
+    if (read_byte == '0') {
+      TIMSK1 &= ~(1 << OCIE1A);  // Disable stepper interrupt
+      driver.toff(0);            // Disable driver output
+    }
+    else if (read_byte == '1') {
+      TIMSK1 |=  (1 << OCIE1A);  // Enable stepper interrupt
+      driver.toff(driver.savedToff());  // Restore driver output
+    }
+    else if (read_byte == '+') {
+      if (OCR1A > MAX_SPEED) OCR1A -= 20;
+    }
+    else if (read_byte == '-') {
+      if (OCR1A < MIN_SPEED) OCR1A += 20;
+    }
   }
 
-  if((ms-last_time) > 100) { //run every 0.1s
+  // Print StallGuard reading every 100ms
+  if (ms - last_time > 100) {
     last_time = ms;
 
     READ_RDSEL10_t data{0};
@@ -125,4 +124,3 @@ void loop() {
     Serial.println(driver.cs2rms(data.se), DEC);
   }
 }
-

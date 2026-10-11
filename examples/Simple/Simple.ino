@@ -6,7 +6,7 @@
 
 #include <TMCStepper.h>
 
-#define EN_PIN           38 // Enable
+#define EN_PIN           38 // Enable pin
 #define DIR_PIN          55 // Direction
 #define STEP_PIN         54 // Step
 #define CS_PIN           42 // Chip select
@@ -48,7 +48,7 @@ void setup() {
 //SERIAL_PORT.begin(115200);      // HW UART drivers
 //driver.beginSerial(115200);     // SW UART drivers
 
-  driver.begin();                 //  SPI: Init CS pins and possible SW SPI pins
+  driver.begin();                 // SPI: Init CS pins and possible SW SPI pins
                                   // UART: Init SW UART (if selected) with default 115200 baudrate
   driver.toff(5);                 // Enables driver in software
   driver.rms_current(600);        // Set motor RMS current
@@ -59,16 +59,16 @@ void setup() {
   driver.pwm_autoscale(true);     // Needed for stealthChop
 }
 
-bool shaft = false;
+bool dir = false;
 
 void loop() {
   // Run 5000 steps and switch direction in software
-  for (uint16_t i = 5000; i>0; i--) {
+  for (uint16_t i = 5000; i > 0; i--) {
     digitalWrite(STEP_PIN, HIGH);
     delayMicroseconds(160);
     digitalWrite(STEP_PIN, LOW);
     delayMicroseconds(160);
   }
-  shaft = !shaft;
-  driver.shaft(shaft);
+  dir = !dir;
+  driver.shaft(dir);
 }
