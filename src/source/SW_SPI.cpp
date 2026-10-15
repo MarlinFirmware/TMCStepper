@@ -3,6 +3,7 @@
  * SW_SPI.cpp - Software SPI for Arduino or Raspberry Pi
  */
 #include "SW_SPI.h"
+#include "ESP32_Adapter.h"
 
 SW_SPIClass::SW_SPIClass(uint16_t mosi, uint16_t miso, uint16_t sck) :
   mosi_pin(mosi),
