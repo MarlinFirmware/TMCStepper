@@ -11,8 +11,8 @@
 class TMC5160Stepper : public TMC5130Stepper {
 	public:
 		TMC5160Stepper(uint16_t pinCS, float RS = default_RS, int8_t link_index = -1);
-		TMC5160Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1);
-		TMC5160Stepper(uint16_t pinCS, float RS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1);
+		TMC5160Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1, bool softSPI = _TMC_SOFTSPI_DEFAULT);
+		TMC5160Stepper(uint16_t pinCS, float RS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link_index = -1, bool softSPI = _TMC_SOFTSPI_DEFAULT);
 
 		void rms_current(uint16_t mA) { TMC2160Stepper::rms_current(mA); }
 		void rms_current(uint16_t mA, float mult) { TMC2160Stepper::rms_current(mA, mult); }

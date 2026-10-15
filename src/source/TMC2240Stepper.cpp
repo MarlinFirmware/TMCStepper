@@ -10,6 +10,10 @@ uint32_t TMC2240Stepper::spi_speed = 16000000/8;
 
 TMC2240Stepper::TMC2240Stepper(uint16_t pinCS, int8_t link) :
 	_pinCS(pinCS),
+	_pinMISO(0),
+	_pinMOSI(0),
+	_pinSCK(0),
+	_has_pins(false),
 	link_index(link)
 	{
 		defaults();
@@ -20,6 +24,10 @@ TMC2240Stepper::TMC2240Stepper(uint16_t pinCS, int8_t link) :
 
 TMC2240Stepper::TMC2240Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link) :
 	_pinCS(pinCS),
+	_pinMISO(pinMISO),
+	_pinMOSI(pinMOSI),
+	_pinSCK(pinSCK),
+	_has_pins(true),
 	link_index(link)
 	{
 		SW_SPIClass *SW_SPI_Obj = new SW_SPIClass(pinMOSI, pinMISO, pinSCK);
@@ -29,6 +37,48 @@ TMC2240Stepper::TMC2240Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMIS
 		if (link > chain_length)
 			chain_length = link;
 	}
+
+TMC2240Stepper::TMC2240Stepper(uint16_t pinCS, uint16_t pinMOSI, uint16_t pinMISO, uint16_t pinSCK, int8_t link, bool softSPI) :
+  TMCStepper(default_RS),
+  _pinCS(pinCS),
+  _pinMISO(pinMISO),
+  _pinMOSI(pinMOSI),
+  _pinSCK(pinSCK),
+  _has_pins(true),
+  _spiMan(nullptr),
+  link_index(link)
+  {
+    if (softSPI)
+    {
+      SW_SPIClass *SW_SPI_Obj = new SW_SPIClass(pinMOSI, pinMISO, pinSCK);
+      TMC_SW_SPI = SW_SPI_Obj;
+    }
+    else
+    {
+      TMC_SW_SPI = nullptr;
+    }
+    defaults();
+
+    if (link > chain_length)
+      chain_length = link;
+  }
+
+TMC2240Stepper::TMC2240Stepper(uint16_t pinCS, float RS, TMCSPIInterface *spiMan, int8_t link) :
+  TMCStepper(RS),
+  _pinCS(pinCS),
+  _pinMISO(0),
+  _pinMOSI(0),
+  _pinSCK(0),
+  _has_pins(false),
+  TMC_SW_SPI(nullptr),
+  _spiMan(spiMan),
+  link_index(link)
+  {
+    defaults();
+
+    if (link > chain_length)
+      chain_length = link;
+  }
 
 void TMC2240Stepper::defaults() {
 	GCONF_register.multistep_filt = 1;
