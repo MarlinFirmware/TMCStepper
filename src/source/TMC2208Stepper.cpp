@@ -323,7 +323,7 @@ uint64_t TMC2208Stepper::_sendDatagram(uint8_t datagram[], const uint8_t len, ui
 	uint32_t _body_t0 = micros();
 	timeout = this->abort_window;
 
-	for (uint8_t i = 0; i < 5; i++) {
+	for (uint8_t i = 0; i < 5;) {
 		if ((micros() - _body_t0) > (uint32_t)timeout * 1000UL) {
 			return 0;
 		}
@@ -333,6 +333,8 @@ uint64_t TMC2208Stepper::_sendDatagram(uint8_t datagram[], const uint8_t len, ui
 
 		out <<= 8;
 		out |= res & 0xFF;
+
+		i++;
 	}
 
 	#if HAS_HALF_DUPLEX_MODE
